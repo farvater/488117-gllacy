@@ -1,6 +1,7 @@
 body{
 
 	background-color: #303030;
+	color: white;
 }
 
 a, label{
@@ -16,3 +17,14 @@ li{
 	display: none;
 }
 
+body > * {
+	outline: 1px solid red;
+}
+
+body > * > * {
+	outline: 1px solid green;
+}
+
+body > * > * > * {
+	outline: 1px solid blue;
+}
