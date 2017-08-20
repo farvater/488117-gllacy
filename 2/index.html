@@ -13,7 +13,7 @@
                     <a class="header-logo" href="index.html">
                         <img src="img/logo.svg" alt="Глейси" width="154" height="64">
                     </a>
-                    <ul class="header-nav">
+                    <ul class="header-navigation-item">
                         <li><a href="#">Каталог</a>
                             
                             <ul class="subparagraphs visibility-hidden">
@@ -28,9 +28,9 @@
                         <li><a href="#">О компании</a></li>
                     </ul>
                 </nav>
-                <form class="form-search" action="#" method="post">
-                    <label for="id-search" class="magnifier"></label><!--Не забудь тут иконку-->
-                    <input class="visibility-hidden" type="text" name="search" placeholder="Что ищем?" id="id-search">
+                <form class="search-form" action="#" method="post">
+                    <label for="search-item" class="magnifier"></label><!--Не забудь тут иконку-->
+                    <input class="visibility-hidden" type="text" name="search" placeholder="Что ищем?" id="search-item">
                 </form>
                 <form class="header-login" action="#" method="get">
                     <button type="button">Вход</button><!--Не забудь тут иконку-->
@@ -46,8 +46,8 @@
                         </div>
                     </div>
                 </form>
-                <div>
-                    <label><img src="img/корзина.svg" alt="Корзина"> Пусто</label>
+                <div class="empty-cart">
+                    <span>Пусто</span>
                 </div>
                 <div class="header-contact">
                     <p>С 10 до 20, ежедневно</p>
@@ -56,7 +56,7 @@
             </div>
         </header>
         <main class="main-content">
-            <h1 class="visibility-hidden">Главая страница Глэйси</h1>
+            <h1 class="visibility-hidden">Глэйси - доставка мороженого</h1>
             <section class="ice-cream-banner">
                 <h3 class="visibility-hidden">Основные наборы мороженого</h3>
                 <!--Тут будет разметка с банерами с мороженками-->
@@ -145,16 +145,16 @@
                     <h3 class="wafer-titel">Магазин Глейси - это онлайн магазин по продаже мороженого
                      собственного производства на развес</h3>
                     <ul class="wafer-text">
-                        <li class="wafer-icon1">Все наше мороженое изготавливается на&nbsp;собственном
+                        <li class="wafer-icon-ice-cream">Все наше мороженое изготавливается на&nbsp;собственном
                          производстве, с&nbsp;использованием современного оборудования и&nbsp;проверенных 
                          временем технологий.</li>
-                        <li class="wafer-icon2">Закупка ингредиентов производится только у&nbsp;проверенных
+                        <li class="wafer-icon-cow">Закупка ингредиентов производится только у&nbsp;проверенных
                          фермерских хозяйств и&nbsp;компаний, с&nbsp;которыми нас связывает долговременное
                           сотрудничество.</li>
-                        <li class="wafer-icon3">Для приготовления мороженого используется настоящие сливки
+                        <li class="wafer-icon-sheet">Для приготовления мороженого используется настоящие сливки
                          и&nbsp;молоко высочайшего качества. Все дополнительные ингредиенты и&nbsp;добавки
                           произведены из&nbsp;натурального, экологически чистого сырья.</li>
-                        <li class="wafer-icon4">Доставка нашего мороженого до&nbsp;заказчиков осуществляется
+                        <li class="wafer-icon-temperature">Доставка нашего мороженого до&nbsp;заказчиков осуществляется
                          в&nbsp;специальном термопаке, который не&nbsp;дает мороженому растаять в&nbsp;пути
                           и&nbsp;позволяет сохранить превосходный вкус.</li>
                     </ul>

@@ -28,12 +28,12 @@
                         <li><a href="#">О компании</a></li>
                     </ul>
                 </nav>
-                <form class="form-search" action="#" method="get">
-                    <label class="magnifier" for="id-search"></label><!--Не забудь тут иконку-->
-                    <input class="visibility-hidden" type="text" name="search" placeholder="Что ищем?" id="id-search">
+                <form class="search-form" action="#" method="post">
+                    <label for="search-item" class="magnifier"></label><!--Не забудь тут иконку-->
+                    <input class="visibility-hidden" type="text" name="search" placeholder="Что ищем?" id="search-item">
                 </form>
                 <form class="header-login" action="#" method="post">
-                    <button type="button">Вход</button><!--Не забудь тут иконку-->
+                    <a class="button" href="#">Вход</a><!--Не забудь тут иконку-->
                     <div class="visibility-hidden">
                         <input type="email" name="email" placeholder="Электронная почта">
                         <input type="password" name="password" placeholder="Пароль">
@@ -51,13 +51,13 @@
                     <div class="visibility-hidden">
                         <table class="table-goods-basket">
                             <tr>
-                                <td class="reset-goods"><button type="reset" name="reset-goods-basket"></button></td>
+                                <td class="reset-goods"><a href="#" class="reset-goods-basket"></a></td>
                                 <td>Пломбир с апельсиновым джемом</td>
                                 <td>1,5кг х <b>200руб</b></td>
                                 <td>300руб</td>
                             </tr>
                             <tr>
-                                <td class="reset-goods"><input type="reset" name="reset-goods-basket" value="X"></td>
+                                <td class="reset-goods"><a href="#" class="reset-goods-basket"></a></td>
                                 <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                                 <td>1,5кг х <b>300руб</b></td>
                                 <td>450руб</td>
@@ -79,7 +79,7 @@
                 <ol class="breadcrumbs">
                     <li><a href="index.html">Глвная</a></li>
                     <li><a href="catalog.html">Каталог</a></li>
-                    <li>Сливочное</li>
+                    <li><a>Сливочное</a</li>
                 </ol>
                 <h1>Сливочное мороженое</h1>
 
@@ -98,10 +98,10 @@
                     </p>
                     <p class="filter-item">
                         <span>Жирность:</span>
-                        <label for="fatiness-percent-zero"><input type="radio" name="fatiness-percent" id="fatiness-percent-zero">0%</label>
-                        <label for="fatiness-percent-ten"><input type="radio" name="fatiness-percent" id="fatiness-percent-ten" checked>до 10%</label>
-                        <label for="fatiness-percent-thirty"><input type="radio" name="fatiness-percent" id="fatiness-percent-thirty">до 30%</label>
-                        <label for="fatiness-percent-more-than-thirty"><input type="radio" name="fatiness-percent" id="fatiness-percent-more-than-thirty">выше 30%</label>
+                        <label for="fatiness-percent-zero"><input type="radio" name="fatiness-percent" id="fatiness-percent-zero" value="fatiness-percent-zero">0%</label>
+                        <label for="fatiness-percent-ten"><input type="radio" name="fatiness-percent" id="fatiness-percent-ten" value="fatiness-percent-ten" checked>до 10%</label>
+                        <label for="fatiness-percent-thirty"><input type="radio" name="fatiness-percent" id="fatiness-percent-thirty" value="fatiness-percent-thirty">до 30%</label>
+                        <label for="fatiness-percent-more-than-thirty"><input type="radio" name="fatiness-percent" id="fatiness-percent-more-than-thirty" value="fatiness-percent-more-than-thirty">выше 30%</label>
                     </p>
                     <p class="filter-item">
                         <span>Наполнители:</span>
