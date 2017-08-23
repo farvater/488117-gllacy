@@ -1,33 +1,32 @@
-
 body{
     font-size: 16px;
     line-height: 1.37;
     color: #ffffff;
-    font-weight: medium;
     font-family: "Roboto", Arial, sans-serif;
-    text-transform: uppercase;
     background-color: #303030;/*Временно чтобы было видно текст*/
 }
 
-a, label{
-	color: #ffffff;
-	text-decoration: none;
+a, label{/*Временно чтобы было видно текст*/
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.shares h2{
-	font-size: 35px;
+.title-small{
+    font-size: 35px;
     line-height: 1.17;
-	font-weight: bold;
+    font-weight: bold;
+}
+
+.titel-wafer{
+    font-size: 24px;
+    line-height: 1.25;
 }
 
 .visibility-hidden{
-	display: none;
+    display: none;
 }
 
-.wafer-titel{
-	font-size: 24px;
-    line-height: 1.25;
-}
+
 /*
 
 li{
