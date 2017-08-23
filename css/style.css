@@ -1,21 +1,40 @@
-body{
 
-	background-color: #303030;
-	color: white;
+body{
+    font-size: 16px;
+    line-height: 1.37;
+    color: #ffffff;
+    font-weight: medium;
+    font-family: "Roboto", Arial, sans-serif;
+    text-transform: uppercase;
+    background-color: #303030;/*Временно чтобы было видно текст*/
 }
 
 a, label{
-	color: white;
+	color: #ffffff;
 	text-decoration: none;
 }
 
-li{
-	list-style: none;
+.shares h2{
+	font-size: 35px;
+    line-height: 1.17;
+	font-weight: bold;
 }
 
 .visibility-hidden{
 	display: none;
 }
+
+.wafer-titel{
+	font-size: 24px;
+    line-height: 1.25;
+}
+/*
+
+li{
+	list-style: none;
+}
+
+
 
 body > * {
 	outline: 1px solid red;
@@ -27,4 +46,4 @@ body > * > * {
 
 body > * > * > * {
 	outline: 1px solid blue;
-}
+}*/
