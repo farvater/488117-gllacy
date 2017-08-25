@@ -1,0 +1,48 @@
+body{
+    font-size: 16px;
+    line-height: 1.37;
+    color: #ffffff;
+    font-family: "Roboto", Arial, sans-serif;
+    background-color: #303030;/*Временно чтобы было видно текст*/
+}
+
+a, label{/*Временно чтобы было видно текст*/
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.title-small{
+    font-size: 35px;
+    line-height: 1.17;
+    font-weight: bold;
+}
+
+.titel-wafer{
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.visibility-hidden{
+    display: none;
+}
+
+
+/*
+
+li{
+	list-style: none;
+}
+
+
+
+body > * {
+	outline: 1px solid red;
+}
+
+body > * > * {
+	outline: 1px solid green;
+}
+
+body > * > * > * {
+	outline: 1px solid blue;
+}*/
