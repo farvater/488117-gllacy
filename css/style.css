@@ -6,11 +6,6 @@ body{
     background-color: #303030;/*Временно чтобы было видно текст*/
 }
 
-a, label{/*Временно чтобы было видно текст*/
-    color: #ffffff;
-    text-decoration: none;
-}
-
 .title-small{
     font-size: 35px;
     line-height: 1.17;
@@ -26,7 +21,85 @@ a, label{/*Временно чтобы было видно текст*/
     display: none;
 }
 
+.conteiner{
+    width: 1146px;
+}
 
+.header-navigation img{
+    position: relative;
+    display: block;
+    float: left;
+    margin-top: 8px;
+}
+
+.header-navigation-item{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    align-items: stretch;
+}
+
+.header-navigation-item li{
+    list-style: none;
+    margin-left: 27px;
+    margin-top: 30px;
+}
+
+.header-navigation-item>li{
+    position: relative;
+}
+
+.header-navigation-item a{
+    font: inherit;
+    color: #ffffff;
+}
+
+.header-navigation:hover ul{
+    visibility: visible;
+}
+
+.header-navigation-item .subparagraphs{
+    position: absolute;
+    top: 90%;
+    left: 0;
+    display: none;
+    width: 120px;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+.header-navigation-item .subparagraphs a{
+    color: #000000;
+}
+
+.header-navigation-item>li:hover .subparagraphs{
+    display: block;
+}
+
+.search-form{
+    display: block;
+}
+
+.search-form label{
+    background-image: url("../img/search.svg");
+    background-color: #ffffff;
+    width: 30px;
+}
+
+.search-form input{
+    display: none;
+}
+
+.header-login{
+    display: block;
+    float: left
+}
+
+.header-login-form{
+    display: none;
+}
 /*
 
 li{
