@@ -28,21 +28,19 @@
                     </ul>
                 </nav>
                 <form class="search-form" action="#" method="post">
-                    <label for="search-item" class="magnifier"></label><!--Не забудь тут иконку-->
-                    <input class="visibility-hidden" type="text" name="search" placeholder="Что ищем?" id="search-item">
+                    <label for="search-item" class="magnifier" aria-label="Поиск"></label><!--Не забудь тут иконку-->
+                    <input type="text" name="search" placeholder="Что ищем?" id="search-item">
                 </form>
                 <form class="header-login" action="#" method="post">
                     <a class="button" href="#">Вход</a><!--Не забудь тут иконку-->
-                    <div class="visibility-hidden">
-                        <input type="email" name="email" placeholder="Электронная почта">
-                        <input type="password" name="password" placeholder="Пароль">
-                        <div class="login-navigation">
-                            <button class="login-btn" type="submit" name="login">Войти</button>
-                            <p class="password-check-in">
-                                <a href="#">Забыли пароль?</a>
-                                <a href="#">Новая регистрация</a>
-                            </p>
-                        </div>
+                    <input type="email" name="email" placeholder="Электронная почта">
+                    <input type="password" name="password" placeholder="Пароль">
+                    <div class="login-navigation">
+                        <button class="login-btn" type="submit" name="login">Войти</button>
+                        <p class="password-check-in">
+                            <a href="#">Забыли пароль?</a>
+                            <a href="#">Новая регистрация</a>
+                        </p>
                     </div>
                 </form>
                 <section class="table-goods">
