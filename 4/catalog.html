@@ -29,44 +29,42 @@
                     </ul>
                 </nav>
                 <form class="search-form" action="#" method="post">
-                    <label for="search-item" class="magnifier"></label><!--Не забудь тут иконку-->
-                    <input class="visibility-hidden" type="text" name="search" placeholder="Что ищем?" id="search-item">
+                    <label for="search-item" class="magnifier" aria-label="Поиск"></label><!--Не забудь тут иконку-->
+                    <input type="text" name="search" placeholder="Что ищем?" id="search-item">
                 </form>
                 <form class="header-login" action="#" method="post">
                     <a class="button" href="#">Вход</a><!--Не забудь тут иконку-->
-                    <div class="visibility-hidden">
-                        <input type="email" name="email" placeholder="Электронная почта">
-                        <input type="password" name="password" placeholder="Пароль">
-                        <div class="login-navigation">
-                            <button class="login-btn" type="submit" name="login">Войти</button>
-                            <p class="password-check-in">
-                                <a href="#">Забыли пароль?</a>
-                                <a href="#">Новая регистрация</a>
-                            </p>
-                        </div>
+                    <input type="email" name="email" placeholder="Электронная почта">
+                    <input type="password" name="password" placeholder="Пароль">
+                    <div class="login-navigation">
+                        <button class="login-btn" type="submit" name="login">Войти</button>
+                        <p class="password-check-in">
+                            <a href="#">Забыли пароль?</a>
+                            <a href="#">Новая регистрация</a>
+                        </p>
                     </div>
                 </form>
-                <selection class="table-goods">
-                    <button type="button">2 товара</button>
-                    <div class="visibility-hidden">
-                        <table class="table-goods-basket">
-                            <tr>
-                                <td class="reset-goods"><a href="#" class="reset-goods-basket"></a></td>
-                                <td>Пломбир с апельсиновым джемом</td>
-                                <td>1,5кг х <b>200руб</b></td>
-                                <td>300руб</td>
-                            </tr>
-                            <tr>
-                                <td class="reset-goods"><a href="#" class="reset-goods-basket"></a></td>
-                                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                                <td>1,5кг х <b>300руб</b></td>
-                                <td>450руб</td>
-                            </tr>
-                        </table>
-                        <span class="total">Итого: 750руб</span>
-                        <a href="#">Оформить заказ</a>
-                    </div>
-                </selection>
+                <section class="table-goods">
+                    <a href="#">
+                        <button type="button">2 товара</button><!--Не забудь тут иконку-->
+                    </a>
+                    <table class="table-goods-basket">
+                        <tr>
+                            <td class="reset-goods"><a href="#" class="reset-goods-basket"></a></td>
+                            <td>Пломбир с апельсиновым джемом</td>
+                            <td>1,5кг х <b>200руб</b></td>
+                            <td>300руб</td>
+                        </tr>
+                        <tr>
+                            <td class="reset-goods"><a href="#" class="reset-goods-basket"></a></td>
+                            <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                            <td>1,5кг х <b>300руб</b></td>
+                            <td>450руб</td>
+                        </tr>
+                    </table>
+                    <span class="total">Итого: 750руб</span>
+                    <a href="#">Оформить заказ</a>
+                </section>
                 <div class="header-contact">
                     <p>С 10 до 20, ежедневно</p>
                     <a href="tel:+78124502525">8 812 450-25-25</a>
