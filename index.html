@@ -9,13 +9,11 @@
         <header class="header-page">
             <div class="container">
                 <nav class="header-navigation">
-                    <a class="header-logo" href="index.html">
-                        <img src="img/logo.svg" alt="Глейси" width="154" height="64">
-                    </a>
+                    <img src="img/logo.svg" alt="Глейси" width="154" height="64">
                     <ul class="header-navigation-item">
                         <li><a href="#">Каталог</a>
                             
-                            <ul class="subparagraphs visibility-hidden">
+                            <ul class="subparagraphs">
                                 <li><a href="#" class="novelties">Новинки</a></li>
                                 <li><a href="#">Сливочное</a></li>
                                 <li><a href="#">Щербеты</a></li>
@@ -28,12 +26,12 @@
                     </ul>
                 </nav>
                 <form class="search-form" action="#" method="post">
-                    <label for="search-item" class="magnifier"></label><!--Не забудь тут иконку-->
-                    <input class="visibility-hidden" type="text" name="search" placeholder="Что ищем?" id="search-item">
+                    <label for="search-item" class="magnifier" aria-label="Поиск"></label><!--Не забудь тут иконку-->
+                    <input type="text" name="search" placeholder="Что ищем?" id="search-item">
                 </form>
                 <form class="header-login" action="#" method="get">
                     <button type="button">Вход</button><!--Не забудь тут иконку-->
-                    <div class="visibility-hidden">
+                    <div>
                         <input type="email" name="email" placeholder="Электронная почта">
                         <input type="password" name="password" placeholder="Пароль">
                         <div class="login-navigation">
@@ -45,9 +43,11 @@
                         </div>
                     </div>
                 </form>
-                <div class="empty-cart">
-                    <span>Пусто</span>
-                </div>
+                <section class="table-goods"><!--Не забудь тут иконку-->
+                    <a href="#">
+                        <button type="button">2 товара</button><!--Не забудь тут иконку-->
+                    </a>
+                </section>
                 <div class="header-contact">
                     <p>С 10 до 20, ежедневно</p>
                     <a href="tel:+78124502525">8 812 450-25-25</a>
@@ -64,20 +64,18 @@
             <section class="shares">
                 <h3 class="visibility-hidden">Акции</h3>
                 <div class="container">
-                    <article class="raspberry-banner">
+                    <article class="raspberry-banner shares-banner">
                         <h2 class="title-small">Малинка даром!</h2>
                         <p>При покупке 2&nbsp;кг любого фруктового мороженого, добавим в&nbsp;ваш
                          заказ банку малинового варенья бесплатно.</p>
                         <a class="button" href="#">Хочу варенье!</a>
                     </article>
 
-                    <article class="chocolate-banner">
+                    <article class="chocolate-banner shares-banner">
                         <h2 class="title-small">Шоколадки даром!</h2>
                         <p>При покупке 2&nbsp;кг пломбира, добавим в&nbsp;ваш заказ
                          упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-                        <p class="chocolate-button">
-                            <a class="button" href="#">Хочу шоколадки!</a>
-                        </p>
+                        <a class="button" href="#">Хочу шоколадки!</a>
                     </article>
                 </div>
             </section>
@@ -111,14 +109,10 @@
                         <article class="catalog-item">
                             <a class="hit-goods" href="#"><!--Не забудь тут иконку ХИТ-->
                                 <img class="img-goods" src="http://placehold.it/150x100" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                                <p class="price">
-                                    <b>355 ₽<span>/кг</span></b>
-                                </p>
+                                <b>355 ₽<span>/кг</span></b>
                                 <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-                            </a> 
-                            <p class="look-button">
-                                <a class="button" href="#">Быстрый просмотр</a>
-                            </p>
+                            </a>
+                            <a class="button" href="#">Быстрый просмотр</a>
                         </article>
                     </li>
 
@@ -126,44 +120,41 @@
                         <article class="catalog-item">
                             <a class="hit-goods" href="#"><!--Не забудь тут иконку ХИТ-->
                                 <img class="img-goods" src="http://placehold.it/150x100" alt="Сливочное крем-брюле с карамельной подливкой">
-                                <p class="price">
-                                    <b>415 ₽<span>/кг</span></b>
-                                </p>
+                                <b>415 ₽<span>/кг</span></b>
                                 <h3>Сливочное крем-брюле с карамельной подливкой</h3>
-                            </a> 
-                            <p class="look-button">
-                                <a class="button" href="#">Быстрый просмотр</a>
-                            </p>
+                            </a>
+                            <a class="button" href="#">Быстрый просмотр</a>
                         </article>
                     </li>
                 </ul>
             </section>
 
-            <article class="wafer-banner">
-                <div class="container">
-                    <h3 class="titel-wafer">Магазин Глейси - это онлайн магазин по продаже мороженого
-                     собственного производства на развес</h3>
+            <div class="container">
+                <article class="wafer-banner">
+                    <h3 class="titel-wafer">Магазин Глейси - это онлайн магазин по продаже мороженого 
+                        собственного производства на развес</h3>
                     <ul class="wafer-text">
                         <li class="wafer-icon-ice-cream">Все наше мороженое изготавливается на&nbsp;собственном
-                         производстве, с&nbsp;использованием современного оборудования и&nbsp;проверенных 
-                         временем технологий.</li>
+                             производстве, с&nbsp;использованием современного оборудования и&nbsp;проверенных 
+                             временем технологий.</li>
                         <li class="wafer-icon-cow">Закупка ингредиентов производится только у&nbsp;проверенных
-                         фермерских хозяйств и&nbsp;компаний, с&nbsp;которыми нас связывает долговременное
-                          сотрудничество.</li>
+                             фермерских хозяйств и&nbsp;компаний, с&nbsp;которыми нас связывает долговременное
+                              сотрудничество.</li>
                         <li class="wafer-icon-sheet">Для приготовления мороженого используется настоящие сливки
-                         и&nbsp;молоко высочайшего качества. Все дополнительные ингредиенты и&nbsp;добавки
-                          произведены из&nbsp;натурального, экологически чистого сырья.</li>
+                             и&nbsp;молоко высочайшего качества. Все дополнительные ингредиенты и&nbsp;добавки
+                              произведены из&nbsp;натурального, экологически чистого сырья.</li>
                         <li class="wafer-icon-temperature">Доставка нашего мороженого до&nbsp;заказчиков осуществляется
-                         в&nbsp;специальном термопаке, который не&nbsp;дает мороженому растаять в&nbsp;пути
-                          и&nbsp;позволяет сохранить превосходный вкус.</li>
+                             в&nbsp;специальном термопаке, который не&nbsp;дает мороженому растаять в&nbsp;пути
+                              и&nbsp;позволяет сохранить превосходный вкус.</li>
                     </ul>
-                </div>
-            </article>
+                </article>
+            </div>
+
 
             <section class="shares">
                 <div class="container">
                     <article class="blog-banner">
-                            <a href="#"><h2>10 способов сервировки фруктовых щербетов к столу</h2></a>
+                        <a href="#"><h2>10 способов сервировки фруктовых щербетов к столу</h2></a>
                     </article>
 
                     <article class="email-banner">
@@ -171,9 +162,9 @@
                             <p>Подпишитесь на&nbsp;нашу сладкую рассылку и&nbsp;будете всегда в&nbsp;курсе
                              всего самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не&nbsp;слать
                               всякой не&nbsp;нужной ерунды. Честно =)</p>
-                            <form class="form-email" action="#" method="get">
+                            <form class="form-email" action="#" method="post">
                                 <input class="bunner-user-email" type="email" name="email" placeholder="Электронная почта">
-                                <button class="button" type="submit" name="user-email">Отправить</button>
+                                <button class="button" type="submit">Отправить</button>
                             </form>
                     </article>
                 </div>
@@ -197,14 +188,14 @@
         <footer class="footer-ice-cream">
             <div class="container">
                 <ul>
-                    <li><a class="social-battom" href="#">Twitter</a></li>
-                    <li><a class="social-battom" href="#">Instagram</a></li>
-                    <li><a class="social-battom" href="#">Facebook</a></li>
-                    <li><a class="social-battom" href="#">ВКонтакте</a></li>
+                    <li><a class="social-battom" href="#" aria-label="Twitter"></a></li>
+                    <li><a class="social-battom" href="#" aria-label="Instagram"></a></li>
+                    <li><a class="social-battom" href="#" aria-label="Facebook"></a></li>
+                    <li><a class="social-battom" href="#" aria-label="ВКонтакте"></a></li>
                 </ul>
                 <p class="footer-social">
                     <ul>
-                        <li><a class="footer-navigation" href="#">Для поставщиков</a></li>
+                        <li><a class="footer-navigation for-suppliers" href="#">Для поставщиков</a></li>
                         <li><a class="footer-navigation" href="#">О производстве</a></li>
                         <li><a class="footer-navigation" href="#">Наши документы</a></li>
                         <li><a class="footer-navigation" href="#">Экологические стандарты</a></li>
@@ -214,7 +205,7 @@
                     <a class="logo-html" href="https://htmlacademy.ru">
                         <img src="https://assets.htmlacademy.ru/img/logo.v2.svg" width="161" height="55" alt="HTML Academy">
                     </a>
-                    <span>Сделано в HTML Academy &copy; 2017</span>
+                    <span>Сделано в <a href="https://assets.htmlacademy.ru/img/logo.v2.svg">HTML Academy</a> &copy; 2017</span>
                 </p>
             </div>
         </footer>
