@@ -6,6 +6,14 @@ body{
     background-color: #303030;/*Временно чтобы было видно текст*/
 }
 
+button, input, optgroup, select, textarea{
+    font: inherit;
+    line-height: 0;
+    font-family: none;
+    font-size: 0;
+    text-transform: none;
+}
+
 .title-small{
     font-size: 35px;
     line-height: 1.17;
@@ -21,33 +29,8 @@ body{
     display: none;
 }
 
-.conteiner{
-    width: 1146px;
-}
-
-.header-navigation img{
-    position: relative;
-    display: block;
-    float: left;
-    margin-top: 8px;
-}
-
-.header-navigation-item{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: left;
-    align-items: stretch;
-}
-
-.header-navigation-item li{
-    list-style: none;
-    margin-left: 27px;
-    margin-top: 30px;
-}
-
-.header-navigation-item>li{
-    position: relative;
+.header-page{
+    
 }
 
 .header-navigation-item a{
@@ -55,53 +38,41 @@ body{
     color: #ffffff;
 }
 
-.header-navigation:hover ul{
-    visibility: visible;
+.header-navigation-item li{
+    list-style: none;
 }
 
-.header-navigation-item .subparagraphs{
-    position: absolute;
-    top: 90%;
-    left: 0;
-    display: none;
-    width: 120px;
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
+.subparagraphs a{
+    text-decoration: none;
 }
 
-.header-navigation-item .subparagraphs a{
-    color: #000000;
-}
-
-.header-navigation-item>li:hover .subparagraphs{
-    display: block;
-}
-
-.search-form{
-    display: block;
-}
-
-.search-form label{
-    background-image: url("../img/search.svg");
-    background-color: #ffffff;
-    width: 30px;
-}
-
-.search-form input{
-    display: none;
+.search-form input,
+.header-login-information input{
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.71;
 }
 
 .header-login{
-    display: block;
-    float: left
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.14;
 }
 
-.header-login-form{
-    display: none;
+.login-navigation button{
+    font: inherit;
+    font-size: 18px;
+    line-height: 1.33;
 }
+
 /*
-
+Описание текстовых параметров для всех элементов:
+размер шрифта,
+высоту строки,
+цвет шрифта,
+жирность шрифта,
+гарнитура (название шрифта),
+другие текстовые параметры, если требуется по макету.
 li{
 	list-style: none;
 }
