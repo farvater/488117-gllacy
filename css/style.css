@@ -8,10 +8,6 @@ body{
 
 button, input, optgroup, select, textarea{
     font: inherit;
-    line-height: 0;
-    font-family: none;
-    font-size: 0;
-    text-transform: none;
 }
 
 .title-small{
@@ -34,11 +30,11 @@ button, input, optgroup, select, textarea{
 }
 
 .header-navigation-item a{
-    font: inherit;
     color: #ffffff;
 }
 
-.header-navigation-item li{
+.header-navigation-item li,
+.wafer-text li{
     list-style: none;
 }
 
@@ -48,23 +44,113 @@ button, input, optgroup, select, textarea{
 
 .search-form input,
 .header-login-information input{
-    font: inherit;
     font-size: 14px;
     line-height: 1.71;
 }
 
-.header-login{
-    font: inherit;
+.header-login-information{
+    background-color: #f8f7f4;
+}
+
+.header-login-information input{
+    color: #999999;
+}
+
+.header-login,
+.table-goods,
+.header-contact,
+.subparagraphs li{
     font-size: 14px;
     line-height: 1.14;
 }
 
-.login-navigation button{
-    font: inherit;
+.login-navigation button,
+.button{
     font-size: 18px;
     line-height: 1.33;
+    color: #ffffff;
+    text-decoration: none;
 }
 
+.password-check-in a{
+    font-size: 13px;
+    line-height: 1.84;
+    color: #000000;
+}
+
+.header-contact a{
+    font-size: 22px;
+    line-height: 1.09;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.shares-banner p{
+    font-size: 18px;
+    line-height: 1.22;
+}
+
+.raspberry-banner{
+    background-color: #bb3d5b;
+}
+
+.chocolate-banner {
+    background-color: #825441;
+}
+
+.catalog-list li{
+    list-style: none;
+}
+
+.hit-goods b{
+    font-size: 38px;
+    line-height: 1.18;
+    text-decoration: none;
+}
+
+.catalog-item a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hit-goods h3{
+    font: inherit;
+    text-decoration: underline;
+}
+
+.wafer-banner{
+    color: #323232;
+    background-color: #efe3ca;
+}
+
+.blog-banner{
+    font: inherit;
+    color: #323232;
+    background-color: #ffffff;
+}
+
+.blog-banner a{
+    color: #323232;
+}
+
+.email-banner{
+    background-color: #f8f7f4;
+}
+
+.form-email input{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container-address span{
+    font-size: 14px;
+    line-height: 1.42;
+    color: #303030;
+}
+
+.contacts{
+    background-color: #ffffff;
+}
 /*
 Описание текстовых параметров для всех элементов:
 размер шрифта,
