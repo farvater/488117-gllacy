@@ -1,0 +1,237 @@
+body{
+    font-size: 16px;
+    line-height: 1.37;
+    color: #ffffff;
+    font-family: "Roboto", Arial, sans-serif;
+    background-color: #303030;/*Временно чтобы было видно текст*/
+}
+
+button, input, optgroup, select, textarea{
+    font: inherit;
+}
+
+.title-small{
+    font-size: 35px;
+    line-height: 1.17;
+    font-weight: bold;
+}
+
+.titel-wafer{
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.visibility-hidden{
+    display: none;
+}
+
+.header-navigation-item a{
+    color: #ffffff;
+}
+
+.header-navigation-item li,
+.wafer-text li{
+    list-style: none;
+}
+
+.header-navigation-item a:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.header-navigation-item a:active{
+    background-color: #d16f5a;
+    color: #000000;
+}
+
+.subparagraphs a{
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.subparagraphs a:hover{
+    background-color: #fcddd9;
+    color: #000000;
+}
+
+.subparagraphs a:active{
+    background-color: #f7b5a6;
+    color: #000000;
+}
+
+.table-goods a,
+.header-login-button,
+.search-form label{
+    background-color: rgba(255,255,255,0.5);
+}
+
+.search-form input,
+.header-login-information input{
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.table-goods a,
+.header-login-button:hover,
+.search-form label:hover{
+    background-color: #f9f6f4;
+    color: #000000;
+}
+
+.header-login-information{
+    background-color: #f8f7f4;
+}
+
+.header-login-information input{
+    color: #999999;
+}
+
+.header-login,
+.table-goods,
+.header-contact,
+.subparagraphs li{
+    font-size: 14px;
+    line-height: 1.14;
+}
+
+.login-navigation button,
+.button{
+    font-size: 18px;
+    line-height: 1.33;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.password-check-in a{
+    font-size: 13px;
+    line-height: 1.84;
+    color: #000000;
+}
+
+.header-contact a{
+    font-size: 22px;
+    line-height: 1.09;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.shares-banner p{
+    font-size: 18px;
+    line-height: 1.22;
+}
+
+.raspberry-banner{
+    background-color: #bb3d5b;
+}
+
+.chocolate-banner {
+    background-color: #825441;
+}
+
+.catalog-list li{
+    list-style: none;
+}
+
+.hit-goods b{
+    font-size: 38px;
+    line-height: 1.18;
+    text-decoration: none;
+}
+
+.catalog-item a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hit-goods h3{
+    font: inherit;
+    text-decoration: underline;
+}
+
+.wafer-banner{
+    color: #323232;
+    background-color: #efe3ca;
+}
+
+.blog-banner{
+    font: inherit;
+    color: #323232;
+    background-color: #ffffff;
+}
+
+.blog-banner a{
+    color: #323232;
+}
+
+.email-banner{
+    background-color: #f8f7f4;
+}
+
+.email-banner p{
+    color: #4e4646;
+}
+
+.container-address-bold{
+    font-weight: bold;
+}
+
+.form-email input{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container-address span{
+    font-size: 14px;
+    line-height: 1.42;
+    color: #303030;
+}
+
+.contacts{
+    background-color: #ffffff;
+}
+
+.container-address a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer-ice-cream li{
+    list-style: none;
+}
+
+.footer-ice-cream a{
+    color: #ffffff;
+}
+
+.social-battom{
+    background-image: url("");
+    background-color: #ffffff;
+}
+
+
+/*
+Описание текстовых параметров для всех элементов:
+размер шрифта,
+высоту строки,
+цвет шрифта,
+жирность шрифта,
+гарнитура (название шрифта),
+другие текстовые параметры, если требуется по макету.
+li{
+	list-style: none;
+}
+
+
+
+body > * {
+	outline: 1px solid red;
+}
+
+body > * > * {
+	outline: 1px solid green;
+}
+
+body > * > * > * {
+	outline: 1px solid blue;
+}*/
