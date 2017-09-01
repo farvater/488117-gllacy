@@ -2,7 +2,9 @@
 <html lang="ru">
 	<head>
         <meta charset="utf-8">
+        <link href="css/normalize.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <title>Глейси главная</title>
     </head>
     <body>
@@ -30,11 +32,11 @@
                     <input type="text" name="search" placeholder="Что ищем?" id="search-item">
                 </form>
                 <form class="header-login" action="#" method="get">
-                    <button type="button">Вход</button><!--Не забудь тут иконку-->
-                    <div>
+                    <button class="header-login-button" type="button">Вход</button><!--Не забудь тут иконку-->
+                    <div class="header-login-information">
                         <input type="email" name="email" placeholder="Электронная почта">
                         <input type="password" name="password" placeholder="Пароль">
-                        <div class="login-navigation">
+                        <div class="header-login-navigation">
                             <button class="login-btn" type="submit" name="login">Войти</button>
                             <p class="password-check-in">
                                 <a href="#">Забыли пароль?</a>
@@ -154,6 +156,7 @@
             <section class="shares">
                 <div class="container">
                     <article class="blog-banner">
+                        <span>Новое в нашем блоге</span>
                         <a href="#"><h2>10 способов сервировки фруктовых щербетов к столу</h2></a>
                     </article>
 
@@ -175,11 +178,11 @@
                 <div class="container-address">
                     <p>
                         <span>Адрес главного офиса и<br> офлайн магазина:</span>
-                        <span>ул. Большая Конюшенная<br> 19.8, Санкт-Петербург</span>
+                        <span class="container-address-bold">ул. Большая Конюшенная<br> 19.8, Санкт-Петербург</span>
                     </p>
                     <p>
                         <span>Для заказов по телефону:</span>
-                        <a href="tel:+78124502525">8 812 450-25-25</a>
+                        <a class="container-address-bold" href="tel:+78124502525">8 812 450-25-25</a>
                         <span>(с 10 до 20 ежедневно)</span>
                     </p>
                 </div>
