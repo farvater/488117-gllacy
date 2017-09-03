@@ -3,7 +3,7 @@
 	<head>
         <meta charset="utf-8">
         <link href="css/normalize.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
+        <link href="css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <title>Глейси главная</title>
     </head>
@@ -29,17 +29,15 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">Доставка и оплата</a></li>
-                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">О Компании</a></li>
                             </ul>
                         </nav>
                         <div class="header-tools">
                             <section class="table-goods"><!--Не забудь тут иконку-->
-                                <a href="#">
-                                    <button type="button">2 товара</button><!--Не забудь тут иконку-->
-                                </a>
+                                <a class="table-goods-button" href="#">2 товара</a>
                             </section>
                             <form class="header-login" action="#" method="get">
-                                <button class="header-login-button" type="button">Вход</button><!--Не забудь тут иконку-->
+                                <a class="header-login-button" href="#">Вход</a><!--Не забудь тут иконку-->
                                 <div class="header-login-information">
                                     <input type="email" name="email" placeholder="Электронная почта">
                                     <input type="password" name="password" placeholder="Пароль">
@@ -89,30 +87,28 @@
 
                     <section class="shares">
                         <h3 class="visibility-hidden">Акции</h3>
-                        <div class="container">
-                            <article class="raspberry-banner shares-banner">
-                                <h2 class="title-small">Малинка даром!</h2>
-                                <p>При покупке 2&nbsp;кг любого фруктового мороженого, добавим в&nbsp;ваш
-                                 заказ банку малинового варенья бесплатно.</p>
-                                <a class="button" href="#">Хочу варенье!</a>
-                            </article>
+                        <article class="raspberry-banner shares-banner">
+                            <h2 class="title-small">Малинка даром!</h2>
+                            <p>При покупке 2&nbsp;кг любого фруктового мороженого, добавим в&nbsp;ваш
+                             заказ банку малинового варенья бесплатно.</p>
+                            <a class="button" href="#">Хочу варенье!</a>
+                        </article>
 
-                            <article class="chocolate-banner shares-banner">
-                                <h2 class="title-small">Шоколадки даром!</h2>
-                                <p>При покупке 2&nbsp;кг пломбира, добавим в&nbsp;ваш заказ
-                                 упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-                                <a class="button" href="#">Хочу шоколадки!</a>
-                            </article>
-                        </div>
+                        <article class="chocolate-banner shares-banner">
+                            <h2 class="title-small">Шоколадки даром!</h2>
+                            <p>При покупке 2&nbsp;кг пломбира, добавим в&nbsp;ваш заказ
+                            упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                            <a class="button" href="#">Хочу шоколадки!</a>
+                        </article>
                     </section>
 
                     <section class="catalog">
                         <h2 class="visibility-hidden">Мороженое</h2>
                         <ul class="catalog-list">
                             <li class="catalog-wrapper-item">
-                                <article class="catalog-item">
-                                    <a class="hit-goods" href="#"><!--Не забудь тут иконку ХИТ-->
-                                        <img class="img-goods" src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                                <article class="hit-goods catalog-item">
+                                    <a class="catalog-item-content" href="#">
+                                        <img class="img-goods" src="img/temp/1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                                         <b>310 ₽<span>/кг</span></b>
                                         <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
                                     </a> 
@@ -121,9 +117,9 @@
                             </li>
 
                             <li class="catalog-wrapper-item">
-                                <article class="catalog-item">
-                                    <a class="hit-goods" href="#"><!--Не забудь тут иконку ХИТ-->
-                                        <img class="img-goods" src="http://placehold.it/150x100" alt="Сливочно-кофейное с кусочками шоколада">
+                                <article class="hit-goods catalog-item">
+                                    <a class="catalog-item-content" href="#">
+                                        <img class="img-goods" src="img/temp/2.jpg" alt="Сливочно-кофейное с кусочками шоколада">
                                         <b>380 ₽<span>/кг</span></b>
                                         <h3>Сливочно-кофейное с кусочками шоколада</h3>
                                     </a> 
@@ -132,9 +128,9 @@
                             </li>
 
                             <li class="catalog-wrapper-item">
-                                <article class="catalog-item">
-                                    <a class="hit-goods" href="#"><!--Не забудь тут иконку ХИТ-->
-                                        <img class="img-goods" src="http://placehold.it/150x100" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                                <article class="hit-goods catalog-item">
+                                    <a class="catalog-item-content" href="#">
+                                        <img class="img-goods" src="img/temp/3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                                         <b>355 ₽<span>/кг</span></b>
                                         <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
                                     </a>
@@ -143,9 +139,9 @@
                             </li>
 
                             <li class="catalog-wrapper-item">
-                                <article class="catalog-item">
-                                    <a class="hit-goods" href="#"><!--Не забудь тут иконку ХИТ-->
-                                        <img class="img-goods" src="http://placehold.it/150x100" alt="Сливочное крем-брюле с карамельной подливкой">
+                                <article class="hit-goods catalog-item">
+                                    <a class="catalog-item-content" href="#">
+                                        <img class="img-goods" src="img/temp/4.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
                                         <b>415 ₽<span>/кг</span></b>
                                         <h3>Сливочное крем-брюле с карамельной подливкой</h3>
                                     </a>
@@ -155,46 +151,42 @@
                         </ul>
                     </section>
 
-                    <div class="container">
-                        <article class="wafer-banner">
-                            <h3 class="titel-wafer">Магазин Глейси - это онлайн магазин по продаже мороженого 
-                                собственного производства на развес</h3>
-                            <ul class="wafer-text">
-                                <li class="wafer-icon-ice-cream">Все наше мороженое изготавливается на&nbsp;собственном
-                                     производстве, с&nbsp;использованием современного оборудования и&nbsp;проверенных 
-                                     временем технологий.</li>
-                                <li class="wafer-icon-cow">Закупка ингредиентов производится только у&nbsp;проверенных
-                                     фермерских хозяйств и&nbsp;компаний, с&nbsp;которыми нас связывает долговременное
-                                      сотрудничество.</li>
-                                <li class="wafer-icon-sheet">Для приготовления мороженого используется настоящие сливки
-                                     и&nbsp;молоко высочайшего качества. Все дополнительные ингредиенты и&nbsp;добавки
-                                      произведены из&nbsp;натурального, экологически чистого сырья.</li>
-                                <li class="wafer-icon-temperature">Доставка нашего мороженого до&nbsp;заказчиков осуществляется
-                                     в&nbsp;специальном термопаке, который не&nbsp;дает мороженому растаять в&nbsp;пути
-                                      и&nbsp;позволяет сохранить превосходный вкус.</li>
-                            </ul>
-                        </article>
-                    </div>
-
+                    
+                    <article class="wafer-banner">
+                        <h3 class="titel-wafer">Магазин Глейси - это онлайн магазин по продаже мороженого 
+                            собственного производства на развес</h3>
+                        <ul class="wafer-text">
+                            <li class="wafer-icon-ice-cream">Все наше мороженое изготавливается на&nbsp;собственном
+                                производстве, с&nbsp;использованием современного оборудования и&nbsp;проверенных 
+                                временем технологий.</li>
+                            <li class="wafer-icon-cow">Закупка ингредиентов производится только у&nbsp;проверенных
+                                фермерских хозяйств и&nbsp;компаний, с&nbsp;которыми нас связывает долговременное
+                                сотрудничество.</li>
+                            <li class="wafer-icon-sheet">Для приготовления мороженого используется настоящие сливки
+                                и&nbsp;молоко высочайшего качества. Все дополнительные ингредиенты и&nbsp;добавки
+                                произведены из&nbsp;натурального, экологически чистого сырья.</li>
+                            <li class="wafer-icon-temperature">Доставка нашего мороженого до&nbsp;заказчиков осуществляется
+                                в&nbsp;специальном термопаке, который не&nbsp;дает мороженому растаять в&nbsp;пути
+                                и&nbsp;позволяет сохранить превосходный вкус.</li>
+                        </ul>
+                    </article>
 
                     <section class="shares">
-                        <div class="container">
-                            <article class="blog-banner">
-                                <span>Новое в нашем блоге</span>
-                                <a href="#"><h2>10 способов сервировки фруктовых щербетов к столу</h2></a>
-                            </article>
+                        <article class="blog-banner">
+                            <span>Новое в нашем блоге</span>
+                            <a href="#"><h2>10 способов сервировки фруктовых щербетов к столу</h2></a>
+                        </article>
 
-                            <article class="email-banner">
-                                <h3 class="visibility-hidden">Баннер рассылки новостей</h3>
-                                    <p>Подпишитесь на&nbsp;нашу сладкую рассылку и&nbsp;будете всегда в&nbsp;курсе
-                                     всего самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не&nbsp;слать
-                                      всякой не&nbsp;нужной ерунды. Честно =)</p>
-                                    <form class="form-email" action="#" method="post">
-                                        <input class="bunner-user-email" type="email" name="email" placeholder="Электронная почта">
-                                        <button class="button" type="submit">Отправить</button>
-                                    </form>
-                            </article>
-                        </div>
+                        <article class="email-banner">
+                            <h3 class="visibility-hidden">Баннер рассылки новостей</h3>
+                                <p>Подпишитесь на&nbsp;нашу сладкую рассылку и&nbsp;будете всегда в&nbsp;курсе
+                                    всего самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не&nbsp;слать
+                                    всякой не&nbsp;нужной ерунды. Честно =)</p>
+                                <form class="form-email" action="#" method="post">
+                                    <input class="bunner-user-email" type="email" name="email" placeholder="Электронная почта">
+                                    <button class="button" type="submit">Отправить</button>
+                                </form>
+                        </article>
                     </section>
 
                     <section class="contacts">

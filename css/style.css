@@ -1,3 +1,11 @@
+:root {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 body{
     font-size: 16px;
     line-height: 1.37;
@@ -10,10 +18,12 @@ button, input, optgroup, select, textarea{
     font: inherit;
 }
 
-.container{
-    width: 1146px;
-    align-items: center;
+.content-wrapper {
+    width: 1186px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
+
 /*шрифты основных заголовков*/
 .title-small{
     font-size: 35px;
@@ -30,13 +40,15 @@ button, input, optgroup, select, textarea{
     display: none;
 }
 
-.header-page{
+.main-header{
     display: inline-block;
     width: 100%;
+    height: 110px;
 }
 
 .header-navigation img{
     float: left;
+    margin-top: 10px;
 }
 
 .header-navigation-item{
@@ -46,9 +58,9 @@ button, input, optgroup, select, textarea{
     flex-wrap: wrap;
     float: left;
     justify-content: space-between;
-    width: 350px;
-    padding-top: 18px;
-    padding-left: 22px;
+    width: 374px;
+    padding-top: 29px;
+    padding-left: 23px;
 }
 
 .header-navigation-item a{
@@ -61,8 +73,13 @@ button, input, optgroup, select, textarea{
 }
 
 .header-navigation-item a:hover{
+    font: inherit;
     background-color: #ffffff;
     color: #000000;
+    padding: 7px 14px;
+    border-radius: 35px;
+    text-decoration: none;
+    line-height: 1.125;
 }
 
 .header-navigation-item a:active{
@@ -72,10 +89,11 @@ button, input, optgroup, select, textarea{
 
 .subparagraphs{
     display: none;
+    padding: 12px 20px;
+    position: absolute;
 }
 
-li:hover~.subparagraphs{
-    position: absolute;
+.header-navigation-item li:hover .subparagraphs{
     display: block;
 }
 
@@ -102,23 +120,24 @@ li:hover~.subparagraphs{
     flex-wrap: wrap;
     justify-content: space-between;
     float: right;
-
+    margin-top: 23px;
 }
 /*Вход форма*/
 .header-login{
-    
+    margin-top: 10px;
 }
-
+/*Поиск форма*/
 .search-form{
-    padding-top: 15px;
+    margin-right: -43px;
+    margin-top: 1px;
 }
 
 .search-form label{
    background-image: url("../img/search.svg");
    background-repeat: no-repeat;
    background-position: 50% 50%;
-   width: 30px;
-   height: 30px;
+   width: 33px;
+   height: 33px;
    display: inline-block;
    border-radius: 50%;
 }
@@ -126,14 +145,7 @@ li:hover~.subparagraphs{
 .search-form input{
     display: none;
 }
-
-.search-form label:hover~input{
-    display: block;
-    position: absolute;
-}
-
-.catalog-list li:hover,
-.table-goods a,
+/*Серый фон прозрачный на кнопках*/
 .header-login-button,
 .search-form label{
     background-color: rgba(255,255,255,0.5);
@@ -144,12 +156,20 @@ li:hover~.subparagraphs{
     font-size: 14px;
     line-height: 1.71;
 }
+/*Кнопка Вход*/
+.header-login{
+    width: 96px;
+    height: 32px;
+}
 
-.table-goods a:hover,
-.header-login-button:hover,
-.search-form label:hover{
-    background-color: #f9f6f4;
-    color: #000000;
+.header-login-button{
+    text-decoration: none;
+    color: #ffffff;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 40px;
+    padding-right: 20px;
+    border-radius: 35px;
 }
 
 .header-login-information{
@@ -159,7 +179,7 @@ li:hover~.subparagraphs{
     display: none;
 }
 
-.header-login-button:hover~.header-login-information{
+.header-login-button a:hover~.header-login-information {
     display: block;
 }
 
@@ -189,8 +209,17 @@ li:hover~.subparagraphs{
     color: #000000;
 }
 /*Корзина*/
-.table-goods{
-    
+.table-goods a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+section.table-goods{
+    width: 117px;
+    height: 32px;
+    border-radius: 35px;
+    margin-top: 1px;
+    margin-left: -49px;
 }
 /*Контакты в хэдере*/
 .header-contact a{
@@ -218,22 +247,16 @@ body > input[type="radio"] {
 }
 
 .site-wrapper::before {
-    background-image: url("..//img/background-slider-grey.jpg");
+    background-image: url("../img/background-slider-grey.jpg");
 }
 
 .site-wrapper::after {
-    background-image: url("..//img/background-slider-brown.jpg");
-}
-
-.content-wrapper {
-    width: 1146px;
-    margin: 0 auto;
-    padding: 0 20px;
+    background-image: url("../img/background-slider-brown.jpg");
 }
 
 .slider {
     position: relative;
-    padding-top: 270px;
+    padding-top: 204px;
     text-align: center;
     color: #ffffff;
 }
@@ -248,6 +271,7 @@ body > input[type="radio"] {
     margin-bottom: 30px;
     font-weight: 800;
     font-size: 60px;
+    line-height: 1.005;
 }
 
 .slide-btn {
@@ -309,22 +333,22 @@ body > input[type="radio"] {
 #btn-2:checked ~ .site-wrapper #slide2,
 #btn-3:checked ~ .site-wrapper #slide3 {
     display: block;
-    padding-top: 193px;
+    padding-top: 74px;
 }
 
 #btn-1:checked ~ .site-wrapper {
     background-color: #849d8f;
-    background-image: url("..//img/background-slider-pistachio.jpg");
+    background-image: url("../img/background-slider-pistachio.jpg");
 }
 
 #btn-2:checked ~ .site-wrapper {
     background-color: #8996a6;
-    background-image: url("..//img/background-slider-grey.jpg");
+    background-image: url("../img/background-slider-grey.jpg");
 }
 
 #btn-3:checked ~ .site-wrapper {
     background-color: #9d8b84;
-    background-image: url("..//img/background-slider-brown.jpg");
+    background-image: url("../img/background-slider-brown.jpg");
 }
 
 #btn-1:checked ~ .site-wrapper label[for="btn-1"],
@@ -332,71 +356,215 @@ body > input[type="radio"] {
 #btn-3:checked ~ .site-wrapper label[for="btn-3"] {
     background-color: #ffffff;
 }
-/*-------------------------------------------------*/
+/*--------------Банеры-----------------------------------*/
+.shares{
+    padding: 0;
+    margin: 0;
+    margin-top: 38px;
+    display: inline-flex;
+}
+
+.shares-banner{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;  
+    border-radius: 15px;
+    width: 49%;
+}
+
 .shares-banner p{
     font-size: 18px;
     line-height: 1.22;
+    padding-left: 19px;
+}
+
+.shares-banner h2{
+    margin: 0;
+    padding-top: 16px;
+    padding-left: 19px;
+}
+
+.shares-banner a{
+    align-self: flex-end;
+    margin: auto;
+    margin-bottom: 21px;
+    margin-top: 23px;
+    margin-right: 22px;
 }
 
 .raspberry-banner{
+    background-image: url("../img/raspberries.jpg");
     background-color: #bb3d5b;
 }
 
 .chocolate-banner {
+    background-image: url("../img/chocolate.jpg");
     background-color: #825441;
+    margin-left: auto;
+}
+/*---------------Кнопка на банере---------------------------------------*/
+.button {
+    display: inline-block;
+    padding: 12px 23px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.33;
+    vertical-align: top;
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+    background: #f26843;
+    background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+    background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+    background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+    border-radius: 100px;
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
+.button:hover {
+    background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+    background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+    background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.button:active {
+    background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+    background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+    background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+    box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+/*-------------Каталог---------------------------------*/
 .catalog-list{
     display: flex;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
+    justify-content: space-between;
 }
 
-.catalog-wrapper-item{
-    width: 200px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+.catalog-wrapper-item{  
+    width: 23%;
+    margin-top: 40px;
+    display: flex;
 }
 
 .catalog-list li{
     list-style: none;
 }
 
-.hit-goods b{
+.img-goods{
+    border-radius: 50%;
+}
+
+.catalog-item-content{
     position: relative;
-    font-size: 38px;
-    line-height: 1.18;
-    text-decoration: none;
+}
+
+.catalog-item-content b{
+    font-size: 45px;
+    line-height: 1;
+    position: absolute;
+    z-index: 51;
+    left: 0;
+    top: -40px;
+}
+
+.catalog-item-content span{
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+.catalog-item-content h3{
+    font-size: 16px;
+    line-height: 1.35;
+    margin-top: 10px;
 }
 
 .catalog-item a{
     color: #ffffff;
-    text-decoration: none;
+    text-align: center;
 }
 
-.hit-goods h3{
-    font: inherit;
-    text-decoration: underline;
+.catalog-item .button{
+    margin-left: 25px;
+    display: none;
 }
 
-.wafer-banner{
+.hit-goods{
+    position: relative;
+}
+
+.hit-goods::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 61px;
+    height: 61px;
+    background-color: inherit;
+    background-image: url("../img/hit.svg");
+    z-index: 50;
+}
+
+.catalog-item{
+    position: relative;
+}
+
+.catalog-item a:hover::before{
+    content: "";
+    position: absolute;
+    z-index: 55;
+
+}
+
+.catalog-item:hover .button{
+   display: block;
+   
+}
+
+/*-------------Банер с вафелькой----------------------------------*/
+.wafer-banner{ 
+    padding-left: 23px;
     color: #323232;
+    background-image: url("../img/wafer.jpg");
     background-color: #efe3ca;
+    border-radius: 15px;   
 }
 
+.wafer-text{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*-------------Банер с новостью----------------------------------*/
 .blog-banner{
     font: inherit;
     color: #323232;
     background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+    width: 560px;
+    display: inline-block;
+    border-radius: 15px;
 }
 
 .blog-banner a{
     color: #323232;
 }
-
+/*-------------Банер с подпиской----------------------------------*/
 .email-banner{
     background-color: #f8f7f4;
+    padding: 0;
+    margin: 0;
+    width: 560px;
+    display: inline-block;
+    border-radius: 15px;
+    margin-left: 22px;
+    border-color: rgba(172, 16, 0, 1);
 }
 
 .email-banner p{
@@ -411,6 +579,13 @@ body > input[type="radio"] {
     font-size: 16px;
     line-height: 1.5;
 }
+/*-----------------------Карта------------------------------------------*/
+.container-address{
+    width: 305px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    float: right;
+}
 
 .container-address span{
     font-size: 14px;
@@ -418,8 +593,11 @@ body > input[type="radio"] {
     color: #303030;
 }
 
-.contacts{
+section .contacts{
+    width: 100%;
+    height: 423px;
     background-color: #ffffff;
+    background-image: url("../img/map.png");
 }
 
 .container-address a{
