@@ -51,20 +51,28 @@ button, input, optgroup, select, textarea{
     margin-top: 10px;
 }
 
-.header-navigation-item{
+.header-navigation-items{
     display: flex;
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
     float: left;
     justify-content: space-between;
-    width: 374px;
+    width: 387px;
     padding-top: 29px;
-    padding-left: 23px;
+    padding-left: 9px;
 }
 
-.header-navigation-item a{
+.header-navigation-item>a{
     color: #ffffff;
+    padding: 7px 14px;
+    
+}
+
+.header-navigation-items>li{
+    display: inline-block; 
+    position: relative; 
+    z-index: 1; 
 }
 
 .header-navigation-item li,
@@ -72,45 +80,73 @@ button, input, optgroup, select, textarea{
     list-style: none;
 }
 
-.header-navigation-item a:hover{
+.header-navigation-items a:hover{
     font: inherit;
     background-color: #ffffff;
     color: #000000;
-    padding: 7px 14px;
     border-radius: 35px;
     text-decoration: none;
     line-height: 1.125;
 }
 
-.header-navigation-item a:active{
+.header-navigation-container{
+    display: none;
+    position: absolute;
+    padding-top: 12px;
+    top: 22px;
+    left: -11px;
+}
+
+.header-navigation-items a:active{
     background-color: #d16f5a;
-    color: #000000;
+    color: #ffffff;
+    border-radius: 35px;
+    text-decoration: none;
+    line-height: 1.125;
 }
 
 .subparagraphs{
-    display: none;
-    padding: 12px 20px;
-    position: absolute;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
 }
 
-.header-navigation-item li:hover .subparagraphs{
-    display: block;
+.subparagraphs li:first-child{
+    border-bottom: 1px solid grey;
+    font-weight: bold;
+}
+
+
+.header-navigation-items li:hover .header-navigation-container{
+    display: inline-block;
 }
 
 .subparagraphs a{
+    display: block;
     text-decoration: none;
-    background-color: #ffffff;
     color: #000000;
+    padding: 10px 20px;
+    white-space: nowrap;
+    margin-left: -5px;
+    margin-right: -5px;
 }
 
 .subparagraphs a:hover{
-    background-color: #fcddd9;
+    background-color: #fbded7;
     color: #000000;
+    border-radius: 0;
 }
 
 .subparagraphs a:active{
+    background-color: #f6b5a5;
+    color: #000000;
+    border-radius: 0;
+}
+
+.subparagraphs a:visited{
     background-color: #f7b5a6;
     color: #000000;
+    border-radius: 0;
 }
 
 .header-tools{
@@ -126,10 +162,12 @@ button, input, optgroup, select, textarea{
 .header-login{
     margin-top: 10px;
 }
-/*Поиск форма*/
+/*-------------Поиск форма--------------------*/
 .search-form{
     margin-right: -43px;
     margin-top: 1px;
+    z-index: 1;
+    position: relative;
 }
 
 .search-form label{
@@ -142,12 +180,40 @@ button, input, optgroup, select, textarea{
    border-radius: 50%;
 }
 
-.search-form input{
-    display: none;
+.search-form label:hover{
+    background-color: #f8f7f4; 
+    cursor: pointer;   
 }
-/*Серый фон прозрачный на кнопках*/
+
+.search-container{
+    display: none;
+    padding: 20px 15px;
+    background-color: #f8f7f4; 
+    border-radius: 5px;
+    width: 340px;
+}
+
+.search-form:hover>.search-container{
+    display: block;
+    position: absolute; 
+    top: 37px;
+    left: -307px;
+}
+
+.search-form input{
+    border: solid #ffffff;
+    border-radius: 5px;
+    width: 100%;
+    padding: 6px;
+}
+
+.search-form input:placeholder{
+    color: #b4b4b4;
+}
+/*--------------Серый фон прозрачный на кнопках-------------------*/
 .header-login-button,
-.search-form label{
+.search-form label,
+.table-goods-button{
     background-color: rgba(255,255,255,0.5);
 }
 
@@ -156,35 +222,72 @@ button, input, optgroup, select, textarea{
     font-size: 14px;
     line-height: 1.71;
 }
-/*Кнопка Вход*/
+/*---------------Кнопка Вход-----------------------------*/
 .header-login{
     width: 96px;
     height: 32px;
+    position: relative;
+}
+
+.header-login-icon{
+    background-image: url("../img/login.svg");
+    background-repeat: no-repeat;
+    background-position: 15px 7px;
+    position: relative;
+    z-index: 2;
 }
 
 .header-login-button{
     text-decoration: none;
     color: #ffffff;
-    padding-top: 7px;
+    padding-top: 8px;
     padding-bottom: 7px;
-    padding-left: 40px;
-    padding-right: 20px;
+    padding-left: 44px;
+    padding-right: 15px;
     border-radius: 35px;
+    margin-left: 23px;
 }
 
 .header-login-information{
-    position: absolute;
     background-color: #f8f7f4;
-    width: 300px;
     display: none;
+    padding: 20px;
+    border-radius: 5px;
+    width: 277px;
+    padding-bottom: 7px;
+    z-index: 1;
 }
 
-.header-login-button a:hover~.header-login-information {
+.header-login:hover>.header-login-information {
     display: block;
+    position: absolute; 
+    top: 29px;
+    left: -184px;
 }
 
-.header-login-information input{
+.header-login-information input[type="email"],
+.header-login-information input[type="password"]{
     color: #999999;
+    display: block;
+    border: solid #ffffff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-bottom: 7px;
+}
+
+.header-login-navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.password-check-in{
+    display: grid;
+    margin-top: -4px;
 }
 
 .header-login,
@@ -203,30 +306,59 @@ button, input, optgroup, select, textarea{
     text-decoration: none;
 }
 
+.login-btn{
+    background-color: #e84d37;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 35px;
+    padding: 13px 25px;
+    margin-top: -2px;
+    color: #ffffff;
+    font-size: 18px;
+    display: inline-block;
+    width: 100px;
+}
+
 .password-check-in a{
     font-size: 13px;
     line-height: 1.84;
     color: #000000;
 }
-/*Корзина*/
+/*------------------------Корзина----------------------------*/
 .table-goods a{
     text-decoration: none;
     color: #ffffff;
 }
 
-section.table-goods{
-    width: 117px;
-    height: 32px;
+.table-goods-button{
+    display: inline-block;
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 45px;
+    padding-right: 34px;
     border-radius: 35px;
-    margin-top: 1px;
-    margin-left: -49px;
 }
-/*Контакты в хэдере*/
+
+.table-goods-icon{
+    background-image: url("../img/basket.svg");
+    background-repeat: no-repeat;
+    background-position: 15px 7px;
+    position: relative;
+    z-index: 2;
+}
+/*-------------------Контакты в хэдере------------------------*/
 .header-contact a{
     font-size: 22px;
     line-height: 1.09;
     text-decoration: none;
     color: #ffffff;
+}
+.header-contact p{
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 8px;
 }
 /*-------------------------------------------------*/
 body > input[type="radio"] {
@@ -446,6 +578,11 @@ body > input[type="radio"] {
     justify-content: space-between;
 }
 
+
+.content{
+    padding: 
+}
+
 .catalog-wrapper-item{  
     width: 23%;
     margin-top: 40px;
@@ -523,7 +660,7 @@ body > input[type="radio"] {
 
 .catalog-item:hover .button{
    display: block;
-   
+   position: absolute;
 }
 
 /*-------------Банер с вафелькой----------------------------------*/
