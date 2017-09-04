@@ -31,10 +31,7 @@ button, input, optgroup, select, textarea{
     font-weight: bold;
 }
 
-.titel-wafer{
-    font-size: 24px;
-    line-height: 1.25;
-}
+
 /*--------------------------*/
 .visibility-hidden{
     display: none;
@@ -139,12 +136,6 @@ button, input, optgroup, select, textarea{
 
 .subparagraphs a:active{
     background-color: #f6b5a5;
-    color: #000000;
-    border-radius: 0;
-}
-
-.subparagraphs a:visited{
-    background-color: #f7b5a6;
     color: #000000;
     border-radius: 0;
 }
@@ -578,11 +569,6 @@ body > input[type="radio"] {
     justify-content: space-between;
 }
 
-
-.content{
-    padding: 
-}
-
 .catalog-wrapper-item{  
     width: 23%;
     margin-top: 40px;
@@ -649,8 +635,24 @@ body > input[type="radio"] {
 
 .catalog-item{
     position: relative;
+    z-index: 0;
 }
 
+.catalog-item:hover::after{
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    right: -5px;
+    bottom: -50px;
+    background-color: rgba(255,255,255,0.5);
+    z-index: -1;
+}
+
+.catalog-item a{
+    color: #ffffff;
+    text-align: center;
+}
 .catalog-item a:hover::before{
     content: "";
     position: absolute;
@@ -665,7 +667,7 @@ body > input[type="radio"] {
 
 /*-------------Банер с вафелькой----------------------------------*/
 .wafer-banner{ 
-    padding-left: 23px;
+    padding-left: 18px;
     color: #323232;
     background-image: url("../img/wafer.jpg");
     background-color: #efe3ca;
@@ -675,8 +677,35 @@ body > input[type="radio"] {
 .wafer-text{
     display: flex;
     flex-wrap: wrap;
+    padding-left: 0;
 }
 
+.wafer-text li::before{
+    content: "";
+    background-image: url("../img/advantages-ice-cream.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+}
+
+.wafer-text li{
+    display: inline-block;
+    width: 50%;
+    position: relative;
+    padding-left: 57px;
+}
+
+.titel-wafer{
+    font-size: 24px;
+    line-height: 1.25;
+    color: #ffffff;
+    padding-top: 23px;
+}
 /*-------------Банер с новостью----------------------------------*/
 .blog-banner{
     font: inherit;
@@ -730,9 +759,8 @@ body > input[type="radio"] {
     color: #303030;
 }
 
-section .contacts{
+.contacts{
     width: 100%;
-    height: 423px;
     background-color: #ffffff;
     background-image: url("../img/map.png");
 }
