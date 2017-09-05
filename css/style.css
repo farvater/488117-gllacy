@@ -12,13 +12,18 @@ body{
     color: #ffffff;
     font-family: "Roboto", Arial, sans-serif;
     background-color: #303030;/*Временно чтобы было видно текст*/
+    min-width: 1200px;
 }
 
 button, input, optgroup, select, textarea{
     font: inherit;
 }
 
-.content-wrapper {
+a:hover{
+    transition:background-color  0.2s linear;
+}
+
+.container{
     width: 1186px;
     margin: 0 auto;
     padding: 0 20px;
@@ -116,6 +121,7 @@ button, input, optgroup, select, textarea{
 
 .header-navigation-items li:hover .header-navigation-container{
     display: inline-block;
+    transition: visibility 0.2 linear;
 }
 
 .subparagraphs a{
@@ -148,10 +154,6 @@ button, input, optgroup, select, textarea{
     justify-content: space-between;
     float: right;
     margin-top: 23px;
-}
-/*Вход форма*/
-.header-login{
-    margin-top: 10px;
 }
 /*-------------Поиск форма--------------------*/
 .search-form{
@@ -215,9 +217,13 @@ button, input, optgroup, select, textarea{
 }
 /*---------------Кнопка Вход-----------------------------*/
 .header-login{
-    width: 96px;
-    height: 32px;
     position: relative;
+    left: 24px;
+    top: 10px;
+}
+
+.header-login a:hover{
+    background-color: #f8f7f4; 
 }
 
 .header-login-icon{
@@ -236,7 +242,6 @@ button, input, optgroup, select, textarea{
     padding-left: 44px;
     padding-right: 15px;
     border-radius: 35px;
-    margin-left: 23px;
 }
 
 .header-login-information{
@@ -318,8 +323,17 @@ button, input, optgroup, select, textarea{
 }
 /*------------------------Корзина----------------------------*/
 .table-goods a{
+    position: relative;
+    top: 2px;
+}
+
+.table-goods a{
     text-decoration: none;
     color: #ffffff;
+}
+
+.table-goods a:hover{
+    background-color: #f8f7f4; 
 }
 
 .table-goods-button{
@@ -485,8 +499,10 @@ body > input[type="radio"] {
     margin: 0;
     margin-top: 38px;
     display: inline-flex;
+    justify-content: space-between;
 }
 
+.news-banner,
 .shares-banner{
     display: flex;
     flex-direction: column;
@@ -604,7 +620,7 @@ body > input[type="radio"] {
 .catalog-item-content h3{
     font-size: 16px;
     line-height: 1.35;
-    margin-top: 10px;
+    margin-top: 3px;
 }
 
 .catalog-item a{
@@ -613,8 +629,13 @@ body > input[type="radio"] {
 }
 
 .catalog-item .button{
-    margin-left: 25px;
     display: none;
+    position: absolute;
+    padding: 9px 14px;
+    top: 100%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
 }
 
 .hit-goods{
@@ -641,11 +662,12 @@ body > input[type="radio"] {
 .catalog-item:hover::after{
     content: "";
     position: absolute;
-    left: -5px;
-    top: -5px;
-    right: -5px;
-    bottom: -50px;
+    left: -13px;
+    top: -6px;
+    right: -13px;
+    bottom: -65px;
     background-color: rgba(255,255,255,0.5);
+    border-radius: 5px;
     z-index: -1;
 }
 
@@ -662,7 +684,6 @@ body > input[type="radio"] {
 
 .catalog-item:hover .button{
    display: block;
-   position: absolute;
 }
 
 /*-------------Банер с вафелькой----------------------------------*/
@@ -690,84 +711,221 @@ body > input[type="radio"] {
     height: 50px;
     background-size: cover;
     position: absolute;
-    left: 0;
+    left: 2px;
+    top: -14px;
+}
+
+.wafer-text li:nth-child(2)::before{
+    content: "";
+    background-image: url("../img/advantages-cow.svg");
+}
+
+.wafer-text li:nth-child(3)::before{
+    content: "";
+    background-image: url("../img/advantages-sheet.svg");
+}
+
+.wafer-text li:nth-child(4)::before{
+    content: "";
+    background-image: url("../img/advantages-thermometer.svg");
 }
 
 .wafer-text li{
     display: inline-block;
     width: 50%;
     position: relative;
-    padding-left: 57px;
+    padding-left: 59px;
+    padding-bottom: 22px;
 }
 
 .titel-wafer{
     font-size: 24px;
     line-height: 1.25;
-    color: #ffffff;
     padding-top: 23px;
 }
 /*-------------Банер с новостью----------------------------------*/
+.news-banner{
+    color: #000000;
+    position: relative;
+    top: -12px;
+}
+
 .blog-banner{
-    font: inherit;
-    color: #323232;
+    background-image: url("../img/strawberry.jpg");
     background-color: #ffffff;
-    padding: 0;
-    margin: 0;
-    width: 560px;
-    display: inline-block;
-    border-radius: 15px;
 }
 
 .blog-banner a{
     color: #323232;
+    width: 56%;
+    position: relative;
+    top: -17px;
+    left: -2px;
+    padding-left: 23px;
+    padding-bottom: 37px;
+}
+
+.blog-banner span{
+    padding-left: 21px;
+    padding-top: 23px;
 }
 /*-------------Банер с подпиской----------------------------------*/
-.email-banner{
-    background-color: #f8f7f4;
-    padding: 0;
-    margin: 0;
-    width: 560px;
-    display: inline-block;
+.email-banner::before{
+    content: "";
+    background-image: repeating-linear-gradient(135deg, #ffffff 2%, #92cdff 2%, #92cdff 3%, #ffffff 3%, #ffffff 4%, #fe9e90 4%, #fe9e90 5%, #ffffff 5%, #ffffff 6%);
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    position: absolute;
     border-radius: 15px;
-    margin-left: 22px;
-    border-color: rgba(172, 16, 0, 1);
+}
+
+.email-banner::after{
+    content: "";
+    background-color: #f8f7f4;
+    width: 548px;
+    height: 209px;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    position: absolute;
+    border-radius: 15px;
+    margin: 7px;
 }
 
 .email-banner p{
     color: #4e4646;
+    padding-top: 10px;
+    padding-left: 20px;
 }
 
-.container-address-bold{
-    font-weight: bold;
+.email-banner-background{
+    z-index: 3;
+    padding-right: 3px;
+    padding-left: 7px;
+    padding-top: 7px;
+}
+
+.form-email{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 34px;
 }
 
 .form-email input{
     font-size: 16px;
     line-height: 1.5;
+    border: solid #ffffff;
+    border-radius: 5px;
+    padding: 6px;
+    position: relative;
+    width: 70%;
+}
+
+.form-email button{
+    background-color: #e84d37;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 35px;
+    color: #ffffff;
+    font-size: 18px;
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 19px;
+    padding-right: 19px;
+    font-weight: bold;
 }
 /*-----------------------Карта------------------------------------------*/
+.contacts{
+    position: relative;
+    top: 27px;
+}
+
 .container-address{
     width: 305px;
     background-color: #ffffff;
     border-radius: 15px;
-    float: right;
+    position: absolute;
+    top: 63px;
+    right: 377px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
 }
 
-.container-address span{
+.container-address span:first-child{
     font-size: 14px;
-    line-height: 1.42;
+    line-height: 1.46;
     color: #303030;
 }
 
-.contacts{
-    width: 100%;
+.contacts-map{
+    position: relative;
+    z-index: 2;
+    border: none;
     background-color: #ffffff;
-    background-image: url("../img/map.png");
+}
+
+.container-address p:first-child{
+    padding-top: 10px;
+    padding-left: 27px;
+}
+
+.container-address p:last-child{
+    padding-left: 27px;
+}
+
+.container-address p:last-child a{
+    display: block;
 }
 
 .container-address a{
     color: #000000;
     text-decoration: none;
+}
+
+.container-address span{
+    display: inline-block;
+}
+
+.container-address-bold{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.56;
+    color: #303030;
+    padding-top: 2px;
+    display: block;
+}
+
+.container-address button{
+    background-color: #e84d37;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 35px;
+    color: #ffffff;
+    font-size: 18px;
+    display: inline-block;
+    position: relative;
+    top: 31px;
+    left: 27px;
+    padding-top: 7px;
+    padding-bottom: 14px;
+    padding-left: 28px;
+    padding-right: 23px;
+    font-weight: bold;
+}
+/*---------Футер------------------------------------*/
+.footer-ice-cream{
+    display: flex;
 }
 
 .footer-ice-cream li{
@@ -778,12 +936,104 @@ body > input[type="radio"] {
     color: #ffffff;
 }
 
-.social-battom{
-    background-image: url("");
-    background-color: #ffffff;
+.social-battom-menu li{
+    position: relative;
 }
 
+.social-battom-menu a{
+    width: 36px;
+    height: 36px;
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: 3px solid rgba(255,255,255,0.5);
+    border-radius: 50%;
+}
 
+.twitter{
+    background-image: url("../img/social-twitter.svg");
+    position: relative;
+    left: -38px;
+    top: 1px;
+}
+
+.instagram{
+    background-image: url("../img/social-instagram.svg");
+    position: relative;
+    left: 13px;
+    top: 1px;
+}
+
+.facebook{
+    background-image: url("../img/social-facebook.svg");
+    position: relative;
+    left: 62px;
+    top: 1px;
+}
+
+.vkontakte{
+    background-image: url("../img/social-vk.svg");
+    position: relative;
+    left: 110px;
+    top: 1px;
+}
+
+.social-battom-menu{
+    display: flex;
+    width: 186px;
+    position: relative;
+    height: 40px;
+    top: 40px;
+    left: -3px;
+}
+/*------------Ссылки в футере---------------*/
+.footer-item{
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    position: relative;
+    padding: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 22px;
+    padding-right: 43px;
+    top: -21px;
+}
+
+.footer-item li{
+    display: inline-block;
+    width: 50%;
+    position: relative;
+    padding: 0;
+}
+
+.footer-navigation{
+    font-size: 14px;
+    line-height: 1.56;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.for-suppliers:before{
+    content: "";
+    position: absolute;
+    background-image: url("../img/heart.svg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    left: -21px;
+    top: 6px;
+}
+
+.logo-html-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 253px;
+    left: 83%;
+    top: -47%;
+}
 /*
 Описание текстовых параметров для всех элементов:
 размер шрифта,
