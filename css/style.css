@@ -63,12 +63,13 @@ a:hover{
     width: 387px;
     padding-top: 29px;
     padding-left: 9px;
+    line-height: 1.125;
+    font-weight: bold;
 }
 
 .header-navigation-item>a{
     color: #ffffff;
     padding: 7px 14px;
-    
 }
 
 .header-navigation-items>li{
@@ -111,6 +112,7 @@ a:hover{
     padding: 5px;
     background-color: #ffffff;
     border-radius: 5px;
+    font-weight: normal;
 }
 
 .subparagraphs li:first-child{
@@ -279,11 +281,14 @@ a:hover{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    line-height: 1.33;
+    font-weight: bold;
 }
 
 .password-check-in{
     display: grid;
     margin-top: -4px;
+    font-weight: normal;
 }
 
 .header-login,
@@ -354,6 +359,10 @@ a:hover{
     z-index: 2;
 }
 /*-------------------Контакты в хэдере------------------------*/
+.header-contact{
+    font-weight: bold;
+}
+
 .header-contact a{
     font-size: 22px;
     line-height: 1.09;
@@ -406,7 +415,7 @@ body > input[type="radio"] {
     width: 700px;
     margin: 0 auto;
     margin-bottom: 30px;
-    font-weight: 800;
+    font-weight: bold;
     font-size: 60px;
     line-height: 1.005;
 }
@@ -415,9 +424,9 @@ body > input[type="radio"] {
     display: inline-block;
     padding: 12px 50px;
 
-    font-weight: 600;
-    font-size: 31px;
-    line-height: 41px;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1,375;
     vertical-align: top;
     color: #ffffff;
     text-decoration: none;
@@ -516,6 +525,7 @@ body > input[type="radio"] {
     font-size: 18px;
     line-height: 1.22;
     padding-left: 19px;
+    font-weight: bold;
 }
 
 .shares-banner h2{
@@ -610,17 +620,20 @@ body > input[type="radio"] {
     z-index: 51;
     left: 0;
     top: -40px;
+    font-weight: normal;
 }
 
 .catalog-item-content span{
     font-size: 30px;
     line-height: 1.5;
+    font-weight: normal;
 }
 
 .catalog-item-content h3{
     font-size: 16px;
     line-height: 1.35;
     margin-top: 3px;
+    font-weight: normal;
 }
 
 .catalog-item a{
@@ -742,6 +755,7 @@ body > input[type="radio"] {
     font-size: 24px;
     line-height: 1.25;
     padding-top: 23px;
+    font-weight: normal;
 }
 /*-------------Банер с новостью----------------------------------*/
 .news-banner{
@@ -762,7 +776,8 @@ body > input[type="radio"] {
     top: -17px;
     left: -2px;
     padding-left: 23px;
-    padding-bottom: 37px;
+    padding-bottom: 40px;
+    line-height: 1.25;
 }
 
 .blog-banner span{
@@ -786,14 +801,13 @@ body > input[type="radio"] {
 .email-banner::after{
     content: "";
     background-color: #f8f7f4;
-    width: 548px;
-    height: 209px;
+    width: 550px;
+    height: 210px;
     z-index: 2;
-    right: 0;
-    top: 0;
+    right: 6px;
+    top: 5px;
     position: absolute;
     border-radius: 15px;
-    margin: 7px;
 }
 
 .email-banner p{
@@ -1006,6 +1020,9 @@ body > input[type="radio"] {
     width: 50%;
     position: relative;
     padding: 0;
+    font-size: 13px;
+    line-height: 1.384;
+    font-weight: bold;
 }
 
 .footer-navigation{
@@ -1033,7 +1050,101 @@ body > input[type="radio"] {
     width: 253px;
     left: 83%;
     top: -47%;
+    font-size: 12px;
+    line-height: 1.5;
 }
+
+.popup{
+    height: 440px;
+    width: 480px;
+    position: absolute;
+    display: flex;
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    background-color: #f8f7f4;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    padding-left: 23px;
+    padding-right: 25px;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.popup h2::before{
+    content: "";
+    background-image: url("../img/cross.svg");
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popup h2{
+    padding: 0;
+    margin: 0;
+    color: #000000;
+}
+
+.popup input[name="email"],
+.popup input[name="name"]{
+    border-radius: 5px;
+    border: 1px solid rgb(178, 178, 178);
+    opacity: 0.52;
+    padding: 15px 13px;
+    margin-top: 20px;
+    width: 70%;
+}
+
+.popup input[name="accost"]{
+    border-radius: 5px;
+    border: 1px solid rgb(178, 178, 178);
+    opacity: 0.52;
+    padding: 15px 13px 100px 13px;
+    margin-top: 20px;
+}
+
+.push-btn{
+    background-color: #e84d37;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 35px;
+    color: #ffffff;
+    font-size: 18px;
+    display: inline-block;
+    width: 138px;
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    padding: 10px 23px;
+}
+
+.modal-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: -15px;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    background-image: url("../img/cross.svg");
+    border: 0;
+    cursor: pointer;
+}
+
+.popup-window{
+
+}
+
+
 /*
 Описание текстовых параметров для всех элементов:
 размер шрифта,
