@@ -13,11 +13,17 @@ body{
     font-family: "Roboto", Arial, sans-serif;
     background-color: #303030;/*Временно чтобы было видно текст*/
     min-width: 1200px;
+    background-color: #849d8f;
+}
+
+body > input[type="radio"] {
+    display: none;
 }
 
 button, input, optgroup, select, textarea{
     font: inherit;
 }
+
 
 a:hover{
     transition:background-color  0.2s linear;
@@ -36,7 +42,29 @@ a:hover{
     font-weight: bold;
 }
 
+/*------------------Оформление кнопок-----------------------*/
+.btn{
+    background-color: #e84d37;
+    box-shadow: 0 3px 1px -1px rgba(0, 0, 0, .6);
+    background-image: linear-gradient(#f26743, #e74c36);
+    border: none;
+    border-radius: 35px;
+    padding: 13px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76)
+}
 
+.btn:hover{
+    background-color: #f17e65;
+    background-image: linear-gradient(#f58569, #ed705e);
+}
+
+.btn:active{
+    background-color: #f17e65;
+    background-image: linear-gradient(#d84732, #e0603e);
+    box-shadow: inset 0 2px 2px rgba(172, 16, 0, 0.64);
+}
 /*--------------------------*/
 .visibility-hidden{
     display: none;
@@ -60,7 +88,6 @@ a:hover{
     flex-wrap: wrap;
     float: left;
     justify-content: space-between;
-    width: 387px;
     padding-top: 29px;
     padding-left: 9px;
     line-height: 1.125;
@@ -101,11 +128,23 @@ a:hover{
 }
 
 .header-navigation-items a:active{
-    background-color: #d16f5a;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     border-radius: 35px;
     text-decoration: none;
     line-height: 1.125;
+    box-shadow: inset 0 3px 1px -1px rgba(0, 0, 0, .6);
+}
+
+.selected-items>a{
+    background-color: #d07058;
+    color: #000000;
+    border-radius: 35px;
+}
+
+.selected-item{
+    background-color: #d07058;
+    color: #000000;
 }
 
 .subparagraphs{
@@ -206,6 +245,8 @@ a:hover{
     color: #b4b4b4;
 }
 /*--------------Серый фон прозрачный на кнопках-------------------*/
+.filter-slider ,
+.sorting-select,
 .header-login-button,
 .search-form label,
 .table-goods-button{
@@ -286,9 +327,9 @@ a:hover{
 }
 
 .password-check-in{
-    display: grid;
     margin-top: -4px;
     font-weight: normal;
+    padding-left: 27px;
 }
 
 .header-login,
@@ -299,26 +340,14 @@ a:hover{
     line-height: 1.14;
 }
 
+.header-login-navigation button
 .login-navigation button,
 .button{
     font-size: 18px;
     line-height: 1.33;
     color: #ffffff;
-    text-decoration: none;
-}
-
-.login-btn{
-    background-color: #e84d37;
-    outline: none;
-    box-shadow: none;
-    border: none;
-    border-radius: 35px;
-    padding: 13px 25px;
     margin-top: -2px;
-    color: #ffffff;
-    font-size: 18px;
     display: inline-block;
-    width: 100px;
 }
 
 .password-check-in a{
@@ -358,6 +387,24 @@ a:hover{
     position: relative;
     z-index: 2;
 }
+
+.table-goods-items{
+    position: absolute;
+    display: none;
+}
+
+.table-goods-button-is-full{
+    padding-right: 17px;
+    padding-left: 43px;
+}
+
+.table-goods-icon-is-full{
+    background-image: url("../img/basket-full.svg");
+    background-repeat: no-repeat;
+    background-position: 15px 7px;
+    position: relative;
+    z-index: 2;
+}
 /*-------------------Контакты в хэдере------------------------*/
 .header-contact{
     font-weight: bold;
@@ -374,11 +421,7 @@ a:hover{
     margin-bottom: 5px;
     margin-left: 8px;
 }
-/*-------------------------------------------------*/
-body > input[type="radio"] {
-    display: none;
-}
-
+/*---------------Слайдер----------------------------------*/
 .site-wrapper {
     min-width: 940px;
     background-repeat: no-repeat;
@@ -421,37 +464,10 @@ body > input[type="radio"] {
 }
 
 .slide-btn {
-    display: inline-block;
-    padding: 12px 50px;
-
     font-weight: bold;
     font-size: 32px;
     line-height: 1,375;
     vertical-align: top;
-    color: #ffffff;
-    text-decoration: none;
-    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
-    background: #f26843;
-    background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
-    background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
-    background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-    border-radius: 100px;
-    box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-}
-
-.slide-btn:hover {
-    background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-    background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-    background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-    box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
-}
-
-.slide-btn:active {
-    background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
-    background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
-    background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-    box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .slider-controls {
@@ -540,6 +556,7 @@ body > input[type="radio"] {
     margin-bottom: 21px;
     margin-top: 23px;
     margin-right: 22px;
+    font-weight: bold;
 }
 
 .raspberry-banner{
@@ -552,40 +569,26 @@ body > input[type="radio"] {
     background-color: #825441;
     margin-left: auto;
 }
-/*---------------Кнопка на банере---------------------------------------*/
-.button {
-    display: inline-block;
-    padding: 12px 23px;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 1.33;
-    vertical-align: top;
+/*---------------------Хлебные крошки----------------------*/
+.breadcrumbs{
+    display: flex;
+    list-style: none;
+    margin-left: -40px;
+    margin-top: -16px;
+    font-size: 14px;
+}
+
+.breadcrumbs li{
+    padding-right: 25px;
+}
+
+.breadcrumbs a{
     color: #ffffff;
-    text-decoration: none;
-    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
-    background: #f26843;
-    background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
-    background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
-    background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-    border-radius: 100px;
-    box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
-.button:hover {
-    background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-    background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-    background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-    box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+.breadcrumbs h1{
+    margin-top: -13px;
 }
-
-.button:active {
-    background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
-    background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
-    background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-    box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
-}
-
 /*-------------Каталог---------------------------------*/
 .catalog-list{
     display: flex;
@@ -641,7 +644,7 @@ body > input[type="radio"] {
     text-align: center;
 }
 
-.catalog-item .button{
+.catalog-item .btn{
     display: none;
     position: absolute;
     padding: 9px 14px;
@@ -688,15 +691,95 @@ body > input[type="radio"] {
     color: #ffffff;
     text-align: center;
 }
+
 .catalog-item a:hover::before{
     content: "";
     position: absolute;
     z-index: 55;
-
 }
 
-.catalog-item:hover .button{
+.main-content h1{
+    margin-top: -15px;
+}
+
+.catalog-item:hover .btn{
    display: block;
+}
+/*-------------------Фильтр---------------------*/
+.filter{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    padding-top: 3px;
+}
+
+.filter-item{
+    display: inline-block;
+    margin: 0;
+}
+
+.filter-item:first-child span{
+    padding-left: 17px;
+}
+
+.filter-item:nth-child(2) span{
+    padding-left: 22px;
+}
+
+.sorting-select{
+    border: none;
+    border-radius: 35px;
+    -webkit-appearance: none;
+    background-image: url("../img/icon-down-dir.svg");
+    background-position: 168px center;
+    background-repeat: no-repeat;
+    line-height: 1em;
+    /* for FF */
+    -moz-appearance: none;
+    text-indent: 0.01px; 
+    text-overflow: '';
+    /* for IE */
+    -ms-appearance: none;
+    appearance: none!important;
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 0;
+    padding-left: 11px;
+    margin-top: 7px;
+    color: #ffffff;
+}
+ 
+select::-ms-expand {
+  display: none;
+}
+
+.sorting-select::-ms-expand {
+  display: none;
+}
+
+.filter-slider{
+    height: 36px;
+    padding: 0 15px;
+    line-height: 36px;
+    border-radius: 35px;
+    margin-top: 24px;
+    margin-left: -175px;
+}
+
+input[type="range"] {
+    width: 178px;
+    padding-right: 0;
+    padding-left: 0;
+    vertical-align: middle;
+    background: 0 0;
+    border: none;
+    -webkit-appearance: none;
+    background-color: #ffffff;
+}
+input.second-range {
+    width: 50%;
+    margin-left: -135px;
 }
 
 /*-------------Банер с вафелькой----------------------------------*/
@@ -840,22 +923,7 @@ body > input[type="radio"] {
 }
 
 .form-email button{
-    background-color: #e84d37;
-    outline: none;
-    box-shadow: none;
-    border: none;
-    border-radius: 35px;
-    color: #ffffff;
     font-size: 18px;
-    display: inline-block;
-    position: relative;
-    top: -1px;
-    left: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 19px;
-    padding-right: 19px;
-    font-weight: bold;
 }
 /*-----------------------Карта------------------------------------------*/
 .contacts{
@@ -864,21 +932,32 @@ body > input[type="radio"] {
 }
 
 .container-address{
-    width: 305px;
+    display: flex;
+    flex-direction: column;
+    width: 303px;
     background-color: #ffffff;
     border-radius: 15px;
     position: absolute;
     top: 63px;
     right: 377px;
     z-index: 3;
-    display: flex;
-    flex-direction: column;
+    color: #303030;
+    padding-left: 26px;
+    padding-top: 27px;
 }
 
-.container-address span:first-child{
+.container-address p{
+    margin: 0;
+}
+
+.container-address p:last-child{
+    padding-top: 14px;
+}
+
+.container-address-normal{
     font-size: 14px;
     line-height: 1.46;
-    color: #303030;
+    display: inline-block;
 }
 
 .contacts-map{
@@ -888,26 +967,13 @@ body > input[type="radio"] {
     background-color: #ffffff;
 }
 
-.container-address p:first-child{
-    padding-top: 10px;
-    padding-left: 27px;
-}
-
-.container-address p:last-child{
-    padding-left: 27px;
-}
-
-.container-address p:last-child a{
-    display: block;
-}
-
 .container-address a{
     color: #000000;
     text-decoration: none;
 }
 
-.container-address span{
-    display: inline-block;
+.container-address p:last-of-type{
+    padding-top: 14px;
 }
 
 .container-address-bold{
@@ -915,27 +981,16 @@ body > input[type="radio"] {
     font-size: 16px;
     line-height: 1.56;
     color: #303030;
-    padding-top: 2px;
     display: block;
 }
 
-.container-address button{
-    background-color: #e84d37;
-    outline: none;
-    box-shadow: none;
-    border: none;
-    border-radius: 35px;
-    color: #ffffff;
+.feedback-form{
     font-size: 18px;
-    display: inline-block;
-    position: relative;
-    top: 31px;
-    left: 27px;
-    padding-top: 7px;
-    padding-bottom: 14px;
-    padding-left: 28px;
-    padding-right: 23px;
     font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    padding-right: -1px;
 }
 /*---------Футер------------------------------------*/
 .footer-ice-cream{
@@ -1053,7 +1108,7 @@ body > input[type="radio"] {
     font-size: 12px;
     line-height: 1.5;
 }
-
+/*-----------------Всплывашка-------------------------*/
 .popup{
     height: 440px;
     width: 480px;
@@ -1071,7 +1126,7 @@ body > input[type="radio"] {
     border-radius: 10px;
     z-index: 0;
 }
-
+/*
 .popup h2::before{
     content: "";
     background-image: url("../img/cross.svg");
@@ -1081,7 +1136,7 @@ body > input[type="radio"] {
     top: 0;
     width: 100%;
     height: 100%;
-}
+}*/
 
 .popup h2{
     padding: 0;
@@ -1108,19 +1163,7 @@ body > input[type="radio"] {
 }
 
 .push-btn{
-    background-color: #e84d37;
-    outline: none;
-    box-shadow: none;
-    border: none;
-    border-radius: 35px;
-    color: #ffffff;
     font-size: 18px;
-    display: inline-block;
-    width: 138px;
-    position: absolute;
-    right: 25px;
-    bottom: 20px;
-    padding: 10px 23px;
 }
 
 .modal-show {
@@ -1136,6 +1179,7 @@ body > input[type="radio"] {
     height: 22px;
     font-size: 0;
     background-image: url("../img/cross.svg");
+    background-repeat: no-repeat;
     border: 0;
     cursor: pointer;
 }
