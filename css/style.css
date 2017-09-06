@@ -245,6 +245,7 @@ a:hover{
     color: #b4b4b4;
 }
 /*--------------Серый фон прозрачный на кнопках-------------------*/
+.filter-fatiness,
 .filter-slider ,
 .sorting-select,
 .header-login-button,
@@ -501,16 +502,23 @@ a:hover{
 #btn-1:checked ~ .site-wrapper {
     background-color: #849d8f;
     background-image: url("../img/background-slider-pistachio.jpg");
+    transition: background-image 1s ease;
+    transition: background-color 1s linear;
+
 }
 
 #btn-2:checked ~ .site-wrapper {
     background-color: #8996a6;
     background-image: url("../img/background-slider-grey.jpg");
+    transition: background-image 1s ease;
+    transition: background-color 1s linear;
 }
 
 #btn-3:checked ~ .site-wrapper {
     background-color: #9d8b84;
     background-image: url("../img/background-slider-brown.jpg");
+    transition: background-image 1s ease;
+    transition: background-color 1s linear;
 }
 
 #btn-1:checked ~ .site-wrapper label[for="btn-1"],
@@ -726,6 +734,9 @@ a:hover{
     padding-left: 22px;
 }
 
+.fatiness{
+    padding-left: 46px;
+}
 .sorting-select{
     border: none;
     border-radius: 35px;
@@ -750,12 +761,18 @@ a:hover{
     color: #ffffff;
 }
  
-select::-ms-expand {
+.sorting-select::-ms-expand {
   display: none;
 }
 
 .sorting-select::-ms-expand {
   display: none;
+}
+
+.sorting-select:hover,
+.sorting-select:active{
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .filter-slider{
@@ -782,6 +799,34 @@ input.second-range {
     margin-left: -135px;
 }
 
+.filter-fatiness{
+    border: none;
+    border-radius: 35px;
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 0;
+    padding-left: 11px;
+    margin-top: 24px;
+    color: #ffffff;
+    margin-left: -85px;
+}
+
+.filter-fatiness input[type="radio"]{
+    display: none;
+}
+
+.filter-fatiness input[type="radio"]::before{
+    content: "";
+    background-image: url("../img/radio-off.svg");
+    background-size: 25px 25px;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: absolute;
+    color: #ffffff;
+}
 /*-------------Банер с вафелькой----------------------------------*/
 .wafer-banner{ 
     padding-left: 18px;
@@ -934,12 +979,11 @@ input.second-range {
 .container-address{
     display: flex;
     flex-direction: column;
-    width: 303px;
     background-color: #ffffff;
     border-radius: 15px;
     position: absolute;
     top: 63px;
-    right: 377px;
+    right: 8%;
     z-index: 3;
     color: #303030;
     padding-left: 26px;
