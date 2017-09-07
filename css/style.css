@@ -244,7 +244,8 @@ a:hover{
 .search-form input:placeholder{
     color: #b4b4b4;
 }
-/*--------------Серый фон прозрачный на кнопках-------------------*/
+/*--------------Серый фон прозрачный на кнопках----------------------------------------------------!!!!!!!!---------*/
+.filter-filler,
 .filter-fatiness,
 .filter-slider ,
 .sorting-select,
@@ -391,7 +392,12 @@ a:hover{
 
 .table-goods-items{
     position: absolute;
-    display: none;
+    right: 378px;
+    top: 61px;
+    background-color: #f8f7f4;
+    border: 0;
+    border-radius: 5px;
+    color: #000000;
 }
 
 .table-goods-button-is-full{
@@ -406,6 +412,33 @@ a:hover{
     position: relative;
     z-index: 2;
 }
+/*Выпадашка*/
+.table-ice-cream{
+}
+
+.img-goods-small{
+    background-image: url(../img/temp/1.jpg);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    width: 15px;
+    height: 15px;
+}
+
+.table-ice-cream a{
+    color: #000000;
+    padding-left: 20px
+}
+
+.reset-goods-basket{
+    display: block;
+    background-image: url(../img/cross.svg);
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    width: 12px;
+    height: 12px;
+}
+
 /*-------------------Контакты в хэдере------------------------*/
 .header-contact{
     font-weight: bold;
@@ -423,39 +456,25 @@ a:hover{
     margin-left: 8px;
 }
 /*---------------Слайдер----------------------------------*/
-.site-wrapper {
+.site-wrapper{
     min-width: 940px;
     background-repeat: no-repeat;
     background-position: top center;
-    transition: background-image 0.5s ease, background-color 0.5s ease;
+    transition: background-image .25s ease-in, background-color .25s ease-in;
 }
 
-.site-wrapper::before,
-.site-wrapper::after {
-    content: "";
-    visibility: hidden;
-}
-
-.site-wrapper::before {
-    background-image: url("../img/background-slider-grey.jpg");
-}
-
-.site-wrapper::after {
-    background-image: url("../img/background-slider-brown.jpg");
-}
-
-.slider {
+.slider{
     position: relative;
     padding-top: 204px;
     text-align: center;
     color: #ffffff;
 }
 
-.slide {
+.slide{
     display: none;
 }
 
-.slide-title {
+.slide-title{
     width: 700px;
     margin: 0 auto;
     margin-bottom: 30px;
@@ -502,23 +521,17 @@ a:hover{
 #btn-1:checked ~ .site-wrapper {
     background-color: #849d8f;
     background-image: url("../img/background-slider-pistachio.jpg");
-    transition: background-image 1s ease;
-    transition: background-color 1s linear;
 
 }
 
 #btn-2:checked ~ .site-wrapper {
     background-color: #8996a6;
     background-image: url("../img/background-slider-grey.jpg");
-    transition: background-image 1s ease;
-    transition: background-color 1s linear;
 }
 
 #btn-3:checked ~ .site-wrapper {
     background-color: #9d8b84;
     background-image: url("../img/background-slider-brown.jpg");
-    transition: background-image 1s ease;
-    transition: background-color 1s linear;
 }
 
 #btn-1:checked ~ .site-wrapper label[for="btn-1"],
@@ -598,6 +611,10 @@ a:hover{
     margin-top: -13px;
 }
 /*-------------Каталог---------------------------------*/
+.catalog{
+    margin-top: -13px;
+}
+
 .catalog-list{
     display: flex;
     flex-wrap: wrap;
@@ -662,6 +679,10 @@ a:hover{
     transform: translateX(-50%);
 }
 
+.catalog-item:hover{
+    z-index: 1;
+}
+
 .hit-goods{
     position: relative;
 }
@@ -680,7 +701,6 @@ a:hover{
 
 .catalog-item{
     position: relative;
-    z-index: 0;
 }
 
 .catalog-item:hover::after{
@@ -734,6 +754,14 @@ a:hover{
     padding-left: 22px;
 }
 
+.filter-item:nth-child(3) span{
+    padding-left: 33px;
+}
+
+.filter-item:nth-child(4) span{
+    padding-left: 15px;
+}
+
 .fatiness{
     padding-left: 46px;
 }
@@ -777,55 +805,186 @@ a:hover{
 
 .filter-slider{
     height: 36px;
-    padding: 0 15px;
+    padding: 17px 22px;
     line-height: 36px;
     border-radius: 35px;
-    margin-top: 24px;
-    margin-left: -175px;
+    margin-top: 7px;
+    margin-left: 7px;
+    width: 220px;
 }
 
-input[type="range"] {
-    width: 178px;
-    padding-right: 0;
-    padding-left: 0;
-    vertical-align: middle;
-    background: 0 0;
-    border: none;
-    -webkit-appearance: none;
-    background-color: #ffffff;
-}
-input.second-range {
-    width: 50%;
-    margin-left: -135px;
+.filter-slider-line{
+    border-top: 2px solid rgba(255,255,255,0.6);
 }
 
+.filter-slider-circle{
+    border: 8px solid rgba(255,255,255,0.8);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-top: -13px;
+    background-color: #849d8f;
+}
+
+.filter-slider-circle:hover{
+    cursor: pointer;
+}
+
+.circle-start{
+    margin-left: 15px;
+}
+
+.circle-end{
+    margin-left: 113px;
+}
+
+.line-center{
+    border-top: 3px solid rgba(255,255,255,1);
+    margin-top: -2px;
+    width: 84px;
+    margin-left: 34px;
+}
+/*---------------------Фильтр радиобатон Жирность-----------------------------------*/
 .filter-fatiness{
     border: none;
     border-radius: 35px;
     display: block;
     padding-top: 8px;
     padding-bottom: 8px;
-    padding-right: 0;
+    padding-right: 10px;
     padding-left: 11px;
-    margin-top: 24px;
+    margin-top: 7px;
     color: #ffffff;
-    margin-left: -85px;
+    margin-left: 18px;
 }
 
 .filter-fatiness input[type="radio"]{
     display: none;
 }
 
-.filter-fatiness input[type="radio"]::before{
+.filter-fatiness label{
+    position: relative;
+    cursor: pointer;
+    padding-left: 36px;
+    padding-right: 15px;
+}
+
+.filter-fatiness label::before{
     content: "";
     background-image: url("../img/radio-off.svg");
-    background-size: 25px 25px;
-    width: 25px;
-    height: 25px;
+    background-size: 22px 22px;
+    width: 22px;
+    height: 22px;
     background-repeat: no-repeat;
     background-position: left center;
     position: absolute;
     color: #ffffff;
+    left: 4px;
+    top: -2px;
+}
+
+.filter-fatiness label::after{
+    content: "";
+    background-image: url("../img/radio-on.svg");
+    background-size: 22px 22px;
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: absolute;
+    color: #ffffff;
+    left: 4px;
+    top: -2px;
+    transform: scale(0);
+    transition: transform 0.28s
+}
+
+.filter-fatiness  input[type="radio"]:checked+label::after {
+    transform: scale(1.1)
+}
+/*---------------------Фильтр чекбокс Наполнитель-------------------*/
+.filter-filler{
+    border: none;
+    border-radius: 35px;
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 11px;
+    margin-top: 4px;
+    color: #ffffff;
+}
+
+.filter-filler input[type="checkbox"]{
+    display: none;
+}
+
+.filter-filler label{
+    position: relative;
+    cursor: pointer;
+    padding-left: 36px;
+    padding-right: 23px;
+}
+
+.filter-filler label:nth-of-type(2){
+    padding-right: 32px;
+}
+
+.filter-filler label::before{
+    content: "";
+    background-image: url("../img/checkbox-off.svg");
+   background-size: 21px 21px;
+    width: 21px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: absolute;
+    color: #ffffff;
+    left: 4px;
+    top: -2px;
+}
+
+.filter-filler label::after{
+    content: "";
+    background-image: url("../img/checkbox-on.svg");
+    background-size: 22px 19px;
+    width: 22px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: absolute;
+    color: #ffffff;
+    left: 5px;
+    top: -2px;
+    transform: scale(0);
+    transition: transform 0.28s
+}
+
+.filter-filler  input[type="checkbox"]:checked+label::after {
+    transform: scale(1.1)
+}
+
+.button-employ{
+    background-color: rgba(255,255,255,0.4);
+    box-shadow: inset 0 0 0px 3px #ffffff;
+    border-radius: 35px;
+    padding: 7px 35px;
+    color: #ffffff;
+    margin-top: 23px;
+    margin-bottom: 14px;
+    margin-left: 12px;
+    border: none;
+}
+
+.button-employ:hover{
+    background-color: rgba(255,255,255,1);
+    color: #000000; 
+    box-shadow: none;
+}
+
+.button-employ:active{
+    border: none;
+    box-shadow: inset 0px 1px 1px 1px #000000; 
 }
 /*-------------Банер с вафелькой----------------------------------*/
 .wafer-banner{ 
@@ -981,13 +1140,12 @@ input.second-range {
     flex-direction: column;
     background-color: #ffffff;
     border-radius: 15px;
-    position: absolute;
-    top: 63px;
-    right: 8%;
-    z-index: 3;
     color: #303030;
     padding-left: 26px;
     padding-top: 27px;
+    width: 303px;
+    margin-left: 845px;
+    margin-top: 63px;
 }
 
 .container-address p{
@@ -1009,6 +1167,12 @@ input.second-range {
     z-index: 2;
     border: none;
     background-color: #ffffff;
+}
+
+.contacts-map-iframe{
+    position: absolute;
+    z-index: -1;
+    top: -62px;
 }
 
 .container-address a{
@@ -1036,9 +1200,76 @@ input.second-range {
     margin-right: 25px;
     padding-right: -1px;
 }
+/*-------------------Страницы-------------------------*/
+.page{
+    margin-left: 958px;
+    margin-top: 60px;
+    margin-right: -13px;
+}
+
+.page-number-left{
+    display: inline-block;
+    background-image: url("../img/icon-left-right-small.svg");
+    background-repeat: no-repeat;
+    background-size: 10px 15px;
+    background-position: 9px -1px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+}
+
+.page-number{
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffffff;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: inline-block;
+}
+
+.page-number:hover{
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.4);
+    color: #ffffff;
+}
+
+.page-active,
+.page-number:active{
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.page-number-right{
+    display: inline-block;
+    background-image: url("../img/icon-left-right-small.svg");
+    background-repeat: no-repeat;
+    background-size: 10px 15px;
+    background-position: 9px -1px;
+    width: 20px;
+    height: 20px;
+}
+
+.page-number:nth-child(2){
+    margin-right: -2px;
+}
+
+.page-number:nth-child(3){
+    margin-right: -4px;
+}
+
+.page-number:nth-child(4){
+    margin-right: -5px;
+}
+
+.page-number:nth-child(5){
+    margin-right: -3px;
+}
 /*---------Футер------------------------------------*/
 .footer-ice-cream{
     display: flex;
+    margin-top: 70px;
 }
 
 .footer-ice-cream li{

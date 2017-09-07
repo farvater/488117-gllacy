@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <script src="js/script.js" type="text/javascript"></script>
         <title>Глейси главная</title>
@@ -39,15 +39,25 @@
                             <table class="table-goods-basket">
                                 <tr>
                                     <td class="reset-goods"><a href="#" class="reset-goods-basket"></a></td>
-                                    <td>Пломбир с апельсиновым джемом</td>
-                                    <td>1,5кг х <b>200руб</b></td>
-                                    <td>300руб</td>
+                                    <td class="table-ice-cream">
+                                        <a href="#">
+                                            <img class="img-goods-small" src="img/temp/1.jpg" alt="Сливочно-кофейное с кусочками шоколада">
+                                            Пломбир с апельсиновым джемом
+                                        </a>
+                                    </td>
+                                    <td>1,5 кг х <b>200 руб.</b></td>
+                                    <td>300 руб.</td>
                                 </tr>
                                 <tr>
                                     <td class="reset-goods"><a href="#" class="reset-goods-basket"></a></td>
-                                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                                    <td>1,5кг х <b>300руб</b></td>
-                                    <td>450руб</td>
+                                    <td class="table-ice-cream">
+                                        <a href="#">
+                                            <img class="img-goods-small" src="img/temp/1.jpg" alt="Сливочно-кофейное с кусочками шоколада">
+                                            Клубничный пломбир с присыпкой из белого шоколада
+                                        </a>
+                                    </td>
+                                    <td>1,5 кг х <b>300 руб.</b></td>
+                                    <td>450 руб.</td>
                                 </tr>
                             </table>
                             <span class="total">Итого: 750руб</span>
@@ -93,7 +103,7 @@
                 <h1>Сливочное мороженое</h1>
 
                 <form class="filter" action="#" method="get"> 
-                    <p class="filter-item">
+                    <div class="filter-item">
                         <span>Сортировка:</span>
                         <select class="sorting-select" name="sorting" id="sorting">
                             <option value="sorting-popularity" selected>по популярности</option>
@@ -101,32 +111,45 @@
                             <option value="sorting-min-value">стоимость по-убыванию</option>
                             <option value="sorting-max-value">стоимость по-возрастанию</option>
                         </select>
-                    </p>
-                    <p class="filter-item">
+                    </div>
+                    <div class="filter-item">
                         <span>Цена: 100 руб. – 500 руб.</span>
                         <div class="filter-slider">
-                            <input type="range" min="100" max="500" step="10" value="150">
-                            <input class="second-range" type="range" min="100" max="500" step="10" value="500">
+                            <div class="filter-slider-line"></div>
+                            <div class="filter-slider-line line-center"></div>
+                            <div class="filter-slider-circle circle-start"></div>
+                            <div class="filter-slider-circle circle-end"></div>
                         </div>
-                    </p>
-                    <p class="filter-item">
+                    </div>
+                    <div class="filter-item">
                         <span class="fatiness">Жирность:</span>
-                        <div class="filter-fatiness">
-                            <label for="fatiness-percent-zero"><input type="radio" name="fatiness-percent" id="fatiness-percent-zero" value="fatiness-percent-zero">0%</label>
-                            <label for="fatiness-percent-ten"><input type="radio" name="fatiness-percent" id="fatiness-percent-ten" value="fatiness-percent-ten" checked>до 10%</label>
-                            <label for="fatiness-percent-thirty"><input type="radio" name="fatiness-percent" id="fatiness-percent-thirty" value="fatiness-percent-thirty">до 30%</label>
-                            <label for="fatiness-percent-more-than-thirty"><input type="radio" name="fatiness-percent" id="fatiness-percent-more-than-thirty" value="fatiness-percent-more-than-thirty">выше 30%</label>
-                        </div>
-                    </p>
-                    <p class="filter-item">
+                        <p class="filter-fatiness">
+                            <input type="radio" name="fatiness-percent" id="fatiness-percent-zero" value="fatiness-percent-zero">
+                            <label for="fatiness-percent-zero">0%</label>
+                            <input type="radio" name="fatiness-percent" id="fatiness-percent-ten" value="fatiness-percent-ten" checked>
+                            <label for="fatiness-percent-ten">до 10%</label>
+                            <input type="radio" name="fatiness-percent" id="fatiness-percent-thirty" value="fatiness-percent-thirty">
+                            <label for="fatiness-percent-thirty">до 30%</label>
+                            <input type="radio" name="fatiness-percent" id="fatiness-percent-more-than-thirty" value="fatiness-percent-more-than-thirty">
+                            <label for="fatiness-percent-more-than-thirty">выше 30%</label>
+                        </p>                      
+                    </div>
+                    <div class="filter-item">
                         <span>Наполнители:</span>
-                        <label for="chocolate"><input type="checkbox" name="checkbox-button[]" id="chocolate" checked>Шоколадные</label>
-                        <label for="sugar-powder"><input type="checkbox" name="checkbox-button[]" id="sugar-powder" value="sugar-powder" checked>Сахарные присыпки</label>
-                        <label for="fruit"><input type="checkbox" name="checkbox-button[]" id="fruit" value="fruit">Фрукты</label>
-                        <label for="syrup"><input type="checkbox" name="checkbox-button[]" id="syrup" value="syrup">Сиропы</label>
-                        <label for="jam"><input type="checkbox" name="checkbox-button[]" id="jam" value="jam">Джемы</label>
-                    </p>
-                    <button type="submit">Применить</button> 
+                        <p class="filter-filler">
+                            <input type="checkbox" name="checkbox-button[]" id="chocolate" checked>
+                            <label for="chocolate">Шоколадные</label>
+                            <input type="checkbox" name="checkbox-button[]" id="sugar-powder" value="sugar-powder" checked>
+                            <label for="sugar-powder">Сахарные присыпки</label>
+                            <input type="checkbox" name="checkbox-button[]" id="fruit" value="fruit">
+                            <label for="fruit">Фрукты</label>
+                            <input type="checkbox" name="checkbox-button[]" id="syrup" value="syrup">
+                            <label for="syrup">Сиропы</label>
+                            <input type="checkbox" name="checkbox-button[]" id="jam" value="jam">
+                            <label for="jam">Джемы</label>
+                        </p>
+                    </div>
+                    <button class="button-employ" type="submit">Применить</button> 
                 </form>
 
                 <section class="catalog">
@@ -264,14 +287,14 @@
                             </article>
                         </li>
                     </ul>
-                    <p>
-                        <a class="page-number-left">Предыдущая</a>
-                        <a class="page-number">1</a>
+                    <p class="page">
+                        <a class="page-number-left" aria-label="Предыдущая"></a>
+                        <a class="page-number page-active">1</a>
                         <a class="page-number" href="#">2</a>
                         <a class="page-number" href="#">3</a>
                         <a class="page-number" href="#">4</a>
                         <a class="page-number" href="#">5</a>
-                        <a class="page-number-right" href="#">Следующая</a>
+                        <a class="page-number-right" href="#" aria-label="Следующая"></a></li>
                     </p>
                 </section>
                 
@@ -281,10 +304,10 @@
         <footer class="footer-ice-cream">
             <div class="container">
                 <ul class="social-battom-menu">
-                    <li><a class="social-battom twitter" href="#" aria-label="Twitter"></a></li>
-                    <li><a class="social-battom instagram" href="#" aria-label="Instagram"></a></li>
-                    <li><a class="social-battom facebook" href="#" aria-label="Facebook"></a></li>
-                    <li><a class="social-battom vkontakte" href="#" aria-label="ВКонтакте"></a></li>
+                    <li><a class="twitter" href="#" aria-label="Twitter"></a></li>
+                    <li><a class="instagram" href="#" aria-label="Instagram"></a></li>
+                    <li><a class="facebook" href="#" aria-label="Facebook"></a></li>
+                    <li><a class="vkontakte" href="#" aria-label="ВКонтакте"></a></li>
                 </ul>
                 <p class="footer-items">
                     <ul class="footer-item">
