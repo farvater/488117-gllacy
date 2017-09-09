@@ -35,6 +35,14 @@ a{
     padding: 0 20px;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #000000;
+}
 /*шрифты основных заголовков*/
 .title-small{
     font-size: 35px;
@@ -184,6 +192,7 @@ a{
     background-color: #fbded7;
     color: #000000;
     border-radius: 0;
+    box-shadow: none;
 }
 
 .subparagraphs a:active{
@@ -245,15 +254,47 @@ a{
 }
 
 .search-form input{
-    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: inset 0 0 0px 2px #d3d3d2;
     border-radius: 5px;
     width: 100%;
     padding: 6px;
+    border: 0 solid;
 }
 
-.search-form input[placeholder]{
-    color: rgba(0,0,0,0.2);
+.label-box{
+    position: relative;
+    width: 100%;
 }
+
+.label-box label{
+    position: absolute;
+    top: -29px;
+    font-size: 14px;
+    color: #999999;
+    pointer-events: none;
+    width: 100%;
+    padding-left: 15px;
+    transition-duration: 0.2s;
+}
+
+input[type="text"]:hover{
+    border: none;
+    box-shadow: inset 0 0 0px 2px #c7c6c5;
+}
+
+.search-container input:focus,
+.search-container input:valid{
+    border: none;
+    box-shadow: inset 0 0 0px 2px #8fbdec;
+}
+
+.search-container input:focus ~ .label-box label,
+.search-container input:valid ~ .label-box label{
+    font-size: 12px;
+    transform: translateY(-27px);
+    background-image: none;
+}
+
 /*--------------Серый фон прозрачный на кнопках----------------------------------------------------!!!!!!!!---------*/
 .filter-filler,
 .filter-fatiness,
@@ -311,6 +352,25 @@ a{
     width: 277px;
     padding-bottom: 7px;
     z-index: 1;
+}
+
+.header-login-information .label-box label{
+    top: -50px;
+}
+
+.header-login-information input:hover{
+    border: none;
+    box-shadow: inset 0 0 0px 2px #c7c6c5;
+}
+
+.header-login-information  input[type="password"]:focus ~ .label-box-password label,
+.header-login-information  input[type="password"]:valid ~ .label-box-password label,
+.header-login-information  input[type="email"]:focus ~ .label-box-email label,
+.header-login-information  input[type="email"]:valid ~ .label-box-email label{
+    font-size: 12px;
+    transform: translateY(-27px);
+    background-image: none;
+    border: none;
 }
 
 .header-login:hover>.header-login-information {
@@ -378,6 +438,12 @@ a{
     font-size: 13px;
     line-height: 1.84;
     color: #000000;
+}
+
+.password-check-in a:hover,
+.password-check-in a:active{
+    background-image: none;
+    color: #ffbc9e;
 }
 /*------------------------Корзина----------------------------*/
 /*.table-goods a{
@@ -609,6 +675,10 @@ a{
     cursor: pointer;
 }
 
+.slider-controls label:hover{
+    background-color: rgba(255,255,255,0.4);
+}
+
 #btn-1:checked ~ .site-wrapper #slide1,
 #btn-2:checked ~ .site-wrapper #slide2,
 #btn-3:checked ~ .site-wrapper #slide3 {
@@ -619,7 +689,6 @@ a{
 #btn-1:checked ~ .site-wrapper {
     background-color: #849d8f;
     background-image: url("../img/background-slider-pistachio.jpg");
-
 }
 
 #btn-2:checked ~ .site-wrapper {
@@ -708,6 +777,11 @@ a{
 .breadcrumbs a{
     color: #ffffff;
     position: relative;
+}
+
+.breadcrumbs a:first-child:hover,
+.breadcrumbs a:first-child:active{
+    color: #ffbc9e;
 }
 
 .breadcrumbs li:first-child a::after{
@@ -1044,8 +1118,8 @@ a{
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 11px;
-    margin-top: 4px;
     color: #ffffff;
+    margin-top: 4px;
 }
 
 .filter-filler input[type="checkbox"]{
@@ -1186,7 +1260,6 @@ a{
     display: inline-flex;
     justify-content: space-between;
     padding-top: 3.7%;
-    margin-bottom: 12px;
 }
 
 .news-banner{
@@ -1222,8 +1295,6 @@ a{
     width: 100%;
     height: 100%;
     z-index: 1;
-    right: 0;
-    top: 0;
     position: absolute;
     border-radius: 15px;
 }
@@ -1242,21 +1313,17 @@ a{
 
 .email-banner p{
     color: #4e4646;
-    padding-top: 10px;
-    padding-left: 20px;
+    padding: 10px 20px;
 }
 
 .email-banner-background{
     z-index: 3;
-    padding-right: 3px;
-    padding-left: 7px;
-    padding-top: 7px;
+    padding: 3px 7px;
 }
 
 .form-email{
     padding-top: 20px;
     padding-left: 20px;
-    padding-bottom: 34px;
 }
 
 .form-email input{
@@ -1275,9 +1342,12 @@ a{
     margin-left: 3px;
 }
 /*-----------------------Карта------------------------------------------*/
+.container-map{
+    margin-top: 10px;
+}
+
 .contacts{
     position: relative;
-    top: 27px;
 }
 
 .container-address{
@@ -1290,7 +1360,7 @@ a{
     padding-top: 27px;
     width: 303px;
     margin-left: 845px;
-    margin-top: 63px;
+    margin-top: 45px;
 }
 
 .container-address p{
@@ -1317,9 +1387,7 @@ a{
 .contacts-map-iframe{
     position: absolute;
     z-index: -1;
-    top: -62px;
     width: 100%;
-    height: 430px;
 }
 
 .container-address a{
@@ -1427,7 +1495,7 @@ a{
     color: #ffffff;
 }
 
-.social-battom-menu{
+.social-button-menu{
     display: flex;
     width: 186px;
     margin-top: 48px;
@@ -1435,21 +1503,21 @@ a{
     justify-content: space-between;
 }
 
-.social-battom-menu li{
+.social-button-menu li{
     width: 38px;
     height: 38px;
     border: 3px solid rgba(255,255,255,0.7);
     border-radius: 50%;
 }
 
-.social-battom-menu a{
+.social-button-menu a{
     position: relative;
     width: 38px;
     height: 38px;
     display: block;
 }
 
-.social-battom-menu a::before{
+.social-button-menu a::before{
     width: 36px;
     height: 36px;
 }
@@ -1460,6 +1528,10 @@ a{
     background-repeat: no-repeat;
     position: absolute;
     opacity: 0.8;
+}
+
+.footer-navigation:hover{
+    color: #ffbc9e;
 }
 
 .instagram::before{
@@ -1596,6 +1668,8 @@ a{
 
 .push-btn{
     font-size: 18px;
+    align-self: flex-end;
+    margin-top: 15px;
 }
 
 .modal-show {

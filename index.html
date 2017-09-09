@@ -43,8 +43,14 @@
                         <form class="header-login" action="#" method="get">
                             <a class="header-login-button header-login-icon" href="#">Вход</a><!--Не забудь тут иконку-->
                             <div class="header-login-information">
-                                <input type="email" name="email" placeholder="Электронная почта">
-                                <input type="password" name="password" placeholder="Пароль">
+                                <input type="email" name="email" required>
+                                <div class="label-box label-box-email">
+                                    <label>Электронная почта</label> 
+                                </div>
+                                <input type="password" name="password" required>
+                                <div class="label-box label-box-password">
+                                    <label>Пароль</label> 
+                                </div>
                                 <div class="header-login-navigation">
                                     <button class="btn" type="submit" name="login">Войти</button>
                                     <p class="password-check-in">
@@ -58,7 +64,10 @@
                         <form class="search-form" action="#" method="post">
                             <label for="search-item" class="magnifier" aria-label="Поиск"></label><!--Не забудь тут иконку-->
                             <div class="search-container">
-                                <input type="text" name="search" placeholder="Что ищем?" id="search-item">
+                                <input type="text" name="search" id="search-item" required>
+                                <div class="label-box">
+                                    <label>Что ищем?</label> 
+                                </div>
                             </div>
                         </form>
                         <div class="header-contact">
@@ -204,7 +213,7 @@
                 <section class="contacts contacts-map">
                     <h3 class="visibility-hidden">Контакты</h3>
                     <iframe class="contacts-map-iframe" src="https://yandex.ru/map-widget/v1/-/CBUZNWQH3D" frameborder="0"></iframe>
-                    <div class="container">
+                    <div class="container container-map">
                         <div class="container-address">
                             <p>
                                 <span class="container-address-normal">Адрес главного офиса<br>и офлайн магазина:</span>
@@ -223,7 +232,7 @@
 
             <div class="container">
             <footer class="footer-ice-cream">                
-                    <ul class="social-battom-menu">
+                    <ul class="social-button-menu">
                         <li><a class="twitter" href="#" aria-label="Twitter"></a></li>
                         <li><a class="instagram" href="#" aria-label="Instagram"></a></li>
                         <li><a class="facebook" href="#" aria-label="Facebook"></a></li>
