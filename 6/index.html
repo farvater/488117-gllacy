@@ -197,21 +197,19 @@
                         </article>
 
                         <article class="email-banner news-banner">
-                            <div class="email-banner-background">
-                                <h3 class="visibility-hidden">Баннер рассылки новостей</h3>
-                                <p>Подпишитесь на&nbsp;нашу сладкую рассылку и&nbsp;будете всегда в&nbsp;курсе
-                                    всего самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не&nbsp;слать
-                                    всякой не&nbsp;нужной ерунды. Честно =)</p>
-                                <form class="form-email" action="#" method="post">
-                                    <input class="bunner-user-email" type="email" name="email" placeholder="Электронная почта">
-                                    <button class="btn" type="submit">Отправить</button>
-                                </form>
-                            </div>
+                            <h3 class="visibility-hidden">Баннер рассылки новостей</h3>
+                            <p>Подпишитесь на&nbsp;нашу сладкую рассылку и&nbsp;будете всегда в&nbsp;курсе
+                                всего самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не&nbsp;слать
+                                всякой не&nbsp;нужной ерунды. Честно =)</p>
+                            <form class="form-email" action="#" method="post">
+                                <input class="bunner-user-email" type="email" name="email" placeholder="Электронная почта">
+                                <button class="btn" type="submit">Отправить</button>
+                            </form>
                         </article>
                     </section>
                 </div>
 
-                <section class="contacts contacts-map">
+                <section class="contacts-map">
                     <h3 class="visibility-hidden">Контакты</h3>
                     <iframe class="contacts-map-iframe" src="https://yandex.ru/map-widget/v1/-/CBUZNWQH3D" frameborder="0"></iframe>
                     <div class="container container-map">
@@ -258,9 +256,18 @@
 
             <form class="popup popup-window" action="#" method="post">
                 <h2>Мы обязательно вам ответим!</h2>
-                <input type="text" name="name" placeholder="Как вас зовут?">
-                <input type="email" name="email" placeholder="Ваша почта для ответа?">
-                <input type="text" name="accost" placeholder="Напишите что-нибудь...">
+                <input type="text" name="name" required>
+                <div class="label-box">
+                    <label class="popup-name">Как вас зовут?</label> 
+                </div>
+                <input type="email" name="email" required>
+                <div class="label-box">
+                    <label class="popup-email">Ваша почта для ответа?</label> 
+                </div>
+                <input type="text" name="accost" required>
+                <div class="label-box">
+                    <label class="popup-text">Напишите что-нибудь...</label> 
+                </div>
                 <button class="push-btn btn" type="submit" name="push">Отправить</button>
                 <button class="modal-close" type="button">Закрыть</button>
             </form>

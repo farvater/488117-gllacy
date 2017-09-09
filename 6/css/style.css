@@ -195,6 +195,16 @@ input[type="password"]{
     box-shadow: none;
 }
 
+.subparagraphs li:first-child a:hover{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.subparagraphs li:last-child a:hover{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 .subparagraphs a:active{
     background-color: #f6b5a5;
     color: #000000;
@@ -355,12 +365,24 @@ input[type="text"]:hover{
 }
 
 .header-login-information .label-box label{
-    top: -50px;
+    top: -47px;
 }
 
-.header-login-information input:hover{
-    border: none;
+.header-login-information input[type="password"],
+.header-login-information input[type="email"]{
+    box-shadow: inset 0 0 0px 1px #c7c6c5;
+}
+
+.header-login-information input[type="password"]:hover,
+.header-login-information input[type="email"]:hover{
     box-shadow: inset 0 0 0px 2px #c7c6c5;
+}
+
+.header-login-information input[type="password"]:active,
+.header-login-information input[type="email"]:active,
+.header-login-information input[type="password"]:valid,
+.header-login-information input[type="email"]:valid{
+    box-shadow: inset 0 0 0px 2px #8fbdec;
 }
 
 .header-login-information  input[type="password"]:focus ~ .label-box-password label,
@@ -384,7 +406,7 @@ input[type="text"]:hover{
 .header-login-information input[type="password"]{
     color: #999999;
     display: block;
-    border: solid #ffffff;
+    border: none;
     border-radius: 5px;
     box-sizing: border-box;
     width: 100%;
@@ -392,6 +414,7 @@ input[type="text"]:hover{
     padding-top: 8px;
     padding-left: 10px;
     padding-bottom: 7px;
+    box-shadow: inset 0 0 0px 1px #d3d3d2;
 }
 
 .header-login-navigation{
@@ -779,12 +802,25 @@ input[type="text"]:hover{
     position: relative;
 }
 
-.breadcrumbs a:first-child:hover,
-.breadcrumbs a:first-child:active{
+.breadcrumbs a:hover,
+.breadcrumbs a:active{
     color: #ffbc9e;
 }
 
-.breadcrumbs li:first-child a::after{
+.breadcrumbs a:hover::after,
+.breadcrumbs a:active::after{
+    color: #ffffff;
+}
+
+.breadcrumbs a::after{
+    content: "»";
+    position: absolute;
+    top: -1px;
+    pointer-events: none;
+    padding-left: 9px;
+}
+
+.breadcrumbs a:nth-child(2)::after{
     content: "»";
     position: absolute;
     left: 55px;
@@ -792,12 +828,14 @@ input[type="text"]:hover{
     pointer-events: none;
 }
 
-.breadcrumbs li:nth-child(2) a::after{
-    content: "»";
+.breadcrumbs li:last-child a::after{
+    content: "";
     position: absolute;
-    left: 64px;
-    top: -1px;
     pointer-events: none;
+}
+
+.breadcrumbs li:last-child a{
+    color: #ffffff;
 }
 
 .breadcrumbs h1{
@@ -1104,11 +1142,16 @@ input[type="text"]:hover{
     left: 4px;
     top: -2px;
     transform: scale(0);
-    transition: transform 0.28s
+    transition: transform 0.28s;
 }
 
 .filter-fatiness  input[type="radio"]:checked+label::after {
     transform: scale(1.1)
+}
+
+.filter-fatiness  input[type="radio"]:disabled+label::after {
+    transform: none;
+    background-image: url("../img/radio-off-disabled.svg");
 }
 /*---------------------Фильтр чекбокс Наполнитель-------------------*/
 .filter-filler{
@@ -1171,6 +1214,13 @@ input[type="text"]:hover{
     transform: scale(1.1)
 }
 
+.filter-filler  input[type="checkbox"]:disabled+label::after {
+    transform: none;
+    background-image: url("../img/checkbox-off-disabled.svg");
+    background-size: 23px 20px;
+    width: 23px;
+    height: 21px;
+}
 .button-employ{
     background-color: rgba(255,255,255,0.4);
     box-shadow: inset 0 0 0px 3px #ffffff;
@@ -1265,6 +1315,7 @@ input[type="text"]:hover{
 .news-banner{
     color: #000000;
     position: relative;
+    z-index: 1;
 }
 
 .blog-banner{
@@ -1294,7 +1345,9 @@ input[type="text"]:hover{
     background-color: #ffffff;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    left: 0;
+    top: 0;
+    z-index: -2;
     position: absolute;
     border-radius: 15px;
 }
@@ -1304,9 +1357,11 @@ input[type="text"]:hover{
     background-color: #f8f7f4;
     width: 550px;
     height: 210px;
-    z-index: 2;
-    right: 6px;
+    z-index: -1;
+    right: 5px;
     top: 5px;
+    left: 5px;
+    bottom: 5px;
     position: absolute;
     border-radius: 15px;
 }
@@ -1343,11 +1398,6 @@ input[type="text"]:hover{
 }
 /*-----------------------Карта------------------------------------------*/
 .container-map{
-    margin-top: 10px;
-}
-
-.contacts{
-    position: relative;
 }
 
 .container-address{
@@ -1360,7 +1410,6 @@ input[type="text"]:hover{
     padding-top: 27px;
     width: 303px;
     margin-left: 845px;
-    margin-top: 45px;
 }
 
 .container-address p{
@@ -1382,12 +1431,18 @@ input[type="text"]:hover{
     z-index: 2;
     border: none;
     background-color: #ffffff;
+    margin-top: 40px;
+    padding-top: 61px;
+    padding-bottom: 58px;
 }
 
 .contacts-map-iframe{
     position: absolute;
     z-index: -1;
+    left: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
 }
 
 .container-address a{
@@ -1484,7 +1539,6 @@ input[type="text"]:hover{
 /*---------Футер------------------------------------*/
 .footer-ice-cream{
     display: flex;
-    margin-top: 70px;
 }
 
 .footer-ice-cream li{
@@ -1498,7 +1552,7 @@ input[type="text"]:hover{
 .social-button-menu{
     display: flex;
     width: 186px;
-    margin-top: 48px;
+    margin-top: 35px;
     padding-left: 0;
     justify-content: space-between;
 }
@@ -1518,16 +1572,26 @@ input[type="text"]:hover{
 }
 
 .social-button-menu a::before{
+    content: "";
     width: 36px;
     height: 36px;
-}
-
-.twitter::before{
-    content: "";
-    background-image: url("../img/social-twitter.svg");
+    left: 0;
+    top: 0;
     background-repeat: no-repeat;
     position: absolute;
     opacity: 0.8;
+}
+
+.twitter::before{
+    background-image: url("../img/social-twitter.svg");
+}
+
+.social-button-menu a:hover::before{
+    opacity: 1;
+}
+
+.social-button-menu a:active::before{
+    opacity: 0.9;
 }
 
 .footer-navigation:hover{
@@ -1535,40 +1599,27 @@ input[type="text"]:hover{
 }
 
 .instagram::before{
-    content: "";
     background-image: url("../img/social-instagram.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    opacity: 0.8;
 }
 
 .facebook::before{
-    content: "";
     background-image: url("../img/social-facebook.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    opacity: 0.8;
 }
 
 .vkontakte::before{
-    content: "";
     background-image: url("../img/social-vk.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    opacity: 0.8;
 }
 /*------------Ссылки в футере---------------*/
 .footer-item{
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
     width: 350px;
-    position: relative;
-    padding: 0;
-    left: 34%;
     transform: translateX(-50%);
-    padding-left: 22px;
-    padding-right: 43px;
-    top: 27px;
+    padding-left: 39px;
+    padding-right: 24px;
+    margin-left: 372px;
+    margin-top: 11px;
 }
 
 .footer-item li{
@@ -1591,26 +1642,28 @@ input[type="text"]:hover{
     white-space: nowrap;
 }
 
+.for-suppliers{
+    position: relative;
+}
+
 .for-suppliers:before{
     content: "";
     position: absolute;
     background-image: url("../img/heart.svg");
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 6px;
+    width: 15px;
+    height: 15px;
+    left: -22px;
+    top: 3px;
 }
 
 .logo-html-item{
-    position: relative;
     display: flex;
     flex-direction: column;
-    width: 253px;
-    left: 423px;
-    top: 17px;
     font-size: 12px;
     line-height: 1.5;
+    margin-left: 54px;
+    margin-top: 18px;
 }
 /*-----------------Всплывашка-------------------------*/
 .popup{
@@ -1629,6 +1682,42 @@ input[type="text"]:hover{
     padding-right: 25px;
     border-radius: 10px;
     z-index: 0;
+}
+
+.popup input{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.popup label{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #999999;
+}
+
+.popup label{
+    top: -40px;
+}
+
+.popup .popup-text{
+    top: -130px;
+}
+
+.popup input:hover{
+    box-shadow: inset 0 0 0px 2px #c7c6c5;
+}
+
+.popup  input[type="text"]:focus ~ .popup-name label,
+.popup  input[type="email"]:focus ~ .label-box-password label,,
+.popup  input[name="accost"]:focus ~ .label-box-password label,
+.popup  input[name="name"]:valid ~ .popup-name label,
+.popup input[name="email"]:valid ~ .label-box-email label,
+.popup input[name="accost"]:valid ~ .label-box-email label{
+    font-size: 12px;
+    transform: translateY(-40px);
+    background-image: none;
+    border: none;
 }
 /*
 .popup h2::before{
@@ -1669,7 +1758,9 @@ input[type="text"]:hover{
 .push-btn{
     font-size: 18px;
     align-self: flex-end;
-    margin-top: 15px;
+    margin-top: 20px;
+    padding-top: 10px;
+    margin-bottom: -13px;
 }
 
 .modal-show {
@@ -1678,14 +1769,21 @@ input[type="text"]:hover{
 }
 
 .modal-close {
+    font-size: 0;
+    position: relative;
+    width: 0;
+    border: 0;
+}
+
+.modal-close::after{
+    content: "";
     position: absolute;
-    top: 0;
-    right: -15px;
+    top: -405px;
+    right: -445px;
     width: 22px;
     height: 22px;
-    font-size: 0;
     background-image: url("../img/cross.svg");
     background-repeat: no-repeat;
-    border: 0;
+    
     cursor: pointer;
 }
