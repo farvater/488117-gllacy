@@ -219,6 +219,9 @@ input[type="password"]{
     padding-top: 24px;
 }
 /*-------------Поиск форма--------------------*/
+.search-form{
+    position: relative;
+}
 
 .search-form label{
     background-image: url("../img/search.svg");
@@ -251,8 +254,8 @@ input[type="password"]{
 .search-form:hover>.search-container{
     display: block;
     position: absolute; 
-    top: 60px;
-    right: 24.4%;
+    top: 37px;
+    right: 0;
 }
 
 .search-form input{
@@ -314,6 +317,9 @@ input[type="text"]:hover{
     line-height: 1.71;
 }
 /*---------------Кнопка Вход-----------------------------*/
+.header-login{
+    position: relative;
+}
 
 .header-login a:hover{
     background-color: #f8f7f4; 
@@ -381,8 +387,8 @@ input[type="text"]:hover{
 .header-login:hover>.header-login-information {
     display: block;
     position: absolute; 
-    top: 58px;
-    right: 226px;
+    top: 36px;
+    right: 0;
 }
 
 .header-login-information input[type="email"],
@@ -460,7 +466,7 @@ input[type="text"]:hover{
     background-color: #f8f7f4; 
     background-image: url("../img/basket-black.svg");
     background-repeat: no-repeat;
-    background-position: 15px 7px;
+    background-position: 17px 6px;
     color: #000000;
 }
 
@@ -477,8 +483,6 @@ input[type="text"]:hover{
     padding-right: 34px;
     border-radius: 35px;
 }
-
-
 
 .table-goods-icon{
     background-image: url("../img/basket.svg");
@@ -508,7 +512,7 @@ input[type="text"]:hover{
 .table-goods-icon-is-full{
     background-image: url("../img/basket-full.svg");
     background-repeat: no-repeat;
-    background-position: 15px 7px;
+    background-position: 17px 6px;
     position: relative;
     z-index: 2;
 }
@@ -873,10 +877,11 @@ input[type="text"]:hover{
     line-height: 1;
     position: absolute;
     z-index: 51;
-    font-weight: normal;
+    font-weight: bold;
     width: 100%;
     right: 53px;
     top: 207px;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .catalog-item-content span{
@@ -1390,14 +1395,15 @@ input[type="text"]:hover{
     border-radius: 5px;
     padding: 6px;
     position: relative;
-    width: 70%;
-    font-weight: normal;
+    width: 69%;
+    font-weight: normal;   
+    height: 45px;
 }
 
 .form-email button{
     font-size: 18px;
     padding: 11px 18px;
-    margin-left: 3px;
+    margin-left: 7px;
 }
 /*-----------------------Карта------------------------------------------*/
 .container-map{
@@ -1479,7 +1485,7 @@ input[type="text"]:hover{
 .page{
     margin-left: 958px;
     margin-top: 64px;
-    margin-bottom: 32px;
+    margin-bottom: 23px;
     display: flex;
     justify-content: space-between;
 }
@@ -1544,7 +1550,7 @@ input[type="text"]:hover{
 /*---------Футер------------------------------------*/
 .footer-ice-cream{
     display: flex;
-    border-top: 1px solid #ffffff;
+    border-top: 1px solid rgba(255,255,255,0.3);
 }
 
 .footer-ice-cream li{
@@ -1558,7 +1564,7 @@ input[type="text"]:hover{
 .social-button-menu{
     display: flex;
     width: 186px;
-    margin-top: 28px;
+    margin-top: 37px;
     padding-left: 0;
     justify-content: space-between;
 }
@@ -1623,7 +1629,7 @@ input[type="text"]:hover{
     padding-left: 39px;
     padding-right: 24px;
     margin-left: 372px;
-    margin-top: 20px;
+    margin-top: 32px;
 }
 
 .footer-item li{
@@ -1667,7 +1673,7 @@ input[type="text"]:hover{
     font-size: 12px;
     line-height: 1.5;
     margin-left: 48px;
-    margin-top: 12px;
+    margin-top: 17px;
 }
 /*-----------------Всплывашка-------------------------*/
 .popup-shadow{
