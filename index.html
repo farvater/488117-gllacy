@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
+    <head>
         <meta charset="utf-8">
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-        <script src="js/script.js" type="text/javascript"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
         <title>Глейси главная</title>
     </head>
     <body>
@@ -36,9 +34,15 @@
                     </nav>
 
                     <div class="header-tools">
-                        <section class="table-goods"><!--Не забудь тут иконку-->
-                            <a class="table-goods-button table-goods-icon" href="#">Пусто</a>
-                        </section>
+                        <form class="search-form" action="#" method="post">
+                            <label for="search-item" class="magnifier" aria-label="Поиск"></label><!--Не забудь тут иконку-->
+                            <div class="search-container">
+                                <input type="text" name="search" id="search-item" required>
+                                <div class="label-box">
+                                    <label>Что ищем?</label> 
+                                </div>
+                            </div>
+                        </form>
 
                         <form class="header-login" action="#" method="get">
                             <a class="header-login-button header-login-icon" href="#">Вход</a><!--Не забудь тут иконку-->
@@ -60,16 +64,10 @@
                                 </div>
                             </div>
                         </form>
-
-                        <form class="search-form" action="#" method="post">
-                            <label for="search-item" class="magnifier" aria-label="Поиск"></label><!--Не забудь тут иконку-->
-                            <div class="search-container">
-                                <input type="text" name="search" id="search-item" required>
-                                <div class="label-box">
-                                    <label>Что ищем?</label> 
-                                </div>
-                            </div>
-                        </form>
+                        <section class="table-goods"><!--Не забудь тут иконку-->
+                            <a class="table-goods-button table-goods-icon" href="#">Пусто</a>
+                        </section>
+                        
                         <div class="header-contact">
                             <p>С 10 до 20, ежедневно</p>
                             <a href="tel:+78124502525">8 812 450-25-25</a>
@@ -222,7 +220,7 @@
                                 <a class="container-address-bold" href="tel:+78124502525">8 812 450-25-25</a>
                                 <span class="container-address-normal">(с 10 до 20 ежедневно)</span>
                             </p>
-                            <button class="feedback-form btn" type="submit">Форма обратной связи</button>
+                            <button class="feedback-form btn modal-login" type="submit">Форма обратной связи</button>
                         </div>
                     </div>
                 </section>
@@ -245,31 +243,34 @@
                     </ul>
                     
                     <p class="logo-html-item">
-                        <a class="logo-html" href="https://htmlacademy.ru">
+                        <a class="logo-html" href="https://htmlacademy.ru/intensive/htmlcss">
                             <img src="https://assets.htmlacademy.ru/img/logo.v2.svg" width="110" height="40" alt="HTML Academy">
                         </a>
-                        <span>Сделано в <a href="https://assets.htmlacademy.ru/img/logo.v2.svg">HTML Academy</a> &copy; 2017</span>
+                        <span>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017</span>
                     </p>
                 </footer>
             </div>
 
-            <form class="popup popup-window" action="#" method="post">
-                <h2>Мы обязательно вам ответим!</h2>
-                <input type="text" name="name" required>
-                <div class="label-box">
-                    <label class="popup-name">Как вас зовут?</label> 
-                </div>
-                <input type="email" name="email" required>
-                <div class="label-box">
-                    <label class="popup-email">Ваша почта для ответа?</label> 
-                </div>
-                <input type="text" name="accost" required>
-                <div class="label-box">
-                    <label class="popup-text">Напишите что-нибудь...</label> 
-                </div>
-                <button class="push-btn btn" type="submit" name="push">Отправить</button>
-                <button class="modal-close" type="button">Закрыть</button>
-            </form>
-        </div>
+            <div class="popup-shadow ">
+                <form class="popup popup-window" action="#" method="post">
+                    <h2>Мы обязательно вам ответим!</h2>
+                    <button class="modal-close" type="button">Закрыть</button>
+                    <input type="text" name="name" required>
+                    <div class="label-box">
+                        <label class="popup-name">Как вас зовут?</label> 
+                    </div>
+                    <input type="email" name="email" required>
+                    <div class="label-box">
+                        <label class="popup-email">Ваша почта для ответа?</label> 
+                    </div>
+                    <input type="text" name="accost" required>
+                    <div class="label-box">
+                        <label class="popup-text">Напишите что-нибудь...</label> 
+                    </div>
+                    <button class="push-btn btn" type="submit" name="push">Отправить</button>
+                </form>
+            </div>
+        </div> 
+        <script src="js/script.js" type="text/javascript"></script>
     </body>
 </html>
