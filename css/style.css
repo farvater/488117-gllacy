@@ -775,8 +775,8 @@ input[type="text"]:hover{
 .breadcrumbs{
     display: flex;
     list-style: none;
-    margin-left: -42px;
-    margin-top: -16px;
+    margin-left: -39px;
+    margin-top: -10px;
     font-size: 14px;
 }
 
@@ -981,6 +981,7 @@ input[type="text"]:hover{
 .filter-item{
     display: inline-block;
     margin: 0;
+    margin-bottom: -1px;
 }
 
 .filter-item:first-child span{
@@ -988,7 +989,7 @@ input[type="text"]:hover{
 }
 
 .filter-item:nth-child(2) span{
-    padding-left: 22px;
+    padding-left: 24px;
 }
 
 .filter-item:nth-child(3) span{
@@ -996,7 +997,7 @@ input[type="text"]:hover{
 }
 
 .filter-item:nth-child(4) span{
-    padding-left: 15px;
+    padding-left: 17px;
 }
 
 .fatiness{
@@ -1017,10 +1018,10 @@ input[type="text"]:hover{
     /* for IE */
     -ms-appearance: none;
     display: block;
-    padding-top: 8px;
+    padding-top: 5px;
     padding-bottom: 8px;
     padding-right: 0;
-    padding-left: 16px;
+    padding-left: 13px;
     margin-top: 6px;
     color: #ffffff;
     font-size: 16px;
@@ -1049,7 +1050,7 @@ input[type="text"]:hover{
     padding: 17px 22px;
     line-height: 36px;
     border-radius: 35px;
-    margin-top: 7px;
+    margin-top: 5px;
     margin-left: 7px;
     width: 220px;
 }
@@ -1095,7 +1096,7 @@ input[type="text"]:hover{
     padding-bottom: 8px;
     padding-right: 10px;
     padding-left: 11px;
-    margin-top: 7px;
+    margin-top: 5px;
     color: #ffffff;
     margin-left: 15px;
 }
@@ -1153,12 +1154,14 @@ input[type="text"]:hover{
 .filter-filler{
     border: none;
     border-radius: 35px;
-    display: block;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 11px;
+    display: flex;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 13px;
     color: #ffffff;
-    margin-top: 4px;
+    margin-top: 6px;
+    justify-content: space-between;
+    width: 702px;
 }
 
 .filter-filler input[type="checkbox"]{
@@ -1223,9 +1226,9 @@ input[type="text"]:hover{
     border-radius: 35px;
     padding: 7px 30px;
     color: #ffffff;
-    margin-top: 23px;
+    margin-top: 25px;
     margin-bottom: 14px;
-    margin-left: 12px;
+    margin-left: 16px;
     border: none;
     font-size: 16px;
     line-height: 1.125;
@@ -1295,7 +1298,7 @@ input[type="text"]:hover{
     width: 50%;
     position: relative;
     padding-left: 59px;
-    padding-bottom: 26px;
+    padding-bottom: 22px;
 }
 
 .titel-wafer{
@@ -1465,6 +1468,10 @@ input[type="text"]:hover{
     margin-bottom: -4px;
 }
 
+.container-address a{
+    color: #ffffff;
+}
+
 .container-address-bold{
     font-weight: bold;
     font-size: 17px;
@@ -1476,11 +1483,13 @@ input[type="text"]:hover{
 .feedback-form{
     font-size: 18px;
     font-weight: bold;
-    margin-top: 31px;
-    margin-right: 20px;
+    margin-top: 27px;
+    margin-right: 17px;
     padding-bottom: 9px;
     margin-bottom: 31px;
     padding-top: 8px;
+    padding-left: 28px;
+    display: block;
 }
 /*-------------------Страницы-------------------------*/
 .page{
@@ -1573,7 +1582,7 @@ input[type="text"]:hover{
 .social-button-menu li{
     width: 38px;
     height: 38px;
-    box-shadow: inset 0 0 0 3.5px rgba(255,255,255,0.8);
+    box-shadow: inset 0 0 0 3.5px rgba(255,255,255,0.5);
     border-radius: 50%;
 }
 
@@ -1689,6 +1698,10 @@ input[type="text"]:hover{
     z-index: 100;
 }
 
+.active{
+    display: block;
+}
+
 .popup{
     height: 440px;
     width: 480px;
@@ -1724,9 +1737,10 @@ input[type="text"]:hover{
 }
 
 .popup .popup-text{
-    top: -146px;
+    top: -168px;
 }
 
+.popup textarea:hover
 .popup input:hover{
     box-shadow: inset 0 0 0px 2px #c7c6c5;
 }
@@ -1735,8 +1749,8 @@ input[type="text"]:hover{
 .popup  input[name="name"]:focus ~ .label-box .popup-name,
 .popup  input[name="email"]:active ~ .label-box .popup-email,
 .popup  input[name="email"]:focus ~ .label-box .popup-email,
-.popup  input[name="accost"]:active ~ .label-box .popup-text,
-.popup  input[name="accost"]:focus ~ .label-box .popup-text{
+.popup  textarea:active ~ .label-box .popup-text,
+.popup  textarea:focus ~ .label-box .popup-text{
     font-size: 12px;
     transform: translateY(-27px);
     background-image: none;
@@ -1747,8 +1761,8 @@ input[type="text"]:hover{
 .popup  input[name="name"]:focus,
 .popup  input[name="email"]:active,
 .popup  input[name="email"]:focus,
-.popup  input[name="accost"]:active,
-.popup  input[name="accost"]:focus{
+.popup  textarea:active,
+.popup  textarea:focus{
     box-shadow: inset 0 0 0px 2px #8fbdec;
 }
 
@@ -1778,11 +1792,11 @@ input[type="text"]:hover{
     padding: 9px;
 }
 
-.popup input[name="accost"]{
+.popup textarea{
     border-radius: 5px;
     border: 1px solid rgb(178, 178, 178);
     opacity: 0.52;
-    padding: 15px 13px 115px 13px;
+    padding: 14px;
     margin-top: 5px;
 }
 
@@ -1808,6 +1822,7 @@ input[type="text"]:hover{
     top: -32px;
     border: 0;
     background-color: #f8f7f4;
+    cursor: pointer;
 }
 
 .modal-close::after{
