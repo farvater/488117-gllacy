@@ -889,14 +889,14 @@ input[type="text"]:hover{
 .catalog-wrapper-item:nth-of-type(6),
 .catalog-wrapper-item:nth-of-type(7),
 .catalog-wrapper-item:nth-of-type(8){
-    margin-top: 25px;
+    margin-top: 23px;
 }
 
 .catalog-wrapper-item:nth-of-type(9),
 .catalog-wrapper-item:nth-of-type(10),
 .catalog-wrapper-item:nth-of-type(11),
 .catalog-wrapper-item:nth-of-type(12){
-        margin-top: 27px;
+        margin-top: 25px;
 }
 .catalog-list li{
     list-style: none;
@@ -1031,6 +1031,7 @@ input[type="text"]:hover{
 .filter-item{
     display: inline-block;
     margin: 0;
+    margin-top: -2px
 }
 
 .filter-item:first-child span{
@@ -1067,7 +1068,7 @@ input[type="text"]:hover{
     /* for IE */
     -ms-appearance: none;
     display: block;
-    padding-top: 9px;
+    padding-top: 5px;
     padding-bottom: 8px;
     padding-right: 0;
     padding-left: 13px;
@@ -1141,9 +1142,9 @@ input[type="text"]:hover{
     border: none;
     border-radius: 35px;
     display: block;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-right: 10px;
+    padding-top: 9px;
+    padding-bottom: 6px;
+    padding-right: 7px;
     padding-left: 11px;
     margin-top: 5px;
     color: #ffffff;
@@ -1158,7 +1159,8 @@ input[type="text"]:hover{
     position: relative;
     cursor: pointer;
     padding-left: 36px;
-    padding-right: 15px;
+    padding-right: 10px;
+    font-size: 16px;
 }
 
 .filter-fatiness label::before{
@@ -1543,8 +1545,8 @@ input[type="text"]:hover{
 /*-------------------Страницы-------------------------*/
 .page{
     margin-left: 955px;
-    margin-top: 60px;
-    margin-bottom: 29px;
+    margin-top: 65px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
 }
