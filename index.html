@@ -37,9 +37,9 @@
                         <form class="search-form" action="#" method="post">
                             <label for="search-item" class="magnifier" aria-label="Поиск"></label>
                             <div class="search-container">
-                                <input type="text" name="search" id="search-item" required>
                                 <div class="label-box">
-                                    <label>Что ищем?</label> 
+                                    <input type="text" name="search" id="search-item" required>
+                                    <label class="search-label">Что ищем?</label> 
                                 </div>
                             </div>
                         </form>
@@ -47,7 +47,7 @@
                         <form class="header-login" action="#" method="get">
                             <a class="header-login-button header-login-icon" href="#">Вход</a>
                             <div class="header-login-information">
-                                <input type="email" name="email" required>
+                                <input type="text" name="email" required>
                                 <div class="label-box label-box-email">
                                     <label>Электронная почта</label> 
                                 </div>
@@ -263,16 +263,16 @@
                 <form class="popup popup-window" action="#" method="post">
                     <h2>Мы обязательно вам ответим!</h2>
                     <button class="modal-close" type="button">Закрыть</button>
-                    <input type="text" name="name" required>
-                    <div class="label-box">
+                    <div class="label-box label-box-name">
+                        <input type="text" name="name" required>
                         <label class="popup-name">Как вас зовут?</label> 
                     </div>
-                    <input type="email" name="email" required>
-                    <div class="label-box">
+                    <div class="label-box label-box-email">
+                        <input type="text" name="email" required>
                         <label class="popup-email">Ваша почта для ответа?</label> 
                     </div>
-                    <textarea cols="100" rows="40" name="accost" required>  </textarea>
-                    <div class="label-box">
+                    <div class="label-box label-box-teaxtarea">
+                        <textarea class="popup-textarea" name="accost" required></textarea>
                         <label class="popup-text">Напишите что-нибудь...</label> 
                     </div>
                     <button class="push-btn btn" type="submit" name="push">Отправить</button>

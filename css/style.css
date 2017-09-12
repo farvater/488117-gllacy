@@ -48,6 +48,7 @@ input[type="password"]{
     line-height: 1.5;
     font-weight: bold;
     color: #000000;
+    outline: none;
 }
 /*шрифты основных заголовков*/
 .title-small{
@@ -244,7 +245,7 @@ input[type="password"]{
     position: relative;
 }
 
-.search-form label{
+.search-form>label{
     background-image: url("../img/search.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -295,12 +296,12 @@ input[type="password"]{
 
 .label-box label{
     position: absolute;
-    top: -32px;
+    top: 13px;
+    left: 15px;
     font-size: 14px;
     color: #999999;
     pointer-events: none;
     width: 100%;
-    padding-left: 15px;
     transition-duration: 0.2s;
 }
 
@@ -309,17 +310,34 @@ input[type="text"]:hover{
     box-shadow: inset 0 0 0px 2px #c7c6c5;
 }
 
-.search-container input:focus,
-.search-container input:valid{
+.label-box input:focus{
     border: none;
     box-shadow: inset 0 0 0px 2px #8fbdec;
 }
 
-.search-container input:focus ~ .label-box label,
-.search-container input:valid ~ .label-box label{
+.label-box label{
+    background-color: none;
+
+}
+
+.label-box-name label{
+    padding-top: 7px;
+}
+
+.label-box-email label{
+    padding-top: 1px;
+}
+
+.label-box-teaxtarea label{
+    padding-top: 2px;
+}
+
+.search-container .label-box input:focus ~ label,
+.search-container .label-box input:valid ~ label{
     font-size: 12px;
     transform: translateY(-27px);
     background-image: none;
+    color: #8fbdec;
 }
 
 /*--------------Серый фон прозрачный на кнопках----------------------------------------------------!!!!!!!!---------*/
@@ -328,7 +346,7 @@ input[type="text"]:hover{
 .filter-slider ,
 .sorting-select,
 .header-login-button,
-.search-form label,
+.search-form>label,
 .table-goods-button{
     background-color: rgba(255,255,255,0.3);
 }
@@ -386,25 +404,27 @@ input[type="text"]:hover{
 }
 
 .header-login-information input[type="password"]:hover,
-.header-login-information input[type="email"]:hover{
+.header-login-information input[type="text"]:hover{
     box-shadow: inset 0 0 0px 2px #c7c6c5;
 }
 
-.header-login-information input[type="password"]:active,
-.header-login-information input[type="email"]:active,
+.header-login-information input[type="password"]:focus,
+.header-login-information input[type="text"]:focus,
 .header-login-information input[type="password"]:valid,
-.header-login-information input[type="email"]:valid{
+.header-login-information input[type="text"]:valid{
     box-shadow: inset 0 0 0px 2px #8fbdec;
+    color: #000000;
 }
 
 .header-login-information  input[type="password"]:focus ~ .label-box-password label,
 .header-login-information  input[type="password"]:valid ~ .label-box-password label,
-.header-login-information  input[type="email"]:focus ~ .label-box-email label,
-.header-login-information  input[type="email"]:valid ~ .label-box-email label{
+.header-login-information  input[type="text"]:focus ~ .label-box-email label,
+.header-login-information  input[type="text"]:valid ~ .label-box-email label{
     font-size: 12px;
     transform: translateY(-27px);
     background-image: none;
     border: none;
+    color: #8fbdec;
 }
 
 .header-login:hover>.header-login-information {
@@ -414,7 +434,7 @@ input[type="text"]:hover{
     right: 0;
 }
 
-.header-login-information input[type="email"],
+.header-login-information input[type="text"],
 .header-login-information input[type="password"]{
     color: #999999;
     display: block;
@@ -1755,7 +1775,6 @@ input[type="text"]:hover{
 }
 
 .popup{
-    height: 440px;
     width: 480px;
     position: fixed;
     display: flex;
@@ -1768,7 +1787,7 @@ input[type="text"]:hover{
     padding-top: 15px;
     padding-bottom: 25px;
     padding-left: 23px;
-    padding-right: 25px;
+    padding-right: 29px;
     border-radius: 10px;
 }
 
@@ -1784,37 +1803,30 @@ input[type="text"]:hover{
     color: #999999;
 }
 
-.popup label{
-    top: -48px;
-}
-
-.popup .popup-text{
-    top: -168px;
-}
-
 .popup textarea:hover
 .popup input:hover{
     box-shadow: inset 0 0 0px 2px #c7c6c5;
 }
 
-.popup  input[name="name"]:active ~ .label-box .popup-name,
-.popup  input[name="name"]:focus ~ .label-box .popup-name,
-.popup  input[name="email"]:active ~ .label-box .popup-email,
-.popup  input[name="email"]:focus ~ .label-box .popup-email,
-.popup  textarea:active ~ .label-box .popup-text,
-.popup  textarea:focus ~ .label-box .popup-text{
+.popup  input[name="name"]:valid ~ .popup-name,
+.popup  input[name="name"]:focus ~ .popup-name,
+.popup  input[name="email"]:valid ~ .popup-email,
+.popup  input[name="email"]:focus ~ .popup-email,
+.popup  .popup-textarea:valid ~ .popup-text,
+.popup  .popup-textarea:focus ~ .popup-text{
     font-size: 12px;
     transform: translateY(-27px);
     background-image: none;
     border: none;
+    color: #8fbdec;
 }
 
-.popup  input[name="name"]:active,
+.popup  input[name="name"]:valid,
 .popup  input[name="name"]:focus,
-.popup  input[name="email"]:active,
+.popup  input[name="email"]:valid,
 .popup  input[name="email"]:focus,
-.popup  textarea:active,
-.popup  textarea:focus{
+.popup  .popup-textarea:valid,
+.popup  .popup-textarea:focus{
     box-shadow: inset 0 0 0px 2px #8fbdec;
 }
 
@@ -1822,6 +1834,7 @@ input[type="text"]:hover{
     padding: 0;
     margin: 0;
     color: #000000;
+    margin-bottom: -15px;
 }
 
 .popup input[name="name"]{
@@ -1829,7 +1842,7 @@ input[type="text"]:hover{
     border: 1px solid rgb(178, 178, 178);
     opacity: 0.52;
     margin-bottom: 15px;
-    margin-top: -6px;
+    margin-top: 10px;
     width: 62%;
     padding: 9px;
 }
@@ -1839,7 +1852,7 @@ input[type="text"]:hover{
     border: 1px solid rgb(178, 178, 178);
     opacity: 0.52;
     margin-bottom: 15px;
-    margin-top: 4px;
+    margin-top: 5px;
     width: 62%;
     padding: 9px;
 }
@@ -1848,16 +1861,24 @@ input[type="text"]:hover{
     border-radius: 5px;
     border: 1px solid rgb(178, 178, 178);
     opacity: 0.52;
-    padding: 14px;
+    padding: 10px;
     margin-top: 5px;
+    padding-bottom: 80px;
+    width: 100%;
+    font-weight: bold;
+    outline: none;
 }
 
 .push-btn{
     font-size: 18px;
     align-self: flex-end;
-    margin-top: 24px;
-    padding-top: 11px;
-    margin-bottom: -13px;
+    margin-top: 27px;
+    padding-top: 9px;
+    margin-bottom: 6px;
+    margin-right: 0;
+    padding-bottom: 10px;
+    padding-right: 23px;
+    padding-left: 23px;
 }
 
 .modal-show{
@@ -1869,9 +1890,9 @@ input[type="text"]:hover{
     font-size: 0;
     position: relative;
     width: 22px;
-    left: 97%;
+    left: 98%;
     height: 22px;
-    top: -32px;
+    top: -16px;
     border: 0;
     background-color: #f8f7f4;
     cursor: pointer;
