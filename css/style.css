@@ -108,7 +108,7 @@ input[type="password"]{
     padding: 0;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 33px;
+    padding-top: 30px;
     padding-left: 9px;
     line-height: 1.125;
     font-weight: bold;
@@ -507,6 +507,9 @@ input[type="text"]:hover{
     color: #ffbc9e;
 }
 /*------------------------Корзина----------------------------*/
+.table-goods{
+    position: relative;
+}
 .table-goods>a{
     text-decoration: none;
     color: #ffffff;
@@ -545,8 +548,8 @@ input[type="text"]:hover{
 
 .table-goods-items{
     position: absolute;
-    left: 52.5%;
-    top: 60px;
+    right: 0;
+    top: 38px;
     background-color: #f8f7f4;
     border: 0;
     border-radius: 5px;
@@ -568,10 +571,18 @@ input[type="text"]:hover{
     position: relative;
     z-index: 2;
 }
+
+.table-goods:hover .table-goods-icon-is-full{
+    background-image: url("../img/basket-full-black.svg");
+    background-repeat: no-repeat;
+    background-position: 17px 6px;
+    position: relative;
+    z-index: 3;
+}
 /*Выпадашка*/
 .table-goods-basket{
-    width: 548px;
-    padding-bottom: 19px;
+    width: 540px;
+    padding-bottom: 15px;
     table-layout: fixed;
 }
 
@@ -605,14 +616,14 @@ input[type="text"]:hover{
 }
 
 .table-goods-sum{
-    width: 17%;
+    width: 57px;
     padding-top: 16px;
     font-size: 13px;
     line-height: 1.23;
 }
 
 .table-goods-quantity{
-    width: 27%;
+    width: 105px;
     padding-top: 17px;
     padding-left: 26px;
     font-size: 13px;
@@ -624,7 +635,7 @@ input[type="text"]:hover{
 }
 
 .table-goods-item{
-    width: 51%;
+    width: 191px;
     padding-top: 14px;
     font-size: 13px;
     line-height: 1.23;
@@ -637,12 +648,34 @@ input[type="text"]:hover{
     align-items: center;
     font-weight: normal;
     text-decoration: none;
+    padding-top: 3px;
 }
 
 .table-reset-goods{
-    width: 7%;
-    padding-top: 15px;
-    padding-left: 18px;
+    width: 24px;
+    padding-top: 14px;
+    padding-left: 19px;
+}
+
+.table-goods-item-second{
+    padding-top: 13px;
+    padding-left: 4px;
+}
+
+.table-goods-item-small span{
+    padding-top: 7px;
+}
+
+.img-item{
+    margin-bottom:3px; 
+}
+
+.table-goods-quantity-second{
+    padding-top: 10px;
+}
+
+.table-goods-sum-second{
+    padding-top: 10px;
 }
 
 .table-goods-total{
@@ -651,10 +684,9 @@ input[type="text"]:hover{
     font-weight: bold;
     padding-top: 14px;
     display: flex;
-    width: 94.5%;
     border-top: 1px solid #000000;
     justify-content: flex-end;
-    margin-left: 14px;
+    margin-right: 11px;
     line-height: 1.2;
 }
 
@@ -662,7 +694,7 @@ input[type="text"]:hover{
     font-weight: bold;
     display: flex;
     width: 169px;
-    margin-left: 355px;
+    margin-left: 357px;
     margin-top: 14px;
     margin-bottom: 22px;
     font-size: 18px;
@@ -713,11 +745,10 @@ input[type="text"]:hover{
 .slide-title{
     width: 700px;
     margin: 0 auto;
-    margin-bottom: 30px;
     font-weight: bold;
     font-size: 60px;
     line-height: 1.005;
-    margin-bottom: 41px;
+    margin-bottom: 38px;
 }
 
 .slide-title-chocolate{
@@ -727,10 +758,10 @@ input[type="text"]:hover{
 .slide-btn {
     font-weight: bold;
     font-size: 32px;
-    line-height: 1,375;
+    line-height: 1.375;
     vertical-align: top;
-    padding-right: 39px;
-    padding-left: 39px;
+    padding-right: 40px;
+    padding-left: 40px;
     line-height: 1.375;
 }
 
@@ -792,10 +823,11 @@ input[type="text"]:hover{
 .shares{
     padding: 0;
     margin: 0;
-    margin-top: 4.5%;
+    margin-top: 51px;
+    margin-bottom: 2px;
     display: inline-flex;
     justify-content: space-between;
-    height: 227px;
+    height: 228px;
 }
 
 .news-banner,
@@ -907,46 +939,35 @@ input[type="text"]:hover{
     margin-top: -13px;
 }
 /*-------------Каталог---------------------------------*/
-.catalog-items{
-    margin-top: 2px;
-}
-
+/*!!!!Не резиновый! Установлены все значения в px. Для равномерного распределения задано  justify-content: space-between;*/
 .catalog-list{
     display: flex;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    margin: 0 -27px;
+    justify-content: space-between;
 }
 
 .catalog-wrapper-item{  
-    width: 22.2%;
-    margin-top: 40px;
-    margin-right: 2.2%;
+    width: 267px;/*Размер карточки установлен в px статично*/
+    margin-top: 39px;
     display: flex;
 }
 
-.catalog-wrapper-item:nth-child(4n){  
-    margin-right: 2.3%;
-}
-
-.catalog-wrapper-item:nth-child(4n+1){  
-    margin-left: 2.3%;
-}
-
-.catalog-wrapper-item:nth-of-type(5),
-.catalog-wrapper-item:nth-of-type(6),
-.catalog-wrapper-item:nth-of-type(7),
-.catalog-wrapper-item:nth-of-type(8){
+.catalog-list li:nth-child(5),
+.catalog-list li:nth-child(6),
+.catalog-list li:nth-child(7),
+.catalog-list li:nth-child(8){
     margin-top: 23px;
 }
 
-.catalog-wrapper-item:nth-of-type(9),
-.catalog-wrapper-item:nth-of-type(10),
-.catalog-wrapper-item:nth-of-type(11),
-.catalog-wrapper-item:nth-of-type(12){
-        margin-top: 25px;
+.catalog-list li:nth-child(9),
+.catalog-list li:nth-child(10),
+.catalog-list li:nth-child(11),
+.catalog-list li:nth-child(12){
+    margin-top: 25px;
 }
+
 .catalog-list li{
     list-style: none;
 }
@@ -991,6 +1012,8 @@ input[type="text"]:hover{
     margin-bottom: 15px;
     margin-top: 7px;
     font-weight: 500;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .catalog-item a{
@@ -1060,7 +1083,7 @@ input[type="text"]:hover{
 }
 
 .main-content h1{
-    margin-top: -13px;
+    margin-top: -10px;
     font-size: 35px;
     line-height: 1.17;
     font-weight: bold;
@@ -1074,14 +1097,13 @@ input[type="text"]:hover{
     display: flex;
     flex-wrap: wrap;
     font-size: 14px;
-    padding-top: 3px;
+    padding-top: 2px;
     margin-bottom: -15px;
 }
 
 .filter-item{
     display: inline-block;
     margin: 0;
-    margin-top: -2px
 }
 
 .filter-item>span{
@@ -1094,7 +1116,7 @@ input[type="text"]:hover{
 }
 
 .filter-item:nth-child(2) span{
-    padding-left: 24px;
+    padding-left: 23px;
 }
 
 .filter-item:nth-child(3) span{
@@ -1126,8 +1148,9 @@ input[type="text"]:hover{
     padding-top: 5px;
     padding-bottom: 8px;
     padding-right: 0;
-    padding-left: 13px;
+    padding-left: 12px;
     margin-top: 5px;
+    margin-bottom: 15px;
     color: #ffffff;
     font-size: 16px;
     line-height: 1.125;
@@ -1153,7 +1176,7 @@ input[type="text"]:hover{
 
 .filter-slider{
     height: 36px;
-    padding: 17px 22px;
+    padding: 16px 22px;
     line-height: 36px;
     border-radius: 35px;
     margin-top: 5px;
@@ -1180,11 +1203,13 @@ input[type="text"]:hover{
 }
 
 .circle-start{
-    margin-left: 15px;
+    margin-left: 13px;
+    margin-top: -11px;
 }
 
 .circle-end{
-    margin-left: 113px;
+    margin-left: 111px;
+    margin-top: -11px;
 }
 
 .line-center{
@@ -1198,13 +1223,13 @@ input[type="text"]:hover{
     border: none;
     border-radius: 35px;
     display: block;
-    padding-top: 9px;
-    padding-bottom: 6px;
-    padding-right: 7px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 1px;
     padding-left: 11px;
-    margin-top: 5px;
+    margin-top: 4px;
     color: #ffffff;
-    margin-left: 15px;
+    margin-left: 13px;
     line-height: 1.125;
     font-weight: 500;
 }
@@ -1217,7 +1242,7 @@ input[type="text"]:hover{
     position: relative;
     cursor: pointer;
     padding-left: 36px;
-    padding-right: 10px;
+    padding-right: 11px;
     font-size: 16px;
 }
 
@@ -1231,8 +1256,8 @@ input[type="text"]:hover{
     background-position: left center;
     position: absolute;
     color: #ffffff;
-    left: 4px;
-    top: -2px;
+    left: 3px;
+    top: -1px;
 }
 
 .filter-fatiness label::after{
@@ -1245,8 +1270,8 @@ input[type="text"]:hover{
     background-position: left center;
     position: absolute;
     color: #ffffff;
-    left: 4px;
-    top: -2px;
+    left: 3px;
+    top: -1px;
     transform: scale(0);
     transition: transform 0.28s;
 }
@@ -1264,11 +1289,11 @@ input[type="text"]:hover{
     border: none;
     border-radius: 35px;
     display: flex;
-    padding-top: 6px;
-    padding-bottom: 9px;
-    padding-left: 13px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    padding-left: 10px;
     color: #ffffff;
-    margin-top: 6px;
+    margin-top: 5px;
     line-height: 1.125;
     font-weight: 500;
 }
@@ -1334,11 +1359,11 @@ input[type="text"]:hover{
     background-color: rgba(255,255,255,0.4);
     box-shadow: inset 0 0 0px 2px #ffffff;
     border-radius: 35px;
-    padding: 7px 30px;
+    padding: 9px 28px;
     color: #ffffff;
-    margin-top: 25px;
+    margin-top: 23px;
     margin-bottom: 16px;
-    margin-left: 16px;
+    margin-left: 15px;
     border: none;
     font-size: 16px;
     line-height: 1.125;
@@ -1383,7 +1408,7 @@ input[type="text"]:hover{
     height: 50px;
     background-size: cover;
     position: absolute;
-    left: 13px;
+    left: 11px;
     top: -14px;
 }
 
@@ -1527,9 +1552,6 @@ input[type="text"]:hover{
     line-height: 1.333;
 }
 /*-----------------------Карта------------------------------------------*/
-.container-map{
-}
-
 .container-address{
     display: flex;
     flex-direction: column;
@@ -1581,8 +1603,7 @@ input[type="text"]:hover{
 }
 
 .container-address p:last-of-type{
-    padding-top: 13px;
-    margin-bottom: -4px;
+    padding-top: 19px;
 }
 
 .container-address-bold{
@@ -1611,7 +1632,7 @@ input[type="text"]:hover{
 /*-------------------Страницы-------------------------*/
 .page{
     margin-left: 955px;
-    margin-top: 65px;
+    margin-top: 67px;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
@@ -1632,11 +1653,11 @@ input[type="text"]:hover{
 
 .page-number{
     text-decoration: none;
-    padding-left: 9px;
+    padding-left: 8px;
     padding-right: 9px;
     color: #ffffff;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     display: inline-block;
 }
 
@@ -1828,7 +1849,8 @@ input[type="text"]:hover{
 }
 
 .popup{
-    width: 480px;
+    width: 475px;
+    height: 442px;
     position: fixed;
     display: flex;
     left: 50%;
@@ -1838,9 +1860,9 @@ input[type="text"]:hover{
     background-color: #f8f7f4;
     flex-direction: column;
     padding-top: 15px;
-    padding-bottom: 25px;
     padding-left: 23px;
-    padding-right: 29px;
+    padding-right: 24px;
+    padding-bottom: 15px;
     border-radius: 10px;
 }
 
@@ -1857,7 +1879,8 @@ input[type="text"]:hover{
 }
 
 .popup textarea:hover
-.popup input:hover{
+.popup input:hover,
+.popup textarea:hover{
     box-shadow: inset 0 0 0px 2px #c7c6c5;
 }
 
@@ -1888,7 +1911,7 @@ input[type="text"]:hover{
     padding: 0;
     margin: 0;
     color: #000000;
-    margin-bottom: -15px;
+    margin-bottom: -10px;
     line-height: 1.166;
     font-weight: 500;
 }
@@ -1899,7 +1922,7 @@ input[type="text"]:hover{
     opacity: 0.52;
     margin-bottom: 15px;
     margin-top: 10px;
-    width: 62%;
+    width: 268px;
     padding: 9px;
 }
 
@@ -1909,7 +1932,7 @@ input[type="text"]:hover{
     opacity: 0.52;
     margin-bottom: 15px;
     margin-top: 5px;
-    width: 62%;
+    width: 268px;
     padding: 9px;
 }
 
@@ -1921,6 +1944,7 @@ input[type="text"]:hover{
     margin-top: 5px;
     padding-bottom: 80px;
     width: 100%;
+    height: 155px;
     font-weight: bold;
     outline: none;
 }
@@ -1929,13 +1953,13 @@ input[type="text"]:hover{
     font-size: 18px;
     line-height: 1.333;
     align-self: flex-end;
-    margin-top: 27px;
+    margin-top: 23px;
     padding-top: 9px;
     margin-bottom: 6px;
     margin-right: 0;
     padding-bottom: 10px;
-    padding-right: 23px;
-    padding-left: 23px;
+    padding-right: 22px;
+    padding-left: 24px;
 }
 
 .modal-show{
