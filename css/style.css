@@ -557,6 +557,7 @@ input[type="text"]:hover{
     z-index: 1;
     display: none;
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.5);
+    width: 540px;
 }
 
 .table-goods-button-is-full{
@@ -679,15 +680,15 @@ input[type="text"]:hover{
 }
 
 .table-goods-total{
-    padding-right: 6px;
     font-size: 15px;
     font-weight: 700;
     padding-top: 14px;
     display: flex;
-    border-top: 1px solid #000000;
+    border-top: 1px solid rgba(0,0,0,0.2);
     justify-content: flex-end;
-    margin-right: 11px;
+    margin-right: 16px;
     line-height: 1.2;
+    margin-left: 16px;
 }
 
 .table-goods-total-button{
@@ -987,7 +988,7 @@ input[type="text"]:hover{
     z-index: 51;
     font-weight: 700;
     left: 0;
-    top: 207px;
+    top: 204px;
     text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
@@ -1014,11 +1015,17 @@ input[type="text"]:hover{
     font-weight: 500;
     padding-right: 0;
     padding-left: 0;
+    text-decoration: underline;
+}
+
+.catalog-item-content h3:hover{
+    color: #eb4d30;
 }
 
 .catalog-item a{
     color: #ffffff;
     text-align: center;
+    text-decoration: none;
 }
 
 .catalog-item .btn{
@@ -1150,13 +1157,13 @@ input[type="text"]:hover{
     padding-right: 0;
     padding-left: 12px;
     margin-top: 5px;
-    margin-bottom: 15px;
     color: #ffffff;
     font-size: 16px;
     line-height: 1.125;
     width: 193px;
     margin-right: 8px;
     font-weight: 500;
+    height: 36px;
 }
  
 .sorting-select::-ms-expand {
@@ -1182,6 +1189,7 @@ input[type="text"]:hover{
     margin-top: 5px;
     margin-left: 7px;
     width: 220px;
+    height: 36px;
 }
 
 .filter-slider-line{
@@ -1232,6 +1240,7 @@ input[type="text"]:hover{
     margin-left: 13px;
     line-height: 1.125;
     font-weight: 500;
+    height: 36px;
 }
 
 .filter-fatiness input[type="radio"]{
@@ -1296,6 +1305,7 @@ input[type="text"]:hover{
     margin-top: 5px;
     line-height: 1.125;
     font-weight: 500;
+    height: 36px;
 }
 
 .filter-filler input[type="checkbox"]{
@@ -1368,6 +1378,7 @@ input[type="text"]:hover{
     font-size: 16px;
     line-height: 1.125;
     font-weight: 500;
+    height: 36px;
 }
 
 .button-employ:hover{
@@ -1436,6 +1447,7 @@ input[type="text"]:hover{
     position: relative;
     padding-left: 70px;
     padding-bottom: 26px;
+    padding-right: 10px;
 }
 
 .titel-wafer{
@@ -1560,9 +1572,10 @@ input[type="text"]:hover{
     background-color: #ffffff;
     border-radius: 15px;
     color: #303030;
-    padding: 26px;
+    padding: 29px 26px 15px;
     width: 303px;
     margin-left: 845px;
+    margin-bottom: -2px;
 }
 
 .container-address p{
@@ -1577,6 +1590,7 @@ input[type="text"]:hover{
     font-size: 14px;
     line-height: 1.42;
     display: inline-block;
+    margin-bottom: 2px;
 }
 
 .contacts-map{
@@ -1605,7 +1619,7 @@ input[type="text"]:hover{
 }
 
 .container-address p:last-of-type{
-    padding-top: 19px;
+    padding-top: 16px;
 }
 
 .container-address-bold{
@@ -1704,10 +1718,12 @@ input[type="text"]:hover{
 .footer-ice-cream{
     display: flex;
     border-top: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 10px;
 }
 
 .footer-ice-cream li{
     list-style: none;
+    padding-bottom: 10px;
 }
 
 .footer-ice-cream a{
@@ -1792,6 +1808,7 @@ input[type="text"]:hover{
     font-size: 13px;
     line-height: 1.384;
     font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .footer-item+li{
