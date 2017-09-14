@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
         <title>Глейси каталог</title>
     </head>
     <body>
@@ -71,25 +71,25 @@
                                     <td class="table-goods-item">
                                         <a href="#">
                                             <img class="img-goods-small" src="img/1.png" alt="Сливочно-кофейное с кусочками шоколада" width="35" height="35">
-                                            Пломбир с апельсиновым джемом
+                                            <span>Пломбир с апельсиновым джемом</span>
                                         </a>
                                     </td>
-                                    <td class="table-goods-quantity">1,5 кг х <b>200 руб.</b></td>
+                                    <td class="table-goods-quantity">1,5 кг х <span>200 руб.</span></td>
                                     <td class="table-goods-sum">300 руб.</td>
                                 </tr>
                                 <tr>
                                     <td class="table-reset-goods"><a href="#" class="table-reset-goods-basket"></a></td>
-                                    <td class="table-goods-item">
-                                        <a href="#">
-                                            <img class="img-goods-small" src="img/3.png" alt="Сливочно-кофейное с кусочками шоколада" width="35" height="35">
-                                            Клубничный пломбир с присыпкой из белого шоколада
+                                    <td class="table-goods-item table-goods-item-second">
+                                        <a class="table-goods-item-small" href="#">
+                                            <img class="img-goods-small  img-item" src="img/3.png" alt="Сливочно-кофейное с кусочками шоколада" width="35" height="35">
+                                            <span>Клубничный пломбир с присыпкой из белого шоколада</span>
                                         </a>
                                     </td>
-                                    <td class="table-goods-quantity">1,5 кг х <b>300 руб.</b></td>
-                                    <td class="table-goods-sum">450 руб.</td>
+                                    <td class="table-goods-quantity table-goods-quantity-second">1,5 кг х <span>300 руб.</span></td>
+                                    <td class="table-goods-sum table-goods-sum-second">450 руб.</td>
                                 </tr>
                             </table>
-                            <span class="table-goods-total">Итого: 750руб</span>
+                            <span class="table-goods-total">Итого: 750 руб.</span>
                             <a class="btn table-goods-total-button " href="#">Оформить заказ</a>
                         </div>
                     </section>
@@ -116,8 +116,6 @@
                         <select class="sorting-select" name="sorting" id="sorting">
                             <option value="sorting-popularity" selected>по популярности</option>
                             <option value="sorting-date">по дате</option>
-                            <option value="sorting-min-value">стоимость по-убыванию</option>
-                            <option value="sorting-max-value">стоимость по-возрастанию</option>
                         </select>
                     </div>
                     <div class="filter-item">

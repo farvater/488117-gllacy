@@ -46,7 +46,7 @@ input[type="email"],
 input[type="password"]{
     font-size: 16px;
     line-height: 1.5;
-    font-weight: bold;
+    font-weight: 700;
     color: #000000;
     outline: none;
 }
@@ -54,7 +54,7 @@ input[type="password"]{
 .title-small{
     font-size: 35px;
     line-height: 1.17;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /*------------------Оформление кнопок-----------------------*/
@@ -69,7 +69,7 @@ input[type="password"]{
     text-decoration: none;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
     transition: background-color 0.25s easi-in;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .btn:hover{
@@ -108,10 +108,10 @@ input[type="password"]{
     padding: 0;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 33px;
+    padding-top: 30px;
     padding-left: 9px;
     line-height: 1.125;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .header-navigation-item>a{
@@ -172,13 +172,13 @@ input[type="password"]{
     padding: 0;
     background-color: #ffffff;
     border-radius: 5px;
-    font-weight: normal;
+    font-weight: 400;
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.5);
     padding-bottom: 5px;
 }
 
 .subparagraphs-novelties{
-    font-weight: bold;
+    font-weight: 700;
     position: relative;
     padding-bottom: 4px;
     margin-bottom: 2px;
@@ -289,6 +289,10 @@ input[type="password"]{
     border: 0 solid;
 }
 
+.search-label{
+    line-height: 1.142;
+}
+
 .label-box{
     position: relative;
     width: 100%;
@@ -334,7 +338,8 @@ input[type="text"]:hover{
 
 .search-container .label-box input:focus ~ label,
 .search-container .label-box input:valid ~ label{
-    font-size: 12px;
+    font-size: 11px;
+    line-height: 1.18;
     transform: translateY(-27px);
     background-image: none;
     color: #8fbdec;
@@ -386,6 +391,7 @@ input[type="text"]:hover{
     padding-left: 43px;
     padding-right: 17px;
     border-radius: 35px;
+    font-weight: 500;
 }
 
 .header-login-information{
@@ -420,7 +426,8 @@ input[type="text"]:hover{
 .header-login-information  input[type="password"]:valid ~ .label-box-password label,
 .header-login-information  input[type="text"]:focus ~ .label-box-email label,
 .header-login-information  input[type="text"]:valid ~ .label-box-email label{
-    font-size: 12px;
+    font-size: 11px;
+    line-height: 1.18;
     transform: translateY(-27px);
     background-image: none;
     border: none;
@@ -452,7 +459,7 @@ input[type="text"]:hover{
     justify-content: space-between;
     align-items: flex-start;
     line-height: 1.33;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 14px;
 }
 
@@ -466,7 +473,7 @@ input[type="text"]:hover{
 
 .password-check-in{
     margin: 0;
-    font-weight: normal;
+    font-weight: 400;
     padding-left: 8%;
 }
 
@@ -497,12 +504,16 @@ input[type="text"]:hover{
 .password-check-in a:hover,
 .password-check-in a:active{
     background-image: none;
-    color: #ffbc9e;
+    color: #eb4d30;
 }
 /*------------------------Корзина----------------------------*/
-.table-goods a{
+.table-goods{
+    position: relative;
+}
+.table-goods>a{
     text-decoration: none;
     color: #ffffff;
+    font-weight: 500;
 }
 
 .table-goods>a:hover{
@@ -537,8 +548,8 @@ input[type="text"]:hover{
 
 .table-goods-items{
     position: absolute;
-    left: 52.5%;
-    top: 60px;
+    right: 0;
+    top: 38px;
     background-color: #f8f7f4;
     border: 0;
     border-radius: 5px;
@@ -546,6 +557,7 @@ input[type="text"]:hover{
     z-index: 1;
     display: none;
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.5);
+    width: 540px;
 }
 
 .table-goods-button-is-full{
@@ -560,11 +572,23 @@ input[type="text"]:hover{
     position: relative;
     z-index: 2;
 }
+
+.table-goods:hover .table-goods-icon-is-full{
+    background-image: url("../img/basket-full-black.svg");
+    background-repeat: no-repeat;
+    background-position: 17px 6px;
+    position: relative;
+    z-index: 3;
+}
 /*Выпадашка*/
 .table-goods-basket{
-    width: 548px;
-    padding-bottom: 19px;
+    width: 540px;
+    padding-bottom: 15px;
     table-layout: fixed;
+}
+
+.table-goods-basket a{
+    font-weight: 700;
 }
 
 .img-goods-small{
@@ -593,18 +617,26 @@ input[type="text"]:hover{
 }
 
 .table-goods-sum{
-    width: 17%;
+    width: 57px;
     padding-top: 16px;
+    font-size: 13px;
+    line-height: 1.23;
 }
 
 .table-goods-quantity{
-    width: 27%;
+    width: 105px;
     padding-top: 17px;
     padding-left: 26px;
+    font-size: 13px;
+    line-height: 1.23;
+}
+
+.table-goods-quantity span{
+    color: #999999;
 }
 
 .table-goods-item{
-    width: 51%;
+    width: 191px;
     padding-top: 14px;
     font-size: 13px;
     line-height: 1.23;
@@ -615,31 +647,55 @@ input[type="text"]:hover{
     color: #000000;
     display: flex;
     align-items: center;
+    font-weight: 400;
+    text-decoration: none;
+    padding-top: 3px;
 }
 
 .table-reset-goods{
-    width: 7%;
-    padding-top: 15px;
-    padding-left: 18px;
+    width: 24px;
+    padding-top: 14px;
+    padding-left: 19px;
+}
+
+.table-goods-item-second{
+    padding-top: 13px;
+    padding-left: 4px;
+}
+
+.table-goods-item-small span{
+    padding-top: 7px;
+}
+
+.img-item{
+    margin-bottom:3px; 
+}
+
+.table-goods-quantity-second{
+    padding-top: 10px;
+}
+
+.table-goods-sum-second{
+    padding-top: 10px;
 }
 
 .table-goods-total{
-    padding-right: 6px;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 700;
     padding-top: 14px;
     display: flex;
-    width: 94.5%;
-    border-top: 1px solid #000000;
+    border-top: 1px solid rgba(0,0,0,0.2);
     justify-content: flex-end;
-    margin-left: 14px;
+    margin-right: 16px;
+    line-height: 1.2;
+    margin-left: 16px;
 }
 
 .table-goods-total-button{
-    font-weight: bold;
+    font-weight: 700;
     display: flex;
     width: 169px;
-    margin-left: 355px;
+    margin-left: 357px;
     margin-top: 14px;
     margin-bottom: 22px;
     font-size: 18px;
@@ -651,7 +707,7 @@ input[type="text"]:hover{
 }
 /*-------------------Контакты в хэдере------------------------*/
 .header-contact{
-    font-weight: bold;
+    font-weight: 700;
     padding-top: 5px;
     width: 100%;
     text-align: right;
@@ -690,20 +746,24 @@ input[type="text"]:hover{
 .slide-title{
     width: 700px;
     margin: 0 auto;
-    margin-bottom: 30px;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 60px;
     line-height: 1.005;
-    margin-bottom: 41px;
+    margin-bottom: 38px;
+}
+
+.slide-title-chocolate{
+    padding: 0 5px;
 }
 
 .slide-btn {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 32px;
-    line-height: 1,375;
+    line-height: 1.375;
     vertical-align: top;
-    padding-right: 39px;
-    padding-left: 39px;
+    padding-right: 40px;
+    padding-left: 40px;
+    line-height: 1.375;
 }
 
 .slider-controls {
@@ -764,10 +824,11 @@ input[type="text"]:hover{
 .shares{
     padding: 0;
     margin: 0;
-    margin-top: 4.5%;
+    margin-top: 51px;
+    margin-bottom: 2px;
     display: inline-flex;
     justify-content: space-between;
-    height: 227px;
+    height: 228px;
 }
 
 .news-banner,
@@ -784,7 +845,7 @@ input[type="text"]:hover{
     font-size: 18px;
     line-height: 1.22;
     padding-left: 19px;
-    font-weight: bold;
+    font-weight: 700;
     margin-top: 15px;
 }
 
@@ -801,7 +862,7 @@ input[type="text"]:hover{
     margin-bottom: 21px;
     margin-top: 26px;
     margin-right: 22px;
-    font-weight: bold;
+    font-weight: 700;
     padding-left: 22px;
     padding-right: 22px;
     padding-top: 10px;
@@ -824,6 +885,7 @@ input[type="text"]:hover{
     margin-left: -39px;
     margin-top: -10px;
     font-size: 14px;
+    line-height: 1.142;
 }
 
 .breadcrumbs li{
@@ -837,7 +899,7 @@ input[type="text"]:hover{
 
 .breadcrumbs a:hover,
 .breadcrumbs a:active{
-    color: #ffbc9e;
+    color: #ffc29a;
 }
 
 .breadcrumbs a:hover::after,
@@ -878,46 +940,35 @@ input[type="text"]:hover{
     margin-top: -13px;
 }
 /*-------------Каталог---------------------------------*/
-.catalog-items{
-    margin-top: 2px;
-}
-
+/*!!!!Не резиновый! Установлены все значения в px. Для равномерного распределения задано  justify-content: space-between;*/
 .catalog-list{
     display: flex;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    margin: 0 -27px;
+    justify-content: space-between;
 }
 
 .catalog-wrapper-item{  
-    width: 22.2%;
-    margin-top: 40px;
-    margin-right: 2.2%;
+    width: 267px;/*Размер карточки установлен в px статично*/
+    margin-top: 39px;
     display: flex;
 }
 
-.catalog-wrapper-item:nth-child(4n){  
-    margin-right: 2.3%;
-}
-
-.catalog-wrapper-item:nth-child(4n+1){  
-    margin-left: 2.3%;
-}
-
-.catalog-wrapper-item:nth-of-type(5),
-.catalog-wrapper-item:nth-of-type(6),
-.catalog-wrapper-item:nth-of-type(7),
-.catalog-wrapper-item:nth-of-type(8){
+.catalog-list li:nth-child(5),
+.catalog-list li:nth-child(6),
+.catalog-list li:nth-child(7),
+.catalog-list li:nth-child(8){
     margin-top: 23px;
 }
 
-.catalog-wrapper-item:nth-of-type(9),
-.catalog-wrapper-item:nth-of-type(10),
-.catalog-wrapper-item:nth-of-type(11),
-.catalog-wrapper-item:nth-of-type(12){
-        margin-top: 25px;
+.catalog-list li:nth-child(9),
+.catalog-list li:nth-child(10),
+.catalog-list li:nth-child(11),
+.catalog-list li:nth-child(12){
+    margin-top: 25px;
 }
+
 .catalog-list li{
     list-style: none;
 }
@@ -935,16 +986,16 @@ input[type="text"]:hover{
     line-height: 1;
     position: absolute;
     z-index: 51;
-    font-weight: bold;
+    font-weight: 700;
     left: 0;
-    top: 207px;
+    top: 209px;/*очень странно передвигается в разных браузерах. поставила по маковскому хрому*/
     text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .kilogram{
     font-size: 30px;
     line-height: 1.5;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .rouble{
@@ -955,17 +1006,26 @@ input[type="text"]:hover{
 
 .catalog-item-content h3{
     font-size: 16px;
-    line-height: 1.35;
+    line-height: 1.375;
     margin: 0;
     padding: 0 10px;
-    font-weight: normal;
+    font-weight: 400;
     margin-bottom: 15px;
     margin-top: 7px;
+    font-weight: 500;
+    padding-right: 0;
+    padding-left: 0;
+    text-decoration: underline;
+}
+
+.catalog-item-content h3:hover{
+    color: #eb4d30;/*Оставила тёмный как для чёрных ссылок, ибо если брать светлый как по стайлгайду, то из-за светлой подложки текста совсем не видно*/
 }
 
 .catalog-item a{
     color: #ffffff;
     text-align: center;
+    text-decoration: none;
 }
 
 .catalog-item .btn{
@@ -978,7 +1038,7 @@ input[type="text"]:hover{
     transform: translateX(-50%);
     font-size: 18px;
     line-height: 1.33;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .catalog-item:hover{
@@ -1030,10 +1090,10 @@ input[type="text"]:hover{
 }
 
 .main-content h1{
-    margin-top: -13px;
+    margin-top: -10px;
     font-size: 35px;
     line-height: 1.17;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .catalog-item:hover .btn{
@@ -1044,14 +1104,18 @@ input[type="text"]:hover{
     display: flex;
     flex-wrap: wrap;
     font-size: 14px;
-    padding-top: 3px;
+    padding-top: 2px;
     margin-bottom: -15px;
 }
 
 .filter-item{
     display: inline-block;
     margin: 0;
-    margin-top: -2px
+}
+
+.filter-item>span{
+    line-height: 1.142;
+    font-weight: 500;
 }
 
 .filter-item:first-child span{
@@ -1059,7 +1123,7 @@ input[type="text"]:hover{
 }
 
 .filter-item:nth-child(2) span{
-    padding-left: 24px;
+    padding-left: 23px;
 }
 
 .filter-item:nth-child(3) span{
@@ -1091,13 +1155,15 @@ input[type="text"]:hover{
     padding-top: 5px;
     padding-bottom: 8px;
     padding-right: 0;
-    padding-left: 13px;
+    padding-left: 12px;
     margin-top: 5px;
     color: #ffffff;
     font-size: 16px;
     line-height: 1.125;
     width: 193px;
     margin-right: 8px;
+    font-weight: 500;
+    height: 36px;
 }
  
 .sorting-select::-ms-expand {
@@ -1117,12 +1183,13 @@ input[type="text"]:hover{
 
 .filter-slider{
     height: 36px;
-    padding: 17px 22px;
+    padding: 16px 22px;
     line-height: 36px;
     border-radius: 35px;
     margin-top: 5px;
     margin-left: 7px;
     width: 220px;
+    height: 36px;
 }
 
 .filter-slider-line{
@@ -1144,11 +1211,13 @@ input[type="text"]:hover{
 }
 
 .circle-start{
-    margin-left: 15px;
+    margin-left: 13px;
+    margin-top: -11px;
 }
 
 .circle-end{
-    margin-left: 113px;
+    margin-left: 111px;
+    margin-top: -11px;
 }
 
 .line-center{
@@ -1162,13 +1231,16 @@ input[type="text"]:hover{
     border: none;
     border-radius: 35px;
     display: block;
-    padding-top: 9px;
-    padding-bottom: 6px;
-    padding-right: 7px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 1px;
     padding-left: 11px;
-    margin-top: 5px;
+    margin-top: 4px;
     color: #ffffff;
-    margin-left: 15px;
+    margin-left: 13px;
+    line-height: 1.125;
+    font-weight: 500;
+    height: 36px;
 }
 
 .filter-fatiness input[type="radio"]{
@@ -1179,7 +1251,7 @@ input[type="text"]:hover{
     position: relative;
     cursor: pointer;
     padding-left: 36px;
-    padding-right: 10px;
+    padding-right: 11px;
     font-size: 16px;
 }
 
@@ -1193,8 +1265,8 @@ input[type="text"]:hover{
     background-position: left center;
     position: absolute;
     color: #ffffff;
-    left: 4px;
-    top: -2px;
+    left: 3px;
+    top: -1px;
 }
 
 .filter-fatiness label::after{
@@ -1207,8 +1279,8 @@ input[type="text"]:hover{
     background-position: left center;
     position: absolute;
     color: #ffffff;
-    left: 4px;
-    top: -2px;
+    left: 3px;
+    top: -1px;
     transform: scale(0);
     transition: transform 0.28s;
 }
@@ -1226,11 +1298,14 @@ input[type="text"]:hover{
     border: none;
     border-radius: 35px;
     display: flex;
-    padding-top: 6px;
-    padding-bottom: 9px;
-    padding-left: 13px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    padding-left: 10px;
     color: #ffffff;
-    margin-top: 6px;
+    margin-top: 5px;
+    line-height: 1.125;
+    font-weight: 500;
+    height: 36px;
 }
 
 .filter-filler input[type="checkbox"]{
@@ -1294,14 +1369,16 @@ input[type="text"]:hover{
     background-color: rgba(255,255,255,0.4);
     box-shadow: inset 0 0 0px 2px #ffffff;
     border-radius: 35px;
-    padding: 7px 30px;
+    padding: 9px 28px;
     color: #ffffff;
-    margin-top: 25px;
+    margin-top: 23px;
     margin-bottom: 16px;
-    margin-left: 16px;
+    margin-left: 15px;
     border: none;
     font-size: 16px;
     line-height: 1.125;
+    font-weight: 500;
+    height: 36px;
 }
 
 .button-employ:hover{
@@ -1330,6 +1407,7 @@ input[type="text"]:hover{
     margin-bottom: 0;
     padding-right: 6px;
     padding-left: 6px;
+    line-height: 1.38;
 }
 
 .wafer-text li::before{
@@ -1342,7 +1420,7 @@ input[type="text"]:hover{
     height: 50px;
     background-size: cover;
     position: absolute;
-    left: 13px;
+    left: 11px;
     top: -14px;
 }
 
@@ -1369,13 +1447,15 @@ input[type="text"]:hover{
     position: relative;
     padding-left: 70px;
     padding-bottom: 26px;
+    padding-right: 10px;
 }
 
 .titel-wafer{
     font-size: 24px;
     line-height: 1.25;
+    font-weight: 500;
     padding-top: 23px;
-    font-weight: normal;
+    font-weight: 500;
     padding-right: 18px;
     padding-left: 18px;
 }
@@ -1424,6 +1504,7 @@ input[type="text"]:hover{
 .blog-banner span{
     padding-left: 21px;
     padding-top: 23px;
+    font-weight: 500;
 }
 /*-------------Банер с подпиской----------------------------------*/
 .email-banner::before{
@@ -1473,18 +1554,17 @@ input[type="text"]:hover{
     padding: 5px 5px 5px 10px;
     position: relative;
     width: 69%;
-    font-weight: normal;   
+    font-weight: 400;   
     height: 45px;
 }
 
 .form-email button{
     font-size: 18px;
-    padding: 9px 19px;
+    padding: 11px 19px;
     margin-left: 7px;
+    line-height: 1.333;
 }
 /*-----------------------Карта------------------------------------------*/
-.container-map{
-}
 
 .container-address{
     display: flex;
@@ -1492,9 +1572,10 @@ input[type="text"]:hover{
     background-color: #ffffff;
     border-radius: 15px;
     color: #303030;
-    padding: 26px;
+    padding: 29px 26px 15px;
     width: 303px;
     margin-left: 845px;
+    margin-bottom: -2px;
 }
 
 .container-address p{
@@ -1507,8 +1588,9 @@ input[type="text"]:hover{
 
 .container-address-normal{
     font-size: 14px;
-    line-height: 1.46;
+    line-height: 1.42;
     display: inline-block;
+    margin-bottom: 2px;
 }
 
 .contacts-map{
@@ -1537,26 +1619,26 @@ input[type="text"]:hover{
 }
 
 .container-address p:last-of-type{
-    padding-top: 13px;
-    margin-bottom: -4px;
+    padding-top: 16px;
 }
 
 .container-address-bold{
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 1.56;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.333;
     color: #303030;
     display: block;
 }
 
 .container-address .feedback-form{
     font-size: 18px;
-    font-weight: bold;
-    margin-top: 30px;
+    font-weight: 700;
+    line-height: 1.333;
+    margin-top: 25px;
     margin-right: 17px;
-    padding-bottom: 9px;
-    margin-bottom: 6px;
-    padding-top: 8px;
+    padding-bottom: 11px;
+    margin-bottom: 15px;
+    padding-top: 11px;
     padding-left: 28px;
     padding-right: 15px;
     display: block;
@@ -1566,10 +1648,13 @@ input[type="text"]:hover{
 /*-------------------Страницы-------------------------*/
 .page{
     margin-left: 955px;
-    margin-top: 65px;
+    margin-top: 67px;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
+    font-size: 16px;
+    line-height: 1.125;
+    font-weight: 500;
 }
 
 .page-number-left{
@@ -1584,11 +1669,11 @@ input[type="text"]:hover{
 
 .page-number{
     text-decoration: none;
-    padding-left: 9px;
+    padding-left: 8px;
     padding-right: 9px;
     color: #ffffff;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     display: inline-block;
 }
 
@@ -1633,10 +1718,12 @@ input[type="text"]:hover{
 .footer-ice-cream{
     display: flex;
     border-top: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 10px;
 }
 
 .footer-ice-cream li{
     list-style: none;
+    padding-bottom: 10px;
 }
 
 .footer-ice-cream a{
@@ -1687,7 +1774,7 @@ input[type="text"]:hover{
 }
 
 .footer-navigation:hover{
-    color: #ffbc9e;
+    color: #ffc29a;
 }
 
 .instagram::before{
@@ -1720,7 +1807,7 @@ input[type="text"]:hover{
     padding: 0;
     font-size: 13px;
     line-height: 1.384;
-    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .footer-item+li{
@@ -1728,14 +1815,19 @@ input[type="text"]:hover{
 }
 
 .footer-navigation{
-    font-size: 14px;
-    line-height: 1.56;
+    font-size: 13px;
+    line-height: 1.23;
     color: #ffffff;
     white-space: nowrap;
+    font-weight: 400;
 }
 
 .for-suppliers{
     position: relative;
+}
+
+.for-suppliers{
+    font-weight: 700;
 }
 
 .for-suppliers:before{
@@ -1753,9 +1845,13 @@ input[type="text"]:hover{
     display: flex;
     flex-direction: column;
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 1.333;
     margin-left: 48px;
     margin-top: 17px;
+}
+
+.logo-html-item a:hover{
+    color: #ffc29a; 
 }
 /*-----------------Всплывашка-------------------------*/
 .popup-shadow{
@@ -1775,7 +1871,8 @@ input[type="text"]:hover{
 }
 
 .popup{
-    width: 480px;
+    width: 475px;
+    height: 442px;
     position: fixed;
     display: flex;
     left: 50%;
@@ -1785,9 +1882,9 @@ input[type="text"]:hover{
     background-color: #f8f7f4;
     flex-direction: column;
     padding-top: 15px;
-    padding-bottom: 25px;
     padding-left: 23px;
-    padding-right: 29px;
+    padding-right: 24px;
+    padding-bottom: 15px;
     border-radius: 10px;
 }
 
@@ -1804,7 +1901,8 @@ input[type="text"]:hover{
 }
 
 .popup textarea:hover
-.popup input:hover{
+.popup input:hover,
+.popup textarea:hover{
     box-shadow: inset 0 0 0px 2px #c7c6c5;
 }
 
@@ -1814,8 +1912,9 @@ input[type="text"]:hover{
 .popup  input[name="email"]:focus ~ .popup-email,
 .popup  .popup-textarea:valid ~ .popup-text,
 .popup  .popup-textarea:focus ~ .popup-text{
-    font-size: 12px;
-    transform: translateY(-27px);
+    font-size: 11px;
+    line-height: 1.18;
+    transform: translateY(-21px);
     background-image: none;
     border: none;
     color: #8fbdec;
@@ -1834,7 +1933,9 @@ input[type="text"]:hover{
     padding: 0;
     margin: 0;
     color: #000000;
-    margin-bottom: -15px;
+    margin-bottom: -10px;
+    line-height: 1.166;
+    font-weight: 500;
 }
 
 .popup input[name="name"]{
@@ -1843,7 +1944,7 @@ input[type="text"]:hover{
     opacity: 0.52;
     margin-bottom: 15px;
     margin-top: 10px;
-    width: 62%;
+    width: 268px;
     padding: 9px;
 }
 
@@ -1853,7 +1954,7 @@ input[type="text"]:hover{
     opacity: 0.52;
     margin-bottom: 15px;
     margin-top: 5px;
-    width: 62%;
+    width: 268px;
     padding: 9px;
 }
 
@@ -1865,20 +1966,22 @@ input[type="text"]:hover{
     margin-top: 5px;
     padding-bottom: 80px;
     width: 100%;
-    font-weight: bold;
+    height: 155px;
+    font-weight: 700;
     outline: none;
 }
 
 .push-btn{
     font-size: 18px;
+    line-height: 1.333;
     align-self: flex-end;
-    margin-top: 27px;
+    margin-top: 23px;
     padding-top: 9px;
     margin-bottom: 6px;
     margin-right: 0;
     padding-bottom: 10px;
-    padding-right: 23px;
-    padding-left: 23px;
+    padding-right: 22px;
+    padding-left: 24px;
 }
 
 .modal-show{
