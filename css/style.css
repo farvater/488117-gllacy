@@ -899,7 +899,7 @@ input[type="text"]:hover{
 
 .breadcrumbs a:hover,
 .breadcrumbs a:active{
-    color: #eb4d30;
+    color: #ffc29a;
 }
 
 .breadcrumbs a:hover::after,
@@ -988,7 +988,7 @@ input[type="text"]:hover{
     z-index: 51;
     font-weight: 700;
     left: 0;
-    top: 206px;
+    top: 209px;/*очень странно передвигается в разных браузерах. поставила по маковскому хрому*/
     text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
@@ -1019,7 +1019,7 @@ input[type="text"]:hover{
 }
 
 .catalog-item-content h3:hover{
-    color: #eb4d30;
+    color: #eb4d30;/*Оставила тёмный как для чёрных ссылок, ибо если брать светлый как по стайлгайду, то из-за светлой подложки текста совсем не видно*/
 }
 
 .catalog-item a{
@@ -1774,7 +1774,7 @@ input[type="text"]:hover{
 }
 
 .footer-navigation:hover{
-    color: #eb4d30;
+    color: #ffc29a;
 }
 
 .instagram::before{
@@ -1851,7 +1851,7 @@ input[type="text"]:hover{
 }
 
 .logo-html-item a:hover{
-    color: #eb4d30; 
+    color: #ffc29a; 
 }
 /*-----------------Всплывашка-------------------------*/
 .popup-shadow{
